@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "primary-dim": "#665800",
+                  "inverse-on-surface": "#9f9d93",
+                  "on-secondary": "#ffffff",
+                  "on-error": "#ffffff",
+                  "surface-dim": "#e6e3d4",
+                  "on-tertiary-fixed-variant": "#790214",
+                  "on-secondary-fixed": "#004844",
+                  "background": "#fffbff",
+                  "secondary": "#00716b",
+                  "on-surface": "#393831",
+                  "error-dim": "#b92902",
+                  "error-container": "#f95630",
+                  "on-tertiary": "#ffffff",
+                  "on-background": "#393831",
+                  "primary-fixed-dim": "#ebce1e",
+                  "outline-variant": "#bcb9af",
+                  "on-primary-fixed-variant": "#655800",
+                  "surface-bright": "#fffbff",
+                  "surface-container-highest": "#ece8da",
+                  "surface": "#fffbff",
+                  "primary-container": "#fadd30",
+                  "surface-container-high": "#f2eee1",
+                  "surface-container-low": "#fdf9ed",
+                  "tertiary-container": "#ff928e",
+                  "on-secondary-container": "#005c57",
+                  "on-primary-container": "#5b4e00",
+                  "tertiary": "#b6353a",
+                  "inverse-primary": "#fadd30",
+                  "outline": "#838178",
+                  "secondary-fixed-dim": "#6ce8de",
+                  "secondary-container": "#7cf6ec",
+                  "on-surface-variant": "#66645c",
+                  "secondary-dim": "#00635e",
+                  "tertiary-fixed-dim": "#ff7a79",
+                  "on-error-container": "#520c00",
+                  "tertiary-fixed": "#ff928e",
+                  "on-tertiary-fixed": "#3a0005",
+                  "primary": "#746400",
+                  "on-primary": "#ffffff",
+                  "surface-container-lowest": "#ffffff",
+                  "surface-container": "#f7f4e7",
+                  "inverse-surface": "#0f0e09",
+                  "secondary-fixed": "#7cf6ec",
+                  "surface-tint": "#746400",
+                  "primary-fixed": "#fadd30",
+                  "tertiary-dim": "#a5292f",
+                  "surface-variant": "#ece8da",
+                  "on-tertiary-container": "#69000f",
+                  "on-primary-fixed": "#453c00",
+                  "error": "#be2d06",
+                  "on-secondary-fixed-variant": "#006761",
+                  "accent-purple": "#A29BFE",
+                  "accent-coral": "#FF6B6B",
+                  "accent-teal": "#4ECDC4"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.125rem",
+                  "lg": "0.25rem",
+                  "xl": "0.5rem",
+                  "full": "0.75rem"
+          },
+          "fontFamily": {
+                  "headline": ["Space Grotesk"],
+                  "body": ["Space Grotesk"],
+                  "label": ["Space Grotesk"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      background-color: #FFFBF0;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .neo-shadow {
+      box-shadow: 5px 5px 0px #1A1A1A;
+    }
+    .neo-shadow-lg {
+      box-shadow: 8px 8px 0px #1A1A1A;
+    }
+    .marquee {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .marquee-content {
+      display: inline-block;
+      animation: marquee 20s linear infinite;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+  </style>
+</head>
+<body class="flex min-h-screen">
+<!-- SideNavBar Anchor -->
+<aside class="fixed left-0 top-0 h-full flex flex-col justify-between z-40 w-[240px] border-r-[3px] border-stone-900 bg-stone-950 shadow-[5px_0px_0px_0px_rgba(26,26,26,1)]">
+<div class="flex flex-col">
+<div class="p-6 border-b-[3px] border-stone-900 mb-2">
+<div class="text-[28px] font-black text-yellow-400 flex items-center gap-2 uppercase tracking-wider font-['Space_Grotesk']">
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                    SANKALP
+                </div>
+<div class="text-[10px] text-yellow-400/60 font-bold uppercase tracking-[0.2em] mt-1">PRODUCTIVITY ENGINE</div>
+</div>
+<nav class="flex flex-col">
+<!-- HOME - ACTIVE -->
+<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 transition-all    font-['Space_Grotesk'] font-bold uppercase tracking-wider hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200" href="../home_dashboard_1/code.html">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+                    HOME
+                </a>
+<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../tasks_streak_1/code.html">
+<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+                    TASKS &amp; STREAK
+                </a>
+<a class="border-l-[6px] border-yellow-400 bg-stone-900 text-yellow-400 py-4 px-6 flex items-center gap-4    transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider translate-x-1" href="../time_awareness_1/code.html">
+<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+                    TIME AWARENESS
+                </a>
+<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../skills_goals_1/code.html">
+<span class="material-symbols-outlined" data-icon="ads_click">ads_click</span>
+                    SKILLS &amp; GOALS
+                </a>
+<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../integrations_hub_1/code.html">
+<span class="material-symbols-outlined" data-icon="extension">extension</span>
+                    INTEGRATIONS
+                </a>
+<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../productivity_tools_1/code.html">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+                    PRODUCTIVITY
+                </a>
+<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../whiteboard_canvas_1/code.html">
+<span class="material-symbols-outlined" data-icon="draw">draw</span>
+                    WHITEBOARD
+                </a>
+<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../settings_1/code.html">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                    SETTINGS
+                </a>
+</nav>
+</div>
+<div class="border-t-[3px] border-stone-900">
+<div class="p-6 flex flex-col gap-4">
+<div class="flex items-center gap-3 text-white">
+<span class="material-symbols-outlined text-yellow-400" data-icon="account_circle">account_circle</span>
+<span class="text-xs tracking-widest font-black uppercase">STUDENT_01</span>
+</div>
+<div class="flex items-center gap-3 text-white">
+<span class="material-symbols-outlined text-yellow-400" data-icon="calendar_today">calendar_today</span>
+<span class="text-xs tracking-widest font-black uppercase">OCT 24, 2024</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-[240px] flex-1 p-8 pb-12">
+<!-- Top Progress Bars -->
+<section class="mb-10">
+<div class="bg-accent-purple border-[3px] border-black p-8 neo-shadow-lg relative overflow-hidden">
+<div class="absolute -right-8 -top-8 text-[120px] opacity-10 font-black rotate-12 select-none">TIME</div>
+<h1 class="text-4xl font-black text-black mb-10 leading-tight tracking-tighter">TIME IS PASSING. HERE IS THE PROOF.</h1>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Month Progress -->
+<div class="space-y-3">
+<div class="flex justify-between items-end">
+<span class="text-lg font-black tracking-tight">OCTOBER</span>
+<span class="text-3xl font-black">74%</span>
+</div>
+<div class="h-10 border-[3px] border-black bg-stone-900 overflow-hidden">
+<div class="h-full bg-primary w-[74%] border-r-[3px] border-black"></div>
+</div>
+<p class="text-xs font-bold uppercase tracking-widest text-black/60">8 days remaining</p>
+</div>
+<!-- Year Progress -->
+<div class="space-y-3">
+<div class="flex justify-between items-end">
+<span class="text-lg font-black tracking-tight">2024</span>
+<span class="text-3xl font-black">81%</span>
+</div>
+<div class="h-10 border-[3px] border-black bg-stone-900 overflow-hidden">
+<div class="h-full bg-accent-coral w-[81%] border-r-[3px] border-black"></div>
+</div>
+<p class="text-xs font-bold uppercase tracking-widest text-black/60">68 days remaining</p>
+</div>
+<!-- Life Progress -->
+<div class="space-y-3">
+<div class="flex justify-between items-end">
+<span class="text-lg font-black tracking-tight">EST. LIFE SPAN</span>
+<span class="text-3xl font-black">28%</span>
+</div>
+<div class="h-10 border-[3px] border-black bg-stone-900 overflow-hidden">
+<div class="h-full bg-accent-teal w-[28%] border-r-[3px] border-black"></div>
+</div>
+<p class="text-xs font-bold uppercase tracking-widest text-black/60">Stage: Early Accumulation</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Middle Section: Memento Mori & Deadline Ticker -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
+<!-- Memento Mori Card -->
+<div class="bg-stone-950 border-[3px] border-black p-8 neo-shadow relative">
+<div class="flex justify-between items-start mb-8">
+<h2 class="text-yellow-400 text-2xl font-black leading-none uppercase tracking-tighter">THE CLOCK IS TICKING</h2>
+<span class="material-symbols-outlined text-yellow-400 text-4xl" style="font-variation-settings: 'FILL' 1;">timer</span>
+</div>
+<div class="grid grid-cols-4 gap-4 mb-10">
+<div class="flex flex-col items-center border-[3px] border-yellow-400/30 p-4">
+<span class="text-4xl font-black text-yellow-400">47</span>
+<span class="text-[10px] font-bold text-yellow-400/60 uppercase mt-1">DAYS</span>
+</div>
+<div class="flex flex-col items-center border-[3px] border-yellow-400/30 p-4">
+<span class="text-4xl font-black text-yellow-400">06</span>
+<span class="text-[10px] font-bold text-yellow-400/60 uppercase mt-1">HRS</span>
+</div>
+<div class="flex flex-col items-center border-[3px] border-yellow-400/30 p-4">
+<span class="text-4xl font-black text-yellow-400">22</span>
+<span class="text-[10px] font-bold text-yellow-400/60 uppercase mt-1">MIN</span>
+</div>
+<div class="flex flex-col items-center border-[3px] border-yellow-400/30 p-4">
+<span class="text-4xl font-black text-yellow-400">14</span>
+<span class="text-[10px] font-bold text-yellow-400/60 uppercase mt-1">SEC</span>
+</div>
+</div>
+<div class="space-y-6">
+<div class="group border-b-[3px] border-stone-800 pb-2">
+<label class="text-yellow-400/50 text-[10px] font-black uppercase tracking-widest block mb-1">UNTIL:</label>
+<div class="flex justify-between items-center cursor-text">
+<span class="text-xl text-yellow-400 font-bold uppercase">[UPSC PRELIMS 2025]</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm opacity-0 group-hover:opacity-100">edit</span>
+</div>
+</div>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 text-stone-400 hover:text-yellow-400 cursor-pointer transition-colors">
+<span class="w-2 h-2 bg-yellow-400"></span>
+<span class="font-bold">SEMESTER FINALS (92 DAYS)</span>
+</li>
+<li class="flex items-center gap-3 text-stone-400 hover:text-yellow-400 cursor-pointer transition-colors">
+<span class="w-2 h-2 bg-stone-700"></span>
+<span class="font-bold">GRADUATION (214 DAYS)</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Deadline Ticker Card -->
+<div class="flex flex-col border-[3px] border-black bg-stone-950 neo-shadow overflow-hidden">
+<div class="p-8 pb-4">
+<h2 class="text-white text-2xl font-black mb-6 uppercase">UPCOMING DEADLINES</h2>
+<div class="space-y-4 max-h-[280px] overflow-y-auto pr-2 custom-scrollbar">
+<!-- Deadline Item -->
+<div class="bg-stone-900 border-[3px] border-stone-800 p-4 flex justify-between items-center hover:border-accent-coral transition-colors cursor-pointer group">
+<div>
+<h4 class="text-white font-bold text-lg">Project Alpha Submission</h4>
+<p class="text-stone-500 text-sm font-bold">Client Review Meeting @ 4PM</p>
+</div>
+<div class="bg-accent-coral px-3 py-1 border-[2px] border-black neo-shadow text-black font-black text-xs uppercase whitespace-nowrap">
+                3 DAYS LEFT
+              </div>
+</div>
+<!-- Deadline Item -->
+<div class="bg-stone-900 border-[3px] border-stone-800 p-4 flex justify-between items-center hover:border-accent-teal transition-colors cursor-pointer group">
+<div>
+<h4 class="text-white font-bold text-lg">Server Migration</h4>
+<p class="text-stone-500 text-sm font-bold">AWS Instance Refresh</p>
+</div>
+<div class="bg-accent-teal px-3 py-1 border-[2px] border-black neo-shadow text-black font-black text-xs uppercase whitespace-nowrap">
+                12 DAYS LEFT
+              </div>
+</div>
+<!-- Deadline Item -->
+<div class="bg-stone-900 border-[3px] border-stone-800 p-4 flex justify-between items-center hover:border-primary transition-colors cursor-pointer group">
+<div>
+<h4 class="text-white font-bold text-lg">Income Tax Filing</h4>
+<p class="text-stone-500 text-sm font-bold">Yearly Compliance</p>
+</div>
+<div class="bg-primary px-3 py-1 border-[2px] border-black neo-shadow text-black font-black text-xs uppercase whitespace-nowrap">
+                5 DAYS LEFT
+              </div>
+</div>
+</div>
+</div>
+<!-- Marquee Strip -->
+<div class="mt-auto bg-primary border-t-[3px] border-black py-3 marquee">
+<div class="marquee-content font-black text-black text-sm uppercase tracking-widest">
+            ★ EXAM IN 12 DAYS ★ ASSIGNMENT DUE IN 3 DAYS ★ EXAM IN 12 DAYS ★ ASSIGNMENT DUE IN 3 DAYS ★ EXAM IN 12 DAYS ★ ASSIGNMENT DUE IN 3 DAYS ★ EXAM IN 12 DAYS ★ ASSIGNMENT DUE IN 3 DAYS ★
+          </div>
+</div>
+</div>
+</section>
+<!-- Bottom: Today's Timeline -->
+<section>
+<div class="bg-white border-[3px] border-black p-8 neo-shadow">
+<div class="flex justify-between items-end mb-10">
+<div>
+<h2 class="text-3xl font-black uppercase tracking-tighter">TODAY'S TIMELINE</h2>
+<p class="text-stone-500 font-bold">DAILY ALLOCATION ENGINE</p>
+</div>
+<div class="text-right">
+<span class="text-4xl font-black block leading-none">14:38</span>
+<span class="text-[10px] font-black uppercase tracking-widest bg-stone-100 px-2 py-1 border-[2px] border-black mt-2 inline-block">LIVE VIEW</span>
+</div>
+</div>
+<div class="relative pt-12 pb-8">
+<!-- The Timeline Track -->
+<div class="h-16 w-full border-y-[3px] border-black bg-stone-50 flex items-center relative">
+<!-- Grid Lines (Subtle) -->
+<div class="absolute inset-0 flex justify-between pointer-events-none px-4">
+<div class="h-full border-r-[1px] border-stone-200"></div>
+<div class="h-full border-r-[1px] border-stone-200"></div>
+<div class="h-full border-r-[1px] border-stone-200"></div>
+<div class="h-full border-r-[1px] border-stone-200"></div>
+<div class="h-full border-r-[1px] border-stone-200"></div>
+<div class="h-full border-r-[1px] border-stone-200"></div>
+<div class="h-full border-r-[1px] border-stone-200"></div>
+<div class="h-full border-r-[1px] border-stone-200"></div>
+<div class="h-full border-r-[1px] border-stone-200"></div>
+<div class="h-full border-r-[1px] border-stone-200"></div>
+<div class="h-full border-r-[1px] border-stone-200"></div>
+</div>
+<!-- Event Blocks -->
+<div class="absolute left-[10%] w-[15%] h-full bg-accent-teal/30 border-x-[3px] border-black flex items-center justify-center cursor-pointer hover:bg-accent-teal/50 transition-colors">
+<span class="text-[10px] font-black uppercase text-center leading-none">DEEP WORK<br/>1</span>
+</div>
+<div class="absolute left-[35%] w-[12%] h-full bg-primary/30 border-x-[3px] border-black flex items-center justify-center cursor-pointer hover:bg-primary/50 transition-colors">
+<span class="text-[10px] font-black uppercase text-center leading-none">STRATEGY<br/>SYNC</span>
+</div>
+<div class="absolute left-[55%] w-[20%] h-full bg-accent-purple/30 border-x-[3px] border-black flex items-center justify-center cursor-pointer hover:bg-accent-purple/50 transition-colors">
+<span class="text-[10px] font-black uppercase text-center leading-none">CORE<br/>DEV</span>
+</div>
+<!-- Current Time Line (DYNAMIC) -->
+<div id="nowMarker" class="absolute h-24 top-1/2 -translate-y-1/2 w-1 bg-error z-10">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 -mt-4 bg-error text-white text-[10px] font-black px-1 leading-none py-1 border-[1px] border-black">
+<span id="nowTime">NOW</span>
+</div>
+</div>
+</div>
+<!-- Time Labels -->
+<div class="flex justify-between mt-4 px-0">
+<span class="text-[10px] font-black w-8">6 AM</span>
+<span class="text-[10px] font-black w-8 text-center">8 AM</span>
+<span class="text-[10px] font-black w-8 text-center">10 AM</span>
+<span class="text-[10px] font-black w-8 text-center">12 PM</span>
+<span class="text-[10px] font-black w-8 text-center">2 PM</span>
+<span class="text-[10px] font-black w-8 text-center">4 PM</span>
+<span class="text-[10px] font-black w-8 text-center">6 PM</span>
+<span class="text-[10px] font-black w-8 text-center">8 PM</span>
+<span class="text-[10px] font-black w-8 text-center">10 PM</span>
+<span class="text-[10px] font-black w-8 text-right">11 PM</span>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t-[3px] border-black flex flex-wrap gap-4">
+<div class="flex items-center gap-2">
+<div class="w-4 h-4 bg-accent-teal border-[2px] border-black"></div>
+<span class="text-xs font-black uppercase">Deep Work</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-4 h-4 bg-primary border-[2px] border-black"></div>
+<span class="text-xs font-black uppercase">Meetings</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-4 h-4 bg-accent-purple border-[2px] border-black"></div>
+<span class="text-xs font-black uppercase">Development</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-4 h-4 bg-accent-coral border-[2px] border-black"></div>
+<span class="text-xs font-black uppercase">Urgent</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Visual Anchor Element -->
+<div class="fixed bottom-8 right-8 w-16 h-16 bg-accent-coral border-[3px] border-black neo-shadow flex items-center justify-center transform rotate-12 z-50 pointer-events-none">
+<span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+
+<script>
+// LIVE DYNAMIC TIME & COUNTDOWN SYSTEM
+// Target: UPSC PRELIMS 2026 (June 9, 2026)
+const targetDate = new Date('2026-06-09').getTime();
+
+function updateAllTimeSections() {
+    const now = new Date();
+    
+    // ============= COUNTDOWN TO TARGET =============
+    const timeRemaining = targetDate - now.getTime();
+    if (timeRemaining > 0) {
+        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const mins = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        const secs = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+        
+        // Update countdown display boxes
+        const countdownDivs = document.querySelectorAll('.flex.flex-col.items-center.border-\\[3px\\].border-yellow-400\\/30');
+        if (countdownDivs.length >= 4) {
+            countdownDivs[0].querySelector('span:first-child').innerText = String(days).padStart(2, '0');
+            countdownDivs[1].querySelector('span:first-child').innerText = String(hours).padStart(2, '0');
+            countdownDivs[2].querySelector('span:first-child').innerText = String(mins).padStart(2, '0');
+            countdownDivs[3].querySelector('span:first-child').innerText = String(secs).padStart(2, '0');
+        }
+    }
+    
+    // ============= LIVE CURRENT TIME =============
+    const hours24 = String(now.getHours()).padStart(2, '0');
+    const mins2 = String(now.getMinutes()).padStart(2, '0');
+    const timeDisplay = document.querySelector('.text-4xl.font-black.block.leading-none');
+    if (timeDisplay) timeDisplay.innerText = `${hours24}:${mins2}`;
+    
+    // ============= MONTHLY PROGRESS (Current Month) =============
+    const monthNames = ['JANUARY', 'FEBRUARY', 'MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER'];
+    const currentMonth = monthNames[now.getMonth()];
+    const daysInMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
+    const dayOfMonth = now.getDate();
+    const monthProgress = Math.round((dayOfMonth / daysInMonth) * 100);
+    
+    // Update month progress sections
+    document.querySelectorAll('.text-sm.uppercase.tracking-\\[0\\.2em\\].mb-4.flex.justify-between').forEach((section, index) => {
+        if (index === 0) {
+            // Month section
+            section.querySelector('span:first-child').innerText = currentMonth;
+            section.querySelector('span:last-child').innerText = `${monthProgress}% GONE`;
+            const progressBar = section.parentElement.querySelector('.flex.gap-1.h-12');
+            if (progressBar) {
+                const filledBoxes = Math.round((monthProgress / 100) * 6);
+                progressBar.innerHTML = '';
+                for (let i = 0; i < 6; i++) {
+                    const box = document.createElement('div');
+                    box.className = i < filledBoxes ? 'flex-1 bg-teal neo-border' : 'flex-[6] bg-background neo-border';
+                    progressBar.appendChild(box);
+                }
+            }
+        }
+    });
+    
+    // ============= YEARLY PROGRESS =============
+    const dayOfYear = Math.floor((now - new Date(now.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
+    const daysInYear = new Date(now.getFullYear() + 1, 0, 0).getDate();
+    const yearProgress = Math.round((dayOfYear / daysInYear) * 100);
+    
+    document.querySelectorAll('.text-xl.font-black.uppercase.tracking-tight').forEach(el => {
+        if (el.innerText.includes('2025') || el.innerText.includes('2026')) {
+            el.parentElement.parentElement.querySelector('.text-3xl').innerText = `${yearProgress}%`;
+        }
+    });
+    
+    // ============= LIFE PROGRESS (EST. LIFE SPAN) =============
+    // Estimate: 80 years = ~29200 days
+    const birthYear = 2005; // Assuming user born in 2005
+    const estimatedDeathYear = birthYear + 80; // 2085
+    const totalDaysInLife = 80 * 365.25;
+    const ageInDays = Math.floor((now - new Date(birthYear, 0, 0)) / 1000 / 60 / 60 / 24);
+    const lifeProgress = Math.round((ageInDays / totalDaysInLife) * 100);
+    
+    document.querySelectorAll('*').forEach(el => {
+        if (el.innerText && el.innerText.includes('EST. LIFE')) {
+            const percentSpan = el.parentElement.querySelector('.text-3xl');
+            if (percentSpan) percentSpan.innerText = `${lifeProgress}%`;
+        }
+    });
+}
+
+setInterval(updateAllTimeSections, 1000);
+updateAllTimeSections();
+
+// POMODORO TIMER
+let timerMode = 'FOCUS';
+let timeLeft = 25 * 60;
+let timerInterval = null;
+let isRunning = false;
+
+document.addEventListener('DOMContentLoaded', () => {
+    const userId = localStorage.getItem('userId');
+    if (!userId) {
+        window.location.href = '../index.html';
+        return;
+    }
+    
+    const username = localStorage.getItem('username');
+    if (username) {
+        document.querySelectorAll('*').forEach(el => {
+            if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
+                if (el.innerText && el.innerText.includes('STUDENT')) {
+                    el.innerText = el.innerText.replace('STUDENT', username.toUpperCase());
+                }
+            }
+        });
+    }
+
+    // Logout button
+    document.querySelectorAll('span.material-symbols-outlined').forEach(s => {
+        if (s.getAttribute('data-icon') === 'account_circle') {
+            let p = s.parentElement;
+            if (p) {
+                p.style.cursor = 'pointer';
+                p.title = 'Click to Logout';
+                p.onclick = () => {
+                    localStorage.clear();
+                    window.location.href = '../index.html';
+                };
+            }
+        }
+    });
+
+    updateTimerDisplay();
+    setupTimerControls();
+});
+
+function setupTimerControls() {
+    // Find all buttons and attach proper handlers
+    document.querySelectorAll('button').forEach(btn => {
+        const text = btn.innerText || '';
+        if (text.includes('START SESSION')) {
+            btn.onclick = toggleTimer;
+            btn.id = 'startBtn';
+        } else if (text.includes('FOCUS')) {
+            btn.onclick = () => setTimerMode('FOCUS', 25 * 60);
+        } else if (text.includes('SHORT')) {
+            btn.onclick = () => setTimerMode('SHORT_BREAK', 5 * 60);
+        } else if (text.includes('LONG')) {
+            btn.onclick = () => setTimerMode('LONG_BREAK', 15 * 60);
+        }
+    });
+}
+
+function setTimerMode(mode, seconds) {
+    if (isRunning) {
+        clearInterval(timerInterval);
+        isRunning = false;
+    }
+    timerMode = mode;
+    timeLeft = seconds;
+    updateTimerDisplay();
+}
+
+function updateTimerDisplay() {
+    // Find all elements that might display the timer
+    document.querySelectorAll('*').forEach(el => {
+        if (el.innerText && el.innerText.match(/^\d{1,2}:\d{2}$/) && el.style.fontSize === '') {
+            const m = Math.floor(timeLeft / 60).toString().padStart(2, '0');
+            const s = (timeLeft % 60).toString().padStart(2, '0');
+            if (parseInt(m) < 100) el.innerText = `${m}:${s}`;
+        }
+    });
+}
+
+function toggleTimer() {
+    if (isRunning) {
+        clearInterval(timerInterval);
+        isRunning = false;
+        const btn = document.getElementById('startBtn');
+        if (btn) btn.innerHTML = '<span class="material-symbols-outlined">play_arrow</span> START SESSION';
+    } else {
+        isRunning = true;
+        const btn = document.getElementById('startBtn');
+        if (btn) btn.innerHTML = '<span class="material-symbols-outlined">pause</span> PAUSE';
+        
+        timerInterval = setInterval(() => {
+            if (timeLeft > 0) {
+                timeLeft--;
+                updateTimerDisplay();
+            } else {
+                clearInterval(timerInterval);
+                alert(`${timerMode} complete!`);
+                isRunning = false;
+                const btn = document.getElementById('startBtn');
+                if (btn) btn.innerHTML = '<span class="material-symbols-outlined">play_arrow</span> START SESSION';
+                setTimerMode('FOCUS', 25 * 60);
+            }
+        }, 1000);
+    }
+}
+
+// ============= DYNAMIC TIMELINE GOALS =============
+let timelineGoals = JSON.parse(localStorage.getItem('timelineGoals') || '[]');
+
+function setupTimelineGoals() {
+    // Try to add goal button near the start session button if it exists
+    const pomodoroSection = document.querySelector('section[class*="bg-black"], section[class*="stone"]');
+    if (!pomodoroSection) {
+        console.log('[TIMELINE] Pomodoro section not found yet');
+        return;
+    }
+    
+    // Check if ADD GOAL button already exists
+    if (document.querySelector('[data-add-goal-btn]')) return;
+    
+    // Add goal creation button at the end of pomodoro section
+    const addGoalBtn = document.createElement('button');
+    addGoalBtn.setAttribute('data-add-goal-btn', 'true');
+    addGoalBtn.className = 'bg-yellow-400 text-black px-4 py-2 font-black text-xs uppercase border-2 border-black';
+    addGoalBtn.innerText = '+ ADD TIME GOAL';
+    addGoalBtn.onclick = addTimelineGoal;
+    
+    // Insert after the pomodoro section (before next section)
+    if (pomodoroSection.nextElementSibling) {
+        pomodoroSection.nextElementSibling.parentElement.insertBefore(addGoalBtn, pomodoroSection.nextElementSibling);
+    } else {
+        pomodoroSection.parentElement.appendChild(addGoalBtn);
+    }
+    
+    renderTimelineGoals();
+    console.log('[TIMELINE] Goal button added');
+}
+
+function addTimelineGoal() {
+    const time = prompt('Enter time (HH:MM format 0-23:00-59)', '09:00');
+    if (!time || !time.match(/^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/)) {
+        alert('Invalid format! Use HH:MM (24-hour)');
+        return;
+    }
+    
+    const goalName = prompt('Enter goal/task name (max 20 chars)', 'NEW_TASK');
+    if (!goalName) return;
+    
+    const goal = {
+        time: time,
+        name: goalName.substring(0, 20).toUpperCase(),
+        color: ['bg-accent-teal/30', 'bg-[#746400]/30', 'bg-accent-coral/30', 'bg-accent-purple/30'][Math.floor(Math.random() * 4)]
+    };
+    
+    timelineGoals.push(goal);
+    localStorage.setItem('timelineGoals', JSON.stringify(timelineGoals));
+    renderTimelineGoals();
+    alert(`✓ Goal "${goalName}" added at ${time}`);
+}
+
+function renderTimelineGoals() {
+    // Find the time track where we render goals
+    const timelineTrack = document.querySelector('.h-16\\.w-full\\.border-y-\\[3px\\]');
+    if (!timelineTrack) return;
+    
+    // Remove existing goal blocks
+    document.querySelectorAll('[data-goal-block]').forEach(el => el.remove());
+    
+    timelineGoals.forEach((goal, idx) => {
+        const [hours, mins] = goal.time.split(':').map(Number);
+        const timePercent = ((hours + mins / 60) / 24) * 100;
+        
+        const goalBlock = document.createElement('div');
+        goalBlock.setAttribute('data-goal-block', 'true');
+        goalBlock.className = `absolute ${goal.color} border-x-[3px] border-black flex items-center justify-center cursor-pointer hover:opacity-100 opacity-80 transition-opacity text-[10px] font-black uppercase text-center leading-none p-1`;
+        goalBlock.style.left = `${timePercent}%`;
+        goalBlock.style.width = '8%';
+        goalBlock.style.minHeight = '40px';
+        goalBlock.innerHTML = `<span>${goal.name.substring(0, 12)}</span>`;
+        goalBlock.title = `Click to delete: ${goal.name} @ ${goal.time}`;
+        goalBlock.onclick = (e) => {
+            e.stopPropagation();
+            if (confirm(`Delete goal "${goal.name}" at ${goal.time}?`)) {
+                timelineGoals.splice(idx, 1);
+                localStorage.setItem('timelineGoals', JSON.stringify(timelineGoals));
+                renderTimelineGoals();
+            }
+        };
+        timelineTrack.appendChild(goalBlock);
+    });
+}
+
+// Initialize timeline goals on page load
+document.addEventListener('DOMContentLoaded', setupTimelineGoals);
+
+// ============= DYNAMIC NOW MARKER =============
+function updateNowMarker() {
+    const now = new Date();
+    const currentHour = now.getHours();
+    const currentMin = now.getMinutes();
+    const currentTime = currentHour + (currentMin / 60);
+    
+    // Timeline is 6 AM (6) to 11 PM (23) = 17 hours
+    const timelineStart = 6;
+    const timelineEnd = 23;
+    const timelineRange = timelineEnd - timelineStart;
+    
+    // If current time is outside timeline range, hide marker
+    const nowMarker = document.getElementById('nowMarker');
+    if (currentTime < timelineStart || currentTime > timelineEnd) {
+        if (nowMarker) nowMarker.style.display = 'none';
+        return;
+    }
+    
+    // Calculate position as percentage (0% = 6 AM, 100% = 11 PM)
+    const positionPercent = ((currentTime - timelineStart) / timelineRange) * 100;
+    
+    if (nowMarker) {
+        nowMarker.style.left = `${positionPercent}%`;
+        nowMarker.style.display = 'block';
+        
+        // Update time display
+        const nowTimeEl = document.getElementById('nowTime');
+        if (nowTimeEl) {
+            const period = currentHour >= 12 ? 'PM' : 'AM';
+            const displayHour = currentHour > 12 ? currentHour - 12 : (currentHour === 0 ? 12 : currentHour);
+            const displayMin = String(currentMin).padStart(2, '0');
+            nowTimeEl.textContent = `${displayHour}:${displayMin} ${period}`;
+        }
+        
+        console.log(`[NOW MARKER] Updated to ${positionPercent.toFixed(1)}% (${currentTime.toFixed(2)}h)`);
+    }
+}
+
+// Update immediately and every second
+updateNowMarker();
+setInterval(updateNowMarker, 1000);
+</script>
+
+</body></html>

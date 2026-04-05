@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GRIND | WHITEBOARD</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-dim": "#665800",
+                    "inverse-on-surface": "#9f9d93",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#e6e3d4",
+                    "on-tertiary-fixed-variant": "#790214",
+                    "on-secondary-fixed": "#004844",
+                    "background": "#fffbff",
+                    "secondary": "#00716b",
+                    "on-surface": "#393831",
+                    "error-dim": "#b92902",
+                    "error-container": "#f95630",
+                    "on-tertiary": "#ffffff",
+                    "on-background": "#393831",
+                    "primary-fixed-dim": "#ebce1e",
+                    "outline-variant": "#bcb9af",
+                    "on-primary-fixed-variant": "#655800",
+                    "surface-bright": "#fffbff",
+                    "surface-container-highest": "#ece8da",
+                    "surface": "#fffbff",
+                    "primary-container": "#fadd30",
+                    "surface-container-high": "#f2eee1",
+                    "surface-container-low": "#fdf9ed",
+                    "tertiary-container": "#ff928e",
+                    "on-secondary-container": "#005c57",
+                    "on-primary-container": "#5b4e00",
+                    "tertiary": "#b6353a",
+                    "inverse-primary": "#fadd30",
+                    "outline": "#838178",
+                    "secondary-fixed-dim": "#6ce8de",
+                    "secondary-container": "#7cf6ec",
+                    "on-surface-variant": "#66645c",
+                    "secondary-dim": "#00635e",
+                    "tertiary-fixed-dim": "#ff7a79",
+                    "on-error-container": "#520c00",
+                    "tertiary-fixed": "#ff928e",
+                    "on-tertiary-fixed": "#3a0005",
+                    "primary": "#746400",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#f7f4e7",
+                    "inverse-surface": "#0f0e09",
+                    "secondary-fixed": "#7cf6ec",
+                    "surface-tint": "#746400",
+                    "primary-fixed": "#fadd30",
+                    "tertiary-dim": "#a5292f",
+                    "surface-variant": "#ece8da",
+                    "on-tertiary-container": "#69000f",
+                    "on-primary-fixed": "#453c00",
+                    "error": "#be2d06",
+                    "on-secondary-fixed-variant": "#006761"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Space Grotesk"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #FFFBF0;
+        }
+        .dot-grid {
+            background-image: radial-gradient(#1A1A1A 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .neo-shadow {
+            box-shadow: 5px 5px 0px #1A1A1A;
+        }
+        .neo-shadow-lg {
+            box-shadow: 8px 8px 0px #1A1A1A;
+        }
+        .neo-shadow-sm {
+            box-shadow: 3px 3px 0px #1A1A1A;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 700, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f7f4e7;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #1A1A1A;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="overflow-hidden flex">
+<!-- SideNavBar (from Shared Components JSON) -->
+<aside class="fixed left-0 top-0 h-full flex flex-col justify-between z-40 w-[240px] border-r-[3px] border-stone-900 bg-stone-950 shadow-[5px_0px_0px_0px_rgba(26,26,26,1)]">
+<div class="flex flex-col">
+<div class="p-6 border-b-[3px] border-stone-900 mb-2">
+<div class="text-[28px] font-black text-yellow-400 flex items-center gap-2 uppercase tracking-wider font-['Space_Grotesk']">
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                    SANKALP
+                </div>
+<div class="text-[10px] text-yellow-400/60 font-bold uppercase tracking-[0.2em] mt-1">PRODUCTIVITY ENGINE</div>
+</div>
+<nav class="flex flex-col">
+<!-- HOME - ACTIVE -->
+<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 transition-all    font-['Space_Grotesk'] font-bold uppercase tracking-wider hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200" href="../home_dashboard_1/code.html">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+                    HOME
+                </a>
+<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../tasks_streak_1/code.html">
+<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+                    TASKS &amp; STREAK
+                </a>
+<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../time_awareness_1/code.html">
+<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+                    TIME AWARENESS
+                </a>
+<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../skills_goals_1/code.html">
+<span class="material-symbols-outlined" data-icon="ads_click">ads_click</span>
+                    SKILLS &amp; GOALS
+                </a>
+<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../integrations_hub_1/code.html">
+<span class="material-symbols-outlined" data-icon="extension">extension</span>
+                    INTEGRATIONS
+                </a>
+<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../productivity_tools_1/code.html">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+                    PRODUCTIVITY
+                </a>
+<a class="border-l-[6px] border-yellow-400 bg-stone-900 text-yellow-400 py-4 px-6 flex items-center gap-4    transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider translate-x-1" href="../whiteboard_canvas_1/code.html">
+<span class="material-symbols-outlined" data-icon="draw">draw</span>
+                    WHITEBOARD
+                </a>
+<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../settings_1/code.html">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                    SETTINGS
+                </a>
+</nav>
+</div>
+<div class="border-t-[3px] border-stone-900">
+<div class="p-6 flex flex-col gap-4">
+<div class="flex items-center gap-3 text-white">
+<span class="material-symbols-outlined text-yellow-400" data-icon="account_circle">account_circle</span>
+<span class="text-xs tracking-widest font-black uppercase">STUDENT_01</span>
+</div>
+<div class="flex items-center gap-3 text-white">
+<span class="material-symbols-outlined text-yellow-400" data-icon="calendar_today">calendar_today</span>
+<span class="text-xs tracking-widest font-black uppercase">OCT 24, 2024</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-[240px] flex-1 flex flex-col h-screen relative bg-[#FFFBF0]">
+<!-- TOP HEADER BAR -->
+<header class="h-16 flex items-center justify-between px-8 bg-[#FFFBF0] border-b-[3px] border-[#1A1A1A] z-30">
+<div class="flex items-center gap-8">
+<h1 class="text-2xl font-black tracking-tight text-[#1A1A1A] uppercase">UNTITLED BOARD</h1>
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-[#1A1A1A] bg-[#4ECDC4] flex items-center justify-center text-[10px] font-black">JD</div>
+<div class="w-8 h-8 rounded-full border-2 border-[#1A1A1A] bg-[#FF6B6B] flex items-center justify-center text-[10px] font-black">AL</div>
+<div class="w-8 h-8 rounded-full border-2 border-[#1A1A1A] bg-[#A29BFE] flex items-center justify-center text-[10px] font-black">KW</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-4 py-2 bg-[#FFE135] border-[3px] border-[#1A1A1A] neo-shadow-sm font-black text-sm uppercase hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[5px_5px_0px_#1A1A1A] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[1px_1px_0px_#1A1A1A] transition-all">
+                    + NEW BOARD
+                </button>
+<button class="px-4 py-2 bg-white border-[3px] border-[#1A1A1A] neo-shadow-sm font-black text-sm uppercase flex items-center gap-2 hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[5px_5px_0px_#1A1A1A] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[1px_1px_0px_#1A1A1A] transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="download">download</span> EXPORT PNG
+                </button>
+<button class="px-4 py-2 bg-[#4ECDC4] border-[3px] border-[#1A1A1A] neo-shadow-sm font-black text-sm uppercase flex items-center gap-2 hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[5px_5px_0px_#1A1A1A] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[1px_1px_0px_#1A1A1A] transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="link">link</span> SHARE
+                </button>
+</div>
+</header>
+<div class="flex flex-1 overflow-hidden relative">
+<!-- LEFT TOOLBAR -->
+<nav class="w-16 bg-[#1A1A1A] flex flex-col items-center py-6 gap-6 z-30 custom-scrollbar overflow-y-auto">
+<!-- Group 1: Selection -->
+<div class="flex flex-col gap-2">
+<button class="w-10 h-10 bg-[#FFE135] border-2 border-[#1A1A1A] flex items-center justify-center text-[#1A1A1A]" title="Select">
+<span class="material-symbols-outlined" data-icon="near_me" style="font-variation-settings: 'FILL' 1;">near_me</span>
+</button>
+<button class="w-10 h-10 bg-[#FFFBF0] border-2 border-[#1A1A1A] flex items-center justify-center text-[#1A1A1A]" title="Pan">
+<span class="material-symbols-outlined" data-icon="pan_tool">pan_tool</span>
+</button>
+</div>
+<div class="w-8 h-[2px] bg-stone-700"></div>
+<!-- Group 2: Drawing Tools -->
+<div class="flex flex-col gap-2">
+<button class="w-10 h-10 bg-[#FFFBF0] border-2 border-[#1A1A1A] flex items-center justify-center text-[#1A1A1A]" title="Pencil">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="w-10 h-10 bg-[#FFFBF0] border-2 border-[#1A1A1A] flex items-center justify-center text-[#1A1A1A]" title="Marker">
+<span class="material-symbols-outlined" data-icon="border_color">border_color</span>
+</button>
+<button class="w-10 h-10 bg-[#FFFBF0] border-2 border-[#1A1A1A] flex items-center justify-center text-[#1A1A1A]" title="Rectangle">
+<span class="material-symbols-outlined" data-icon="rectangle">rectangle</span>
+</button>
+<button class="w-10 h-10 bg-[#FFFBF0] border-2 border-[#1A1A1A] flex items-center justify-center text-[#1A1A1A]" title="Ellipse">
+<span class="material-symbols-outlined" data-icon="circle">circle</span>
+</button>
+<button class="w-10 h-10 bg-[#FFFBF0] border-2 border-[#1A1A1A] flex items-center justify-center text-[#1A1A1A]" title="Arrow">
+<span class="material-symbols-outlined" data-icon="trending_flat">trending_flat</span>
+</button>
+<button class="w-10 h-10 bg-[#FFFBF0] border-2 border-[#1A1A1A] flex items-center justify-center text-[#1A1A1A]" title="Connector">
+<span class="material-symbols-outlined" data-icon="mediation">mediation</span>
+</button>
+<button class="w-10 h-10 bg-[#FFFBF0] border-2 border-[#1A1A1A] flex items-center justify-center text-[#1A1A1A]" title="Diamond">
+<span class="material-symbols-outlined" data-icon="change_history" style="transform: rotate(45deg);">change_history</span>
+</button>
+<button class="w-10 h-10 bg-[#FFFBF0] border-2 border-[#1A1A1A] flex items-center justify-center text-[#1A1A1A]" title="Star">
+<span class="material-symbols-outlined" data-icon="star">star</span>
+</button>
+</div>
+<div class="w-8 h-[2px] bg-stone-700"></div>
+<!-- Group 3: Objects -->
+<div class="flex flex-col gap-2">
+<button class="w-10 h-10 bg-[#FFFBF0] border-2 border-[#1A1A1A] flex items-center justify-center text-[#1A1A1A]" title="Text">
+<span class="material-symbols-outlined" data-icon="title">title</span>
+</button>
+<button class="w-10 h-10 bg-[#FFFBF0] border-2 border-[#1A1A1A] flex items-center justify-center text-[#1A1A1A]" title="Image">
+<span class="material-symbols-outlined" data-icon="image">image</span>
+</button>
+<button class="w-10 h-10 bg-[#FFE135] border-2 border-[#1A1A1A] flex items-center justify-center text-[#1A1A1A]" title="Sticky Note">
+<span class="material-symbols-outlined" data-icon="sticky_note_2">sticky_note_2</span>
+</button>
+<button class="w-10 h-10 bg-[#FFFBF0] border-2 border-[#1A1A1A] flex items-center justify-center text-[#1A1A1A]" title="Templates">
+<span class="material-symbols-outlined" data-icon="dashboard_customize">dashboard_customize</span>
+</button>
+</div>
+<div class="w-8 h-[2px] bg-stone-700"></div>
+<!-- Group 4: Actions -->
+<div class="flex flex-col gap-2">
+<button class="w-10 h-10 bg-[#FFFBF0] border-2 border-[#1A1A1A] flex items-center justify-center text-[#1A1A1A]" title="Undo">
+<span class="material-symbols-outlined" data-icon="undo">undo</span>
+</button>
+<button class="w-10 h-10 bg-[#FFFBF0] border-2 border-[#1A1A1A] flex items-center justify-center text-[#1A1A1A]" title="Redo">
+<span class="material-symbols-outlined" data-icon="redo">redo</span>
+</button>
+<button class="w-10 h-10 bg-[#FFFBF0] border-2 border-[#1A1A1A] flex items-center justify-center text-[#1A1A1A] hover:bg-[#FF6B6B]" title="Delete">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+<button class="w-10 h-10 bg-[#FFFBF0] border-2 border-[#1A1A1A] flex items-center justify-center text-[#1A1A1A]" title="Lock">
+<span class="material-symbols-outlined" data-icon="lock">lock</span>
+</button>
+</div>
+<div class="mt-auto flex flex-col gap-2 pb-4">
+<button class="w-10 h-10 bg-[#FFFBF0] border-2 border-[#1A1A1A] flex items-center justify-center text-[#1A1A1A]" title="Zoom">
+<span class="material-symbols-outlined" data-icon="zoom_in">zoom_in</span>
+</button>
+<button class="w-10 h-10 bg-[#FFFBF0] border-2 border-[#1A1A1A] flex items-center justify-center text-[#1A1A1A]" title="Fit View">
+<span class="material-symbols-outlined" data-icon="fullscreen_exit">fullscreen_exit</span>
+</button>
+<button class="w-10 h-10 bg-[#FFE135] border-2 border-[#1A1A1A] flex items-center justify-center text-[#1A1A1A]" title="Toggle Grid">
+<span class="material-symbols-outlined" data-icon="grid_4x4">grid_4x4</span>
+</button>
+</div>
+</nav>
+<!-- CANVAS AREA -->
+<section class="flex-1 dot-grid relative overflow-auto p-12 custom-scrollbar">
+<!-- Wrapper for infinite feel -->
+<div class="min-w-[2000px] min-h-[2000px] relative">
+<!-- Example Shapes & Work -->
+<!-- Title/Header Area -->
+<div class="absolute top-20 left-40 bg-[#FFE135] border-[3px] border-[#1A1A1A] p-8 neo-shadow-lg max-w-md">
+<h2 class="text-4xl font-black uppercase mb-4 leading-none">Sprint Planning: Q4</h2>
+<p class="font-bold text-lg leading-snug">The goal is to increase output by 40% using the new editorial engine components.</p>
+<div class="mt-6 flex gap-2">
+<span class="px-2 py-1 bg-white border-2 border-[#1A1A1A] font-black text-xs">PRIORITY: HIGH</span>
+<span class="px-2 py-1 bg-[#4ECDC4] border-2 border-[#1A1A1A] font-black text-xs">PHASE 1</span>
+</div>
+</div>
+<!-- Sticky Notes Grid -->
+<div class="absolute top-[350px] left-40 flex gap-8">
+<div class="w-48 h-48 bg-[#FFE135] border-[3px] border-[#1A1A1A] p-4 neo-shadow flex flex-col justify-between">
+<p class="font-bold text-sm uppercase">Revamp CSS tokens to match Neo-Brutalism spec</p>
+<span class="text-[10px] font-black opacity-50 uppercase tracking-widest">BY KW @ 10:30</span>
+</div>
+<div class="w-48 h-48 bg-[#FF6B6B] border-[3px] border-[#1A1A1A] p-4 neo-shadow flex flex-col justify-between">
+<p class="font-bold text-sm uppercase text-white">Fix the infinite scroll logic for the canvas area</p>
+<span class="text-[10px] font-black opacity-70 uppercase tracking-widest text-white">BY AL @ 11:15</span>
+</div>
+<div class="w-48 h-48 bg-[#A29BFE] border-[3px] border-[#1A1A1A] p-4 neo-shadow flex flex-col justify-between">
+<p class="font-bold text-sm uppercase">Add multi-user cursor tracking</p>
+<span class="text-[10px] font-black opacity-50 uppercase tracking-widest">BY JD @ 09:45</span>
+</div>
+</div>
+<!-- Image with Arrow -->
+<div class="absolute top-20 left-[750px]">
+<div class="bg-white border-[3px] border-[#1A1A1A] p-4 neo-shadow-lg w-[400px]">
+<div class="aspect-video bg-stone-200 border-[3px] border-[#1A1A1A] mb-4 overflow-hidden">
+<img alt="Inspiration image" class="w-full h-full object-cover" data-alt="Modern architectural building with sharp angles and clean concrete lines against a bright blue sky, high contrast photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcpcUw4F-vKsPlXsBp7Vx0TE4bj_7b4szCcSv3af0xkus2T9424fDyVxd5EDELsZW3rJ2Rn5VIcm9tKDP1LumZoEhVU9FtLWovpw0h-d0clYvMvLloUR05mLWasRKXLWnvAwrhR0YuwCRV6kGzJML_fTFH93yRWEWH_Q__5inFHxVLZcE9K849IT6XJycHP1yzvohT6TLlDb91zemBQQH0waJ0SKuBd4LLaHFSUeRqlhOfXtB4xq-Kvij9lEN6EyvL2UGXZGmP4SI"/>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-black uppercase text-sm">Inspiration_01.png</span>
+<span class="material-symbols-outlined text-[#1A1A1A]" data-icon="more_vert">more_vert</span>
+</div>
+</div>
+<!-- Arrow SVG -->
+<div class="absolute -left-20 top-1/2 transform -translate-y-1/2">
+<svg fill="none" height="40" viewbox="0 0 100 40" width="100" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 20H90" stroke="#1A1A1A" stroke-dasharray="8 8" stroke-width="4"></path>
+<path d="M85 10L95 20L85 30" stroke="#1A1A1A" stroke-linecap="square" stroke-width="4"></path>
+</svg>
+</div>
+</div>
+<!-- Geometric Diagram -->
+<div class="absolute top-[650px] left-[500px] flex items-center gap-12">
+<div class="w-32 h-32 rounded-full bg-[#4ECDC4] border-[3px] border-[#1A1A1A] neo-shadow flex items-center justify-center font-black uppercase text-center p-2 text-xs">
+                            Ideation Phase
+                        </div>
+<div class="w-48 h-1 bg-[#1A1A1A]"></div>
+<div class="w-32 h-32 bg-[#FFE135] border-[3px] border-[#1A1A1A] neo-shadow flex items-center justify-center font-black uppercase text-center p-2 text-xs transform rotate-3">
+                            Design System
+                        </div>
+<div class="w-48 h-1 bg-[#1A1A1A]"></div>
+<div class="w-40 h-40 bg-[#A29BFE] border-[3px] border-[#1A1A1A] neo-shadow-lg flex items-center justify-center font-black uppercase text-center p-4 text-sm transform -rotate-2">
+                            Launch Engine
+                        </div>
+</div>
+<!-- Floating UI Controls Overlay inside Canvas -->
+<div class="fixed bottom-10 left-1/2 transform -translate-x-1/2 flex items-center gap-4 bg-white/80 backdrop-blur-md border-[3px] border-[#1A1A1A] p-3 neo-shadow-lg z-30">
+<button class="p-2 bg-[#FFE135] border-[3px] border-[#1A1A1A] neo-shadow-sm flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+<div class="px-4 font-black border-r-2 border-[#1A1A1A]">100%</div>
+<button class="p-2 hover:bg-stone-100 transition-colors">
+<span class="material-symbols-outlined" data-icon="remove">remove</span>
+</button>
+<div class="w-[3px] h-6 bg-[#1A1A1A] mx-2"></div>
+<button class="p-2 hover:bg-stone-100 transition-colors" title="Chat">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+</button>
+<button class="p-2 hover:bg-stone-100 transition-colors" title="Activity">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+</button>
+</div>
+<!-- Signature Decoration -->
+<div class="absolute bottom-40 right-40">
+<span class="material-symbols-outlined text-[120px] text-[#FF6B6B]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<div class="absolute -top-10 -right-10 bg-[#1A1A1A] text-[#FFE135] font-black p-4 uppercase transform rotate-12 neo-shadow">
+                            Final Review Required
+                        </div>
+</div>
+<!-- Additional Shapes to show density -->
+<div class="absolute top-[1000px] left-[150px] w-64 h-32 bg-transparent border-[3px] border-[#1A1A1A] neo-shadow flex items-center justify-center border-dashed">
+<span class="font-black opacity-30 uppercase tracking-widest">Drop Assets Here</span>
+</div>
+</div>
+</section>
+</div>
+<!-- Notification Toast -->
+<div class="fixed bottom-8 right-8 z-50 bg-[#4ECDC4] border-[3px] border-[#1A1A1A] p-4 neo-shadow flex items-center gap-4">
+<span class="material-symbols-outlined text-[#1A1A1A]" data-icon="cloud_done">cloud_done</span>
+<span class="font-black text-sm uppercase">All Changes Saved</span>
+</div>
+</main>
+
+<script>
+    // Global Auth Guard & Data Plugin
+    document.addEventListener('DOMContentLoaded', () => {
+        const userId = localStorage.getItem('userId');
+        if (!userId) {
+            window.location.href = '../index.html';
+            return;
+        }
+        
+        const username = localStorage.getItem('username');
+        if (username) {
+            // Update username in sidebars replacing STUDENT_01
+            document.querySelectorAll('*').forEach(el => {
+                if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
+                    if (el.innerText.includes('STUDENT_01')) {
+                        el.innerText = el.innerText.replace('STUDENT_01', username);
+                    }
+                }
+            });
+        }
+
+        // Make sidebars clickable for logout where account_circle resides
+        document.querySelectorAll('span').forEach(s => {
+            if(s.innerText.includes('account_circle')) {
+                let p = s.parentElement;
+                if(p) {
+                    p.style.cursor = 'pointer';
+                    p.title = 'Click to Logout';
+                    p.onclick = function() {
+                        localStorage.clear();
+                        window.location.href = '../index.html';
+                    };
+                }
+            }
+        });
+    });
+</script>
+
+</body></html>

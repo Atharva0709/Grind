@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-dim": "#665800",
+            "inverse-on-surface": "#9f9d93",
+            "on-secondary": "#ffffff",
+            "on-error": "#ffffff",
+            "surface-dim": "#e6e3d4",
+            "on-tertiary-fixed-variant": "#790214",
+            "on-secondary-fixed": "#004844",
+            "background": "#fffbff",
+            "secondary": "#00716b",
+            "on-surface": "#393831",
+            "error-dim": "#b92902",
+            "error-container": "#f95630",
+            "on-tertiary": "#ffffff",
+            "on-background": "#393831",
+            "primary-fixed-dim": "#ebce1e",
+            "outline-variant": "#bcb9af",
+            "on-primary-fixed-variant": "#655800",
+            "surface-bright": "#fffbff",
+            "surface-container-highest": "#ece8da",
+            "surface": "#fffbff",
+            "primary-container": "#fadd30",
+            "surface-container-high": "#f2eee1",
+            "surface-container-low": "#fdf9ed",
+            "tertiary-container": "#ff928e",
+            "on-secondary-container": "#005c57",
+            "on-primary-container": "#5b4e00",
+            "tertiary": "#b6353a",
+            "inverse-primary": "#fadd30",
+            "outline": "#838178",
+            "secondary-fixed-dim": "#6ce8de",
+            "secondary-container": "#7cf6ec",
+            "on-surface-variant": "#66645c",
+            "secondary-dim": "#00635e",
+            "tertiary-fixed-dim": "#ff7a79",
+            "on-error-container": "#520c00",
+            "tertiary-fixed": "#ff928e",
+            "on-tertiary-fixed": "#3a0005",
+            "primary": "#746400",
+            "on-primary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "surface-container": "#f7f4e7",
+            "inverse-surface": "#0f0e09",
+            "secondary-fixed": "#7cf6ec",
+            "surface-tint": "#746400",
+            "primary-fixed": "#fadd30",
+            "tertiary-dim": "#a5292f",
+            "surface-variant": "#ece8da",
+            "on-tertiary-container": "#69000f",
+            "on-primary-fixed": "#453c00",
+            "error": "#be2d06",
+            "on-secondary-fixed-variant": "#006761"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "fontFamily": {
+            "headline": ["Space Grotesk"],
+            "body": ["Space Grotesk"],
+            "label": ["Space Grotesk"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body { background-color: #FFFBF0; font-family: 'Space Grotesk', sans-serif; }
+    .neo-border { border: 3px solid #1A1A1A; }
+    .neo-shadow { box-shadow: 5px 5px 0px #1A1A1A; }
+    .neo-shadow-lg { box-shadow: 8px 8px 0px #1A1A1A; }
+    .neo-button-hover:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0px #1A1A1A; }
+    .neo-button-active:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0px #1A1A1A; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  </style>
+</head>
+<body class="text-[#1A1A1A] font-bold overflow-x-hidden">
+<!-- SIDE NAVBAR (Shared Component) -->
+<aside class="fixed left-0 top-0 h-full flex flex-col justify-between z-40 w-[240px] border-r-[3px] border-stone-900 bg-stone-950 shadow-[5px_0px_0px_0px_rgba(26,26,26,1)]">
+<div class="flex flex-col">
+<div class="p-6 border-b-[3px] border-stone-900 mb-2">
+<div class="text-[28px] font-black text-yellow-400 flex items-center gap-2 uppercase tracking-wider font-['Space_Grotesk']">
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                    SANKALP
+                </div>
+<div class="text-[10px] text-yellow-400/60 font-bold uppercase tracking-[0.2em] mt-1">PRODUCTIVITY ENGINE</div>
+</div>
+<nav class="flex flex-col">
+<!-- HOME - ACTIVE -->
+<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 transition-all    font-['Space_Grotesk'] font-bold uppercase tracking-wider hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200" href="../home_dashboard_1/code.html">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+                    HOME
+                </a>
+<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../tasks_streak_1/code.html">
+<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+                    TASKS &amp; STREAK
+                </a>
+<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../time_awareness_1/code.html">
+<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+                    TIME AWARENESS
+                </a>
+<a class="border-l-[6px] border-yellow-400 bg-stone-900 text-yellow-400 py-4 px-6 flex items-center gap-4    transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider translate-x-1" href="../skills_goals_1/code.html">
+<span class="material-symbols-outlined" data-icon="ads_click">ads_click</span>
+                    SKILLS &amp; GOALS
+                </a>
+<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../integrations_hub_1/code.html">
+<span class="material-symbols-outlined" data-icon="extension">extension</span>
+                    INTEGRATIONS
+                </a>
+<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../productivity_tools_1/code.html">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+                    PRODUCTIVITY
+                </a>
+<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../whiteboard_canvas_1/code.html">
+<span class="material-symbols-outlined" data-icon="draw">draw</span>
+                    WHITEBOARD
+                </a>
+<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../settings_1/code.html">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                    SETTINGS
+                </a>
+</nav>
+</div>
+<div class="border-t-[3px] border-stone-900">
+<div class="p-6 flex flex-col gap-4">
+<div class="flex items-center gap-3 text-white">
+<span class="material-symbols-outlined text-yellow-400" data-icon="account_circle">account_circle</span>
+<span class="text-xs tracking-widest font-black uppercase">STUDENT_01</span>
+</div>
+<div class="flex items-center gap-3 text-white">
+<span class="material-symbols-outlined text-yellow-400" data-icon="calendar_today">calendar_today</span>
+<span class="text-xs tracking-widest font-black uppercase">OCT 24, 2024</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- MAIN CANVAS -->
+<main class="ml-[240px] p-10 min-h-screen">
+<!-- TOP ROW: MONTHLY TARGET -->
+<section class="mb-10 relative">
+<div class="neo-border neo-shadow-lg bg-[#FFE135] p-10 relative overflow-hidden">
+<div class="flex flex-col gap-2 relative z-10">
+<p class="text-sm uppercase tracking-[0.3em] opacity-80">THIS MONTH YOU ARE MASTERING:</p>
+<h1 class="text-[72px] font-black leading-none mb-6 tracking-tighter">REACT.JS</h1>
+<div class="max-w-2xl">
+<div class="flex justify-between items-end mb-2">
+<span class="text-lg">MISSION PROGRESS</span>
+<span class="text-3xl">68%</span>
+</div>
+<!-- Block Progress -->
+<div class="neo-border bg-white h-8 flex overflow-hidden">
+<div class="h-full bg-[#4ECDC4] border-r-[3px] border-[#1A1A1A]" style="width: 68%"></div>
+</div>
+</div>
+</div>
+<!-- Decorative Shape -->
+<div class="absolute -bottom-10 -right-10 w-48 h-48 bg-[#A29BFE] neo-border rotate-12 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[80px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</section>
+<!-- ROW 2: SKILL INVENTORY & RADAR CHART -->
+<section class="grid grid-cols-1 md:grid-cols-10 gap-10 mb-10 items-stretch">
+<!-- LEFT: SKILL INVENTORY (55%) -->
+<div class="md:col-span-6 neo-border neo-shadow bg-[#4ECDC4] p-8 flex flex-col">
+<div class="flex justify-between items-start mb-8">
+<h2 class="text-3xl font-black uppercase italic">SKILL INVENTORY</h2>
+<button class="neo-border neo-shadow bg-white px-4 py-2 text-sm neo-button-hover neo-button-active">ADD SKILL +</button>
+</div>
+<div class="grid grid-cols-2 gap-8 flex-grow">
+<!-- Column 1: MASTERED -->
+<div class="space-y-4">
+<h3 class="text-xl flex items-center gap-2 mb-4 bg-[#1A1A1A] text-white px-3 py-1 w-fit">
+              MASTERED <span class="material-symbols-outlined" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</h3>
+<div class="bg-white neo-border p-4 space-y-4">
+<div class="flex flex-col gap-2">
+<div class="flex justify-between text-sm">
+<span>TYPESCRIPT</span>
+<span>100%</span>
+</div>
+<div class="h-2 bg-[#1A1A1A]"></div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between text-sm">
+<span>TAILWIND CSS</span>
+<span>95%</span>
+</div>
+<div class="h-2 bg-[#1A1A1A] w-[95%]"></div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between text-sm">
+<span>UI DESIGN</span>
+<span>90%</span>
+</div>
+<div class="h-2 bg-[#1A1A1A] w-[90%]"></div>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 mt-4">
+<span class="neo-border bg-[#FFE135] text-[10px] px-2 py-1">#FIGMA</span>
+<span class="neo-border bg-[#FFE135] text-[10px] px-2 py-1">#GIT</span>
+<span class="neo-border bg-[#FFE135] text-[10px] px-2 py-1">#DOCKER</span>
+</div>
+</div>
+<!-- Column 2: LEARNING -->
+<div class="space-y-4">
+<h3 class="text-xl flex items-center gap-2 mb-4 bg-[#FF6B6B] text-white px-3 py-1 w-fit">
+              LEARNING <span class="material-symbols-outlined text-white" data-icon="ads_click">ads_click</span>
+</h3>
+<div class="bg-white neo-border p-4 space-y-4">
+<div class="flex flex-col gap-2">
+<div class="flex justify-between text-sm">
+<span>NEXT.JS</span>
+<span>42%</span>
+</div>
+<div class="h-2 bg-[#FFFBF0] neo-border">
+<div class="h-full bg-[#FF6B6B]" style="width: 42%"></div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between text-sm">
+<span>RUST</span>
+<span>12%</span>
+</div>
+<div class="h-2 bg-[#FFFBF0] neo-border">
+<div class="h-full bg-[#FF6B6B]" style="width: 12%"></div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between text-sm">
+<span>POSTGRESQL</span>
+<span>78%</span>
+</div>
+<div class="h-2 bg-[#FFFBF0] neo-border">
+<div class="h-full bg-[#FF6B6B]" style="width: 78%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT: RADAR CHART (45%) -->
+<div class="md:col-span-4 neo-border neo-shadow bg-[#A29BFE] p-8 flex flex-col">
+<h2 class="text-3xl font-black uppercase italic mb-8">POWER STATS</h2>
+<div class="flex-grow flex items-center justify-center relative mb-8">
+<svg class="w-full max-w-[280px]" viewbox="0 0 200 200">
+<!-- Radar Grid -->
+<polygon fill="none" points="100,20 180,70 180,130 100,180 20,130 20,70" stroke="#1A1A1A" stroke-width="2"></polygon>
+<polygon fill="none" opacity="0.5" points="100,40 160,80 160,120 100,160 40,120 40,80" stroke="#1A1A1A" stroke-width="1"></polygon>
+<polygon fill="none" opacity="0.5" points="100,60 140,90 140,110 100,140 60,110 60,90" stroke="#1A1A1A" stroke-width="1"></polygon>
+<!-- Data Shape -->
+<polygon fill="#FFE135" fill-opacity="0.8" points="100,45 170,75 140,130 100,160 30,120 50,80" stroke="#1A1A1A" stroke-width="3"></polygon>
+<!-- Axis Labels (Simulated) -->
+<text font-size="8" font-weight="900" text-anchor="middle" x="100" y="15">FRONTEND</text>
+<text font-size="8" font-weight="900" text-anchor="start" x="185" y="65">BACKEND</text>
+<text font-size="8" font-weight="900" text-anchor="start" x="185" y="145">DSA</text>
+<text font-size="8" font-weight="900" text-anchor="middle" x="100" y="195">SOFT SKILLS</text>
+<text font-size="8" font-weight="900" text-anchor="end" x="15" y="145">DEVOPS</text>
+<text font-size="8" font-weight="900" text-anchor="end" x="15" y="65">DESIGN</text>
+</svg>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<span class="w-24 text-xs font-black">FRONTEND</span>
+<input class="flex-grow accent-[#1A1A1A]" type="range" value="80"/>
+</div>
+<div class="flex items-center gap-4">
+<span class="w-24 text-xs font-black">BACKEND</span>
+<input class="flex-grow accent-[#1A1A1A]" type="range" value="60"/>
+</div>
+<div class="flex items-center gap-4">
+<span class="w-24 text-xs font-black">DESIGN</span>
+<input class="flex-grow accent-[#1A1A1A]" type="range" value="95"/>
+</div>
+</div>
+</div>
+</section>
+<!-- ROW 3: SWOT BOARD -->
+<section>
+<div class="flex items-center gap-4 mb-6">
+<h2 class="text-4xl font-black uppercase">STRATEGIC ANALYSIS (SWOT)</h2>
+<div class="flex-grow h-[3px] bg-[#1A1A1A]"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-0 border-[3px] border-[#1A1A1A] neo-shadow-lg overflow-hidden">
+<!-- STRENGTHS -->
+<div class="p-8 bg-white border-r-[3px] border-b-[3px] border-[#1A1A1A] group hover:bg-[#55EFC4] transition-colors">
+<div class="flex items-center gap-3 mb-6">
+<span class="w-10 h-10 bg-[#55EFC4] neo-border flex items-center justify-center font-black text-xl">S</span>
+<h3 class="text-2xl font-black uppercase">STRENGTHS</h3>
+</div>
+<ul class="space-y-4">
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-[#1A1A1A]">bolt</span>
+<span>Fast adaptation to new frameworks.</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-[#1A1A1A]">bolt</span>
+<span>Strong visual design intuition.</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-[#1A1A1A]">bolt</span>
+<span>Advanced understanding of Tailwind and React ecosystem.</span>
+</li>
+</ul>
+</div>
+<!-- WEAKNESSES -->
+<div class="p-8 bg-white border-b-[3px] border-[#1A1A1A] group hover:bg-[#FF6B6B] transition-colors">
+<div class="flex items-center gap-3 mb-6">
+<span class="w-10 h-10 bg-[#FF6B6B] neo-border flex items-center justify-center font-black text-xl">W</span>
+<h3 class="text-2xl font-black uppercase">WEAKNESSES</h3>
+</div>
+<ul class="space-y-4">
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-[#1A1A1A]">close</span>
+<span>Struggle with complex data structures/algorithms.</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-[#1A1A1A]">close</span>
+<span>Lack of experience in large-scale system design.</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-[#1A1A1A]">close</span>
+<span>Time management under high-pressure deadlines.</span>
+</li>
+</ul>
+</div>
+<!-- OPPORTUNITIES -->
+<div class="p-8 bg-white border-r-[3px] border-[#1A1A1A] group hover:bg-[#4ECDC4] transition-colors">
+<div class="flex items-center gap-3 mb-6">
+<span class="w-10 h-10 bg-[#4ECDC4] neo-border flex items-center justify-center font-black text-xl">O</span>
+<h3 class="text-2xl font-black uppercase">OPPORTUNITIES</h3>
+</div>
+<ul class="space-y-4">
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-[#1A1A1A]">trending_up</span>
+<span>Expand into AI-driven UI components.</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-[#1A1A1A]">trending_up</span>
+<span>Contribute to Open Source libraries (React/Next.js).</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-[#1A1A1A]">trending_up</span>
+<span>Networking via local developer workshops.</span>
+</li>
+</ul>
+</div>
+<!-- THREATS -->
+<div class="p-8 bg-white group hover:bg-[#FF9A3C] transition-colors">
+<div class="flex items-center gap-3 mb-6">
+<span class="w-10 h-10 bg-[#FF9A3C] neo-border flex items-center justify-center font-black text-xl">T</span>
+<h3 class="text-2xl font-black uppercase">THREATS</h3>
+</div>
+<ul class="space-y-4">
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-[#1A1A1A]">warning</span>
+<span>Saturation of Frontend developers in current market.</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-[#1A1A1A]">warning</span>
+<span>Rapid obsolescence of specific JS framework tools.</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-[#1A1A1A]">warning</span>
+<span>Burnout from excessive "grind" culture.</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+</main>
+<!-- BACKGROUND TEXTURE (Subtle) -->
+<div class="fixed inset-0 pointer-events-none opacity-[0.03] z-[-1]" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC60_bM1vAy1DkZLRUdWKoTv0RR7kxzAqcI_q8LL8mthCEEySjbra5wUkgUcY5dpBXBaOi1FBCzfuzDGH_wSxvgg8io_ibgKEx_2Qkm73yrdhj1wUFHnQJZvGm1h1I1EzLgMVC1C343T0CgZ23hEfPz83n8hwDlBA1mGjFVpeWAdiOiq94lKgith9mFHrXbRy7vQwF7p2XLdNcyA9PMPxMvgRHlL2yeYxSIcJKWTKWutNoV7NN9c3Cjojb2vuZYHlQIgm_ohwPp00Y');">
+</div>
+
+<script>
+    // Global Auth Guard & Data Plugin
+    document.addEventListener('DOMContentLoaded', () => {
+        const userId = localStorage.getItem('userId');
+        if (!userId) {
+            window.location.href = '../index.html';
+            return;
+        }
+        
+        const username = localStorage.getItem('username');
+        if (username) {
+            // Update username in sidebars replacing STUDENT_01
+            document.querySelectorAll('*').forEach(el => {
+                if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
+                    if (el.innerText.includes('STUDENT_01')) {
+                        el.innerText = el.innerText.replace('STUDENT_01', username);
+                    }
+                }
+            });
+        }
+
+        // Make sidebars clickable for logout where account_circle resides
+        document.querySelectorAll('span').forEach(s => {
+            if(s.innerText.includes('account_circle')) {
+                let p = s.parentElement;
+                if(p) {
+                    p.style.cursor = 'pointer';
+                    p.title = 'Click to Logout';
+                    p.onclick = function() {
+                        localStorage.clear();
+                        window.location.href = '../index.html';
+                    };
+                }
+            }
+        });
+    });
+</script>
+
+</body></html>

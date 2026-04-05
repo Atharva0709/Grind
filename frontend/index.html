@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Grind OS - Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary": "#746400",
+            "primary-container": "#fadd30",
+            "coral": "#FF6B6B",
+            "teal": "#4ECDC4",
+            "error": "#be2d06"
+          },
+          "fontFamily": {
+            "headline": ["Space Grotesk"],
+            "body": ["Space Grotesk"]
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    body { background-color: #FFFBF0; font-family: 'Space Grotesk', sans-serif; }
+    .neo-shadow { box-shadow: 5px 5px 0px #1A1A1A; }
+    .neo-shadow-lg { box-shadow: 8px 8px 0px #1A1A1A; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  </style>
+</head>
+<body class="text-[#1A1A1A] font-bold h-screen flex flex-col items-center justify-center p-4">
+  
+  <div class="bg-white border-[4px] border-[#1A1A1A] p-10 neo-shadow-lg max-w-md w-full relative">
+    <div class="absolute -top-6 -right-6 w-12 h-12 bg-coral border-[3px] border-[#1A1A1A] flex items-center justify-center neo-shadow transform rotate-[15deg]">
+      <span class="material-symbols-outlined text-[#1A1A1A] font-black" style="font-variation-settings: 'FILL' 1;">star</span>
+    </div>
+
+    <div class="text-center mb-8">
+      <h1 class="text-5xl font-black text-primary uppercase tracking-tighter leading-none mb-2">SANKALP</h1>
+      <p class="text-[10px] tracking-[0.3em] font-black uppercase text-stone-500">SYSTEM AUTHENTICATION</p>
+    </div>
+
+    <form id="loginForm" class="flex flex-col gap-6">
+      <div class="flex flex-col gap-2">
+        <label class="uppercase text-xs font-black tracking-wider opacity-80">USERNAME</label>
+        <input id="username" type="text" placeholder="ENTER ID..." required
+               class="px-5 py-4 border-[3px] border-[#1A1A1A] text-lg font-bold uppercase focus:outline-none focus:bg-primary-container/20 w-full hover:bg-stone-50 transition-colors" />
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <label class="uppercase text-xs font-black tracking-wider opacity-80">PASSWORD</label>
+        <input id="password" type="password" placeholder="••••••••" required
+               class="px-5 py-4 border-[3px] border-[#1A1A1A] text-lg font-bold focus:outline-none focus:bg-primary-container/20 w-full hover:bg-stone-50 transition-colors" />
+      </div>
+
+      <div id="error-msg" class="hidden text-sm uppercase font-black tracking-wide"></div>
+
+      <button type="submit" class="w-full py-5 bg-teal font-black text-xl hover:bg-[#1A1A1A] hover:text-teal transition-all border-[3px] border-[#1A1A1A] neo-shadow flex justify-center items-center gap-2 mt-4">
+        BOOT SYSTEM <span class="material-symbols-outlined">power_settings_new</span>
+      </button>
+
+      <button type="button" id="registerBtn" class="w-full py-4 bg-white font-black text-sm uppercase hover:bg-primary/20 transition-all border-[3px] border-[#1A1A1A] hover:translate-x-[-2px] hover:translate-y-[-2px] active:translate-x-[2px] active:translate-y-[2px]">
+        REGISTER NEW ID
+      </button>
+    </form>
+  </div>
+
+  <script>
+    const API_URL = 'http://localhost:8082/api/users';
+    
+    const loginForm = document.getElementById('loginForm');
+    const registerBtn = document.getElementById('registerBtn');
+    const msgBox = document.getElementById('error-msg');
+
+    // Check if already logged in
+    window.addEventListener('load', () => {
+        const userId = localStorage.getItem('userId');
+        if (userId) {
+            window.location.href = './home_dashboard_1/code.html';
+        }
+    });
+
+    function showMessage(text, isError = true) {
+      msgBox.classList.remove('hidden', 'text-error', 'text-teal');
+      msgBox.classList.add(isError ? 'text-error' : 'text-teal');
+      msgBox.innerText = text;
+    }
+
+    // Handle Login
+    loginForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const username = document.getElementById('username').value.trim();
+        const password = document.getElementById('password').value;
+
+        try {
+            const resp = await fetch(`${API_URL}/login`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username, password })
+            });
+
+            if (resp.ok) {
+                const data = await resp.json();
+                localStorage.setItem('userId', data.id);
+                localStorage.setItem('username', data.username);
+                window.location.href = './home_dashboard_1/code.html';
+            } else {
+                showMessage('Invalid credentials. Please try again.');
+            }
+        } catch (err) {
+            showMessage('Connection error. Is the backend running?');
+        }
+    });
+
+    // Handle Registration 
+    registerBtn.addEventListener('click', async () => {
+        const username = document.getElementById('username').value.trim();
+        const password = document.getElementById('password').value;
+
+        if (!username || !password) {
+            showMessage('Please enter both username and password.');
+            return;
+        }
+
+        try {
+            const resp = await fetch(`${API_URL}/register`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username, password })
+            });
+
+            if (resp.ok) {
+                showMessage('Registration successful. You can now login.', false);
+                document.getElementById('username').value = '';
+                document.getElementById('password').value = '';
+            } else {
+                const text = await resp.text();
+                showMessage(text);
+            }
+        } catch (err) {
+            showMessage('Connection error. Is the backend running?');
+        }
+    });
+  </script>
+</body>
+</html>
