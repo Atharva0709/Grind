@@ -1,437 +1,490 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          "colors": {
-            "primary-dim": "#665800",
-            "inverse-on-surface": "#9f9d93",
-            "on-secondary": "#ffffff",
-            "on-error": "#ffffff",
-            "surface-dim": "#e6e3d4",
-            "on-tertiary-fixed-variant": "#790214",
-            "on-secondary-fixed": "#004844",
-            "background": "#fffbff",
-            "secondary": "#00716b",
-            "on-surface": "#393831",
-            "error-dim": "#b92902",
-            "error-container": "#f95630",
-            "on-tertiary": "#ffffff",
-            "on-background": "#393831",
-            "primary-fixed-dim": "#ebce1e",
-            "outline-variant": "#bcb9af",
-            "on-primary-fixed-variant": "#655800",
-            "surface-bright": "#fffbff",
-            "surface-container-highest": "#ece8da",
-            "surface": "#fffbff",
-            "primary-container": "#fadd30",
-            "surface-container-high": "#f2eee1",
-            "surface-container-low": "#fdf9ed",
-            "tertiary-container": "#ff928e",
-            "on-secondary-container": "#005c57",
-            "on-primary-container": "#5b4e00",
-            "tertiary": "#b6353a",
-            "inverse-primary": "#fadd30",
-            "outline": "#838178",
-            "secondary-fixed-dim": "#6ce8de",
-            "secondary-container": "#7cf6ec",
-            "on-surface-variant": "#66645c",
-            "secondary-dim": "#00635e",
-            "tertiary-fixed-dim": "#ff7a79",
-            "on-error-container": "#520c00",
-            "tertiary-fixed": "#ff928e",
-            "on-tertiary-fixed": "#3a0005",
-            "primary": "#746400",
-            "on-primary": "#ffffff",
-            "surface-container-lowest": "#ffffff",
-            "surface-container": "#f7f4e7",
-            "inverse-surface": "#0f0e09",
-            "secondary-fixed": "#7cf6ec",
-            "surface-tint": "#746400",
-            "primary-fixed": "#fadd30",
-            "tertiary-dim": "#a5292f",
-            "surface-variant": "#ece8da",
-            "on-tertiary-container": "#69000f",
-            "on-primary-fixed": "#453c00",
-            "error": "#be2d06",
-            "on-secondary-fixed-variant": "#006761",
-            "coral": "#FF6B6B",
-            "teal": "#4ECDC4"
-          },
-          "borderRadius": {
-            "DEFAULT": "0.125rem",
-            "lg": "0.25rem",
-            "xl": "0.5rem",
-            "full": "0.75rem"
-          },
-          "fontFamily": {
-            "headline": ["Space Grotesk"],
-            "body": ["Space Grotesk"],
-            "label": ["Space Grotesk"]
-          }
-        },
-      },
-    }
-  </script>
-<style>
-    body { background-color: #FFFBF0; font-family: 'Space Grotesk', sans-serif; }
-    .diagonal-stripes {
-      background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(185, 41, 2, 0.1) 10px, rgba(185, 41, 2, 0.1) 20px);
-    }
-    .neo-shadow { box-shadow: 5px 5px 0px #1A1A1A; }
-    .neo-shadow-lg { box-shadow: 8px 8px 0px #1A1A1A; }
-    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-  </style>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-dim": "#665800",
+                        "inverse-on-surface": "#9f9d93",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#e6e3d4",
+                        "on-tertiary-fixed-variant": "#790214",
+                        "on-secondary-fixed": "#004844",
+                        "background": "#fffbff",
+                        "secondary": "#00716b",
+                        "on-surface": "#393831",
+                        "error-dim": "#b92902",
+                        "error-container": "#f95630",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#393831",
+                        "primary-fixed-dim": "#ebce1e",
+                        "outline-variant": "#bcb9af",
+                        "on-primary-fixed-variant": "#655800",
+                        "surface-bright": "#fffbff",
+                        "surface-container-highest": "#ece8da",
+                        "surface": "#fffbff",
+                        "primary-container": "#fadd30",
+                        "surface-container-high": "#f2eee1",
+                        "surface-container-low": "#fdf9ed",
+                        "tertiary-container": "#ff928e",
+                        "on-secondary-container": "#005c57",
+                        "on-primary-container": "#5b4e00",
+                        "tertiary": "#b6353a",
+                        "inverse-primary": "#fadd30",
+                        "outline": "#838178",
+                        "secondary-fixed-dim": "#6ce8de",
+                        "secondary-container": "#7cf6ec",
+                        "on-surface-variant": "#66645c",
+                        "secondary-dim": "#00635e",
+                        "tertiary-fixed-dim": "#ff7a79",
+                        "on-error-container": "#520c00",
+                        "tertiary-fixed": "#ff928e",
+                        "on-tertiary-fixed": "#3a0005",
+                        "primary": "#746400",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#f7f4e7",
+                        "inverse-surface": "#0f0e09",
+                        "secondary-fixed": "#7cf6ec",
+                        "surface-tint": "#746400",
+                        "primary-fixed": "#fadd30",
+                        "tertiary-dim": "#a5292f",
+                        "surface-variant": "#ece8da",
+                        "on-tertiary-container": "#69000f",
+                        "on-primary-fixed": "#453c00",
+                        "error": "#be2d06",
+                        "on-secondary-fixed-variant": "#006761",
+                        "coral": "#FF6B6B",
+                        "teal": "#4ECDC4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Space Grotesk"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FFFBF0;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .diagonal-stripes {
+            background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(185, 41, 2, 0.1) 10px, rgba(185, 41, 2, 0.1) 20px);
+        }
+
+        .neo-shadow {
+            box-shadow: 5px 5px 0px #1A1A1A;
+        }
+
+        .neo-shadow-lg {
+            box-shadow: 8px 8px 0px #1A1A1A;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
 </head>
+
 <body class="text-[#1A1A1A] font-bold">
-<!-- Side Navigation Bar -->
-<aside class="fixed left-0 top-0 h-full flex flex-col justify-between z-40 w-[240px] border-r-[3px] border-stone-900 bg-stone-950 shadow-[5px_0px_0px_0px_rgba(26,26,26,1)]">
-<div class="flex flex-col">
-<div class="p-6 border-b-[3px] border-stone-900 mb-2">
-<div class="text-[28px] font-black text-yellow-400 flex items-center gap-2 uppercase tracking-wider font-['Space_Grotesk']">
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
-                    SANKALP
+    <!-- Side Navigation Bar -->
+    <aside
+        class="fixed left-0 top-0 h-full flex flex-col justify-between z-40 w-[240px] border-r-[3px] border-stone-900 bg-stone-950 shadow-[5px_0px_0px_0px_rgba(26,26,26,1)]">
+        <div class="flex flex-col">
+            <div class="p-6 border-b-[3px] border-stone-900 mb-2">
+                <div
+                    class="text-[28px] font-black text-yellow-400 flex items-center gap-2 uppercase tracking-wider font-['Space_Grotesk']">
+                    <span class="material-symbols-outlined" data-icon="star"
+                        style="font-variation-settings: 'FILL' 1;">star</span>
+                    GRIND
                 </div>
-<div class="text-[10px] text-yellow-400/60 font-bold uppercase tracking-[0.2em] mt-1">PRODUCTIVITY ENGINE</div>
-</div>
-<nav class="flex flex-col">
-<!-- HOME - ACTIVE -->
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 transition-all    font-['Space_Grotesk'] font-bold uppercase tracking-wider hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200" href="../home_dashboard_1/code.html">
-<span class="material-symbols-outlined" data-icon="home">home</span>
+                <div class="text-[10px] text-yellow-400/60 font-bold uppercase tracking-[0.2em] mt-1">PRODUCTIVITY
+                    ENGINE</div>
+            </div>
+            <nav class="flex flex-col">
+                <!-- HOME - ACTIVE -->
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 transition-all    font-['Space_Grotesk'] font-bold uppercase tracking-wider hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200"
+                    href="../home_dashboard_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="home">home</span>
                     HOME
                 </a>
-<a class="border-l-[6px] border-yellow-400 bg-stone-900 text-yellow-400 py-4 px-6 flex items-center gap-4    transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider translate-x-1" href="../tasks_streak_1/code.html">
-<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+                <a class="border-l-[6px] border-yellow-400 bg-stone-900 text-yellow-400 py-4 px-6 flex items-center gap-4    transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider translate-x-1"
+                    href="../tasks_streak_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="bolt">bolt</span>
                     TASKS &amp; STREAK
                 </a>
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../time_awareness_1/code.html">
-<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider"
+                    href="../time_awareness_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="schedule">schedule</span>
                     TIME AWARENESS
                 </a>
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../skills_goals_1/code.html">
-<span class="material-symbols-outlined" data-icon="ads_click">ads_click</span>
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider"
+                    href="../skills_goals_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="ads_click">ads_click</span>
                     SKILLS &amp; GOALS
                 </a>
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../integrations_hub_1/code.html">
-<span class="material-symbols-outlined" data-icon="extension">extension</span>
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider"
+                    href="../integrations_hub_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="extension">extension</span>
                     INTEGRATIONS
                 </a>
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../productivity_tools_1/code.html">
-<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider"
+                    href="../productivity_tools_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
                     PRODUCTIVITY
                 </a>
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../whiteboard_canvas_1/code.html">
-<span class="material-symbols-outlined" data-icon="draw">draw</span>
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider"
+                    href="../whiteboard_canvas_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="draw">draw</span>
                     WHITEBOARD
                 </a>
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../settings_1/code.html">
-<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider"
+                    href="../settings_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="settings">settings</span>
                     SETTINGS
                 </a>
-</nav>
-</div>
-<div class="border-t-[3px] border-stone-900">
-<div class="p-6 flex flex-col gap-4">
-<div class="flex items-center gap-3 text-white">
-<span class="material-symbols-outlined text-yellow-400" data-icon="account_circle">account_circle</span>
-<span class="text-xs tracking-widest font-black uppercase">STUDENT_01</span>
-</div>
-<div class="flex items-center gap-3 text-white">
-<span class="material-symbols-outlined text-yellow-400" data-icon="calendar_today">calendar_today</span>
-<span class="text-xs tracking-widest font-black uppercase">OCT 24, 2024</span>
-</div>
-</div>
-</div>
-</aside>
-<!-- Main Content Area -->
-<main class="ml-[240px] p-8 max-w-7xl">
-<!-- TOP — STREAK PANEL -->
-<section class="mb-10">
-<div class="bg-coral border-[3px] border-[#1A1A1A] p-8 neo-shadow-lg flex items-center justify-between gap-12">
-<!-- Left: Streak Counter -->
-<div class="flex flex-col items-start">
-<span class="text-[96px] leading-none font-black tracking-tighter">🔥 14</span>
-<span class="text-xl tracking-[0.3em] font-black mt-2">DAY STREAK</span>
-</div>
-<!-- Center: Heatmap -->
-<div class="flex-1 flex flex-col gap-4">
-<div class="flex justify-between items-end">
-<span class="text-sm font-black tracking-widest opacity-80 uppercase">ACTIVITY HEATMAP (30 DAYS)</span>
-<div class="flex gap-4 text-[10px] font-black uppercase">
-<span class="flex items-center gap-1"><i class="w-3 h-3 bg-teal border border-[#1A1A1A]"></i> DONE</span>
-<span class="flex items-center gap-1"><i class="w-3 h-3 bg-error border border-[#1A1A1A]"></i> MISSED</span>
-<span class="flex items-center gap-1"><i class="w-3 h-3 bg-primary border border-[#1A1A1A]"></i> SHIELD</span>
-</div>
-</div>
-<div class="grid grid-cols-10 grid-rows-3 gap-2">
-<!-- Simulated Heatmap Squares -->
-<div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
-<div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
-<div class="w-full aspect-square bg-error border-[2px] border-[#1A1A1A]"></div>
-<div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
-<div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
-<div class="w-full aspect-square bg-primary border-[2px] border-[#1A1A1A]"></div>
-<div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
-<div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
-<div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
-<div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
-<div class="w-full aspect-square bg-error border-[2px] border-[#1A1A1A]"></div>
-<div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
-<div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
-<div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
-<div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
-<div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
-<div class="w-full aspect-square bg-primary border-[2px] border-[#1A1A1A]"></div>
-<div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
-<div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
-<div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
-<div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
-<div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
-<div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
-<div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
-<div class="w-full aspect-square bg-error border-[2px] border-[#1A1A1A]"></div>
-<div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
-<div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
-<div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
-<div class="w-full aspect-square bg-white/20 border-[2px] border-[#1A1A1A] border-dashed"></div>
-<div class="w-full aspect-square bg-white/20 border-[2px] border-[#1A1A1A] border-dashed"></div>
-</div>
-</div>
-<!-- Right: Shield Status -->
-<div class="flex flex-col items-center justify-center bg-white/10 border-[3px] border-[#1A1A1A] p-6 h-full min-w-[220px] relative group">
-<div class="text-2xl font-black mb-4 flex items-center gap-2">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shield</span>
-            SHIELDS: 1 / 3
-          </div>
-<button class="w-full bg-primary py-3 border-[3px] border-[#1A1A1A] neo-shadow hover:translate-x-[-2px] hover:translate-y-[-2px] active:translate-x-[2px] active:translate-y-[2px] transition-all uppercase font-black text-sm tracking-widest">
-            USE SHIELD
-          </button>
-<!-- Tooltip -->
-<div class="absolute bottom-[-10px] transform translate-y-full bg-[#1A1A1A] text-white text-[10px] p-2 border-[2px] border-coral opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 w-48 text-center uppercase tracking-tighter">
-             Shields prevent streak loss when a day is missed. Refill available in 4 days.
-          </div>
-</div>
-</div>
-</section>
-<!-- MIDDLE — TASK MANAGER -->
-<section class="bg-white border-[3px] border-[#1A1A1A] p-8 neo-shadow-lg mb-10">
-<div class="flex justify-between items-end mb-8">
-<div>
-<h2 class="text-[56px] leading-[0.9] font-black uppercase tracking-tight">TODAY'S<br/>TASKS</h2>
-<p class="text-sm tracking-widest uppercase opacity-60 mt-2">THURSDAY, OCTOBER 24TH</p>
-</div>
-<div class="flex border-[3px] border-[#1A1A1A] bg-[#1A1A1A] overflow-hidden">
-<button class="px-6 py-2 bg-white text-sm font-black hover:bg-primary transition-colors">ALL</button>
-<button class="px-6 py-2 bg-white text-sm font-black hover:bg-primary transition-colors">PENDING</button>
-<button class="px-6 py-2 bg-[#1A1A1A] text-white text-sm font-black">COMPLETED</button>
-<button class="px-6 py-2 bg-white text-sm font-black text-error hover:bg-error hover:text-white transition-colors">OVERDUE</button>
-</div>
-</div>
-<!-- Sticky input row -->
-<div class="flex gap-0 border-[3px] border-[#1A1A1A] mb-8 neo-shadow">
-<input id="task-title" class="flex-1 px-6 py-5 text-xl font-bold uppercase border-r-[3px] border-[#1A1A1A] focus:outline-none focus:bg-primary-container/20" placeholder="WHAT NEEDS GRINDING?" type="text"/>
-<select id="task-priority" class="w-48 px-4 py-5 font-black uppercase border-r-[3px] border-[#1A1A1A] focus:outline-none appearance-none bg-white">
-<option value="NORMAL PRIO">NORMAL PRIO</option>
-<option value="HIGH PRIO">HIGH PRIO</option>
-<option value="URGENT 🔥">URGENT 🔥</option>
-</select>
-<button id="add-task-btn" class="px-10 py-5 bg-teal font-black text-xl hover:bg-[#1A1A1A] hover:text-teal transition-all flex items-center gap-2" onclick="createTask()">
-<span class="material-symbols-outlined font-black">add_circle</span> ADD
-        </button>
-</div>
-<!-- Task Rows -->
-<div id="task-list" class="flex flex-col gap-4">
-</div>
-</section>
-<!-- BOTTOM — WEEKLY SCORE STRIP -->
-<section>
-<div class="bg-[#1A1A1A] p-6 border-[3px] border-[#1A1A1A] neo-shadow-lg">
-<h4 class="text-white text-xs tracking-[0.4em] mb-6 uppercase">WEEKLY DISCIPLINE SCORE</h4>
-<div class="grid grid-cols-7 gap-4">
-<!-- Mon -->
-<div class="flex flex-col gap-3">
-<div class="h-48 bg-stone-800 border-[2px] border-stone-700 flex flex-col justify-end">
-<div class="bg-teal w-full border-t-[3px] border-[#1A1A1A]" style="height: 85%;"></div>
-</div>
-<div class="text-center">
-<p class="text-stone-500 text-[10px] font-black">MON</p>
-<p class="text-white text-lg font-black">85</p>
-</div>
-</div>
-<!-- Tue -->
-<div class="flex flex-col gap-3">
-<div class="h-48 bg-stone-800 border-[2px] border-stone-700 flex flex-col justify-end">
-<div class="bg-coral w-full border-t-[3px] border-[#1A1A1A]" style="height: 40%;"></div>
-</div>
-<div class="text-center">
-<p class="text-stone-500 text-[10px] font-black">TUE</p>
-<p class="text-white text-lg font-black">40</p>
-</div>
-</div>
-<!-- Wed -->
-<div class="flex flex-col gap-3">
-<div class="h-48 bg-stone-800 border-[2px] border-stone-700 flex flex-col justify-end">
-<div class="bg-teal w-full border-t-[3px] border-[#1A1A1A]" style="height: 92%;"></div>
-</div>
-<div class="text-center">
-<p class="text-stone-500 text-[10px] font-black">WED</p>
-<p class="text-white text-lg font-black">92</p>
-</div>
-</div>
-<!-- Thu (CURRENT DAY) -->
-<div class="flex flex-col gap-3 p-2 bg-stone-800/50 border-[3px] border-primary">
-<div class="h-48 bg-stone-800 border-[2px] border-stone-700 flex flex-col justify-end">
-<div class="bg-primary w-full border-t-[3px] border-[#1A1A1A]" style="height: 65%;"></div>
-</div>
-<div class="text-center">
-<p class="text-primary text-[10px] font-black">TODAY</p>
-<p class="text-white text-lg font-black">65</p>
-</div>
-</div>
-<!-- Fri -->
-<div class="flex flex-col gap-3">
-<div class="h-48 bg-stone-800 border-[2px] border-stone-700 flex flex-col justify-end">
-<div class="bg-stone-700 w-full" style="height: 0%;"></div>
-</div>
-<div class="text-center">
-<p class="text-stone-500 text-[10px] font-black">FRI</p>
-<p class="text-white text-lg font-black">--</p>
-</div>
-</div>
-<!-- Sat -->
-<div class="flex flex-col gap-3">
-<div class="h-48 bg-stone-800 border-[2px] border-stone-700 flex flex-col justify-end">
-<div class="bg-stone-700 w-full" style="height: 0%;"></div>
-</div>
-<div class="text-center">
-<p class="text-stone-500 text-[10px] font-black">SAT</p>
-<p class="text-white text-lg font-black">--</p>
-</div>
-</div>
-<!-- Sun -->
-<div class="flex flex-col gap-3">
-<div class="h-48 bg-stone-800 border-[2px] border-stone-700 flex flex-col justify-end">
-<div class="bg-stone-700 w-full" style="height: 0%;"></div>
-</div>
-<div class="text-center">
-<p class="text-stone-500 text-[10px] font-black">SUN</p>
-<p class="text-white text-lg font-black">--</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- Decorative Signature Shape -->
-<div class="fixed bottom-10 right-10 pointer-events-none opacity-20">
-<svg height="200" viewbox="0 0 200 200" width="200">
-<path d="M100 0 L130 70 L200 100 L130 130 L100 200 L70 130 L0 100 L70 70 Z" fill="#A29BFE" stroke="#1A1A1A" stroke-width="3"></path>
-</svg>
-</div>
+            </nav>
+        </div>
+        <div class="border-t-[3px] border-stone-900">
+            <div class="p-6 flex flex-col gap-4">
+                <div class="flex items-center gap-3 text-white">
+                    <span class="material-symbols-outlined text-yellow-400"
+                        data-icon="account_circle">account_circle</span>
+                    <span class="text-xs tracking-widest font-black uppercase">STUDENT_01</span>
+                </div>
+                <div class="flex items-center gap-3 text-white">
+                    <span class="material-symbols-outlined text-yellow-400"
+                        data-icon="calendar_today">calendar_today</span>
+                    <span class="text-xs tracking-widest font-black uppercase">OCT 24, 2024</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!-- Main Content Area -->
+    <main class="ml-[240px] p-8 max-w-7xl">
+        <!-- TOP — STREAK PANEL -->
+        <section class="mb-10">
+            <div
+                class="bg-coral border-[3px] border-[#1A1A1A] p-8 neo-shadow-lg flex items-center justify-between gap-12">
+                <!-- Left: Streak Counter -->
+                <div class="flex flex-col items-start">
+                    <span class="text-[96px] leading-none font-black tracking-tighter">🔥 14</span>
+                    <span class="text-xl tracking-[0.3em] font-black mt-2">DAY STREAK</span>
+                </div>
+                <!-- Center: Heatmap -->
+                <div class="flex-1 flex flex-col gap-4">
+                    <div class="flex justify-between items-end">
+                        <span class="text-sm font-black tracking-widest opacity-80 uppercase">ACTIVITY HEATMAP (30
+                            DAYS)</span>
+                        <div class="flex gap-4 text-[10px] font-black uppercase">
+                            <span class="flex items-center gap-1"><i
+                                    class="w-3 h-3 bg-teal border border-[#1A1A1A]"></i> DONE</span>
+                            <span class="flex items-center gap-1"><i
+                                    class="w-3 h-3 bg-error border border-[#1A1A1A]"></i> MISSED</span>
+                            <span class="flex items-center gap-1"><i
+                                    class="w-3 h-3 bg-primary border border-[#1A1A1A]"></i> SHIELD</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-10 grid-rows-3 gap-2">
+                        <!-- Simulated Heatmap Squares -->
+                        <div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
+                        <div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
+                        <div class="w-full aspect-square bg-error border-[2px] border-[#1A1A1A]"></div>
+                        <div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
+                        <div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
+                        <div class="w-full aspect-square bg-primary border-[2px] border-[#1A1A1A]"></div>
+                        <div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
+                        <div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
+                        <div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
+                        <div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
+                        <div class="w-full aspect-square bg-error border-[2px] border-[#1A1A1A]"></div>
+                        <div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
+                        <div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
+                        <div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
+                        <div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
+                        <div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
+                        <div class="w-full aspect-square bg-primary border-[2px] border-[#1A1A1A]"></div>
+                        <div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
+                        <div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
+                        <div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
+                        <div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
+                        <div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
+                        <div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
+                        <div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
+                        <div class="w-full aspect-square bg-error border-[2px] border-[#1A1A1A]"></div>
+                        <div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
+                        <div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
+                        <div class="w-full aspect-square bg-teal border-[2px] border-[#1A1A1A]"></div>
+                        <div class="w-full aspect-square bg-white/20 border-[2px] border-[#1A1A1A] border-dashed"></div>
+                        <div class="w-full aspect-square bg-white/20 border-[2px] border-[#1A1A1A] border-dashed"></div>
+                    </div>
+                </div>
+                <!-- Right: Shield Status -->
+                <div
+                    class="flex flex-col items-center justify-center bg-white/10 border-[3px] border-[#1A1A1A] p-6 h-full min-w-[220px] relative group">
+                    <div class="text-2xl font-black mb-4 flex items-center gap-2">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shield</span>
+                        SHIELDS: 1 / 3
+                    </div>
+                    <button
+                        class="w-full bg-primary py-3 border-[3px] border-[#1A1A1A] neo-shadow hover:translate-x-[-2px] hover:translate-y-[-2px] active:translate-x-[2px] active:translate-y-[2px] transition-all uppercase font-black text-sm tracking-widest">
+                        USE SHIELD
+                    </button>
+                    <!-- Tooltip -->
+                    <div
+                        class="absolute bottom-[-10px] transform translate-y-full bg-[#1A1A1A] text-white text-[10px] p-2 border-[2px] border-coral opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 w-48 text-center uppercase tracking-tighter">
+                        Shields prevent streak loss when a day is missed. Refill available in 4 days.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- MIDDLE — TASK MANAGER -->
+        <section class="bg-white border-[3px] border-[#1A1A1A] p-8 neo-shadow-lg mb-10">
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <h2 class="text-[56px] leading-[0.9] font-black uppercase tracking-tight">TODAY'S<br />TASKS</h2>
+                    <p class="text-sm tracking-widest uppercase opacity-60 mt-2">THURSDAY, OCTOBER 24TH</p>
+                </div>
+                <div class="flex border-[3px] border-[#1A1A1A] bg-[#1A1A1A] overflow-hidden">
+                    <button
+                        class="px-6 py-2 bg-white text-sm font-black hover:bg-primary transition-colors">ALL</button>
+                    <button
+                        class="px-6 py-2 bg-white text-sm font-black hover:bg-primary transition-colors">PENDING</button>
+                    <button class="px-6 py-2 bg-[#1A1A1A] text-white text-sm font-black">COMPLETED</button>
+                    <button
+                        class="px-6 py-2 bg-white text-sm font-black text-error hover:bg-error hover:text-white transition-colors">OVERDUE</button>
+                </div>
+            </div>
+            <!-- Sticky input row -->
+            <div class="flex gap-0 border-[3px] border-[#1A1A1A] mb-8 neo-shadow">
+                <input id="task-title"
+                    class="flex-1 px-6 py-5 text-xl font-bold uppercase border-r-[3px] border-[#1A1A1A] focus:outline-none focus:bg-primary-container/20"
+                    placeholder="WHAT NEEDS GRINDING?" type="text" />
+                <select id="task-priority"
+                    class="w-48 px-4 py-5 font-black uppercase border-r-[3px] border-[#1A1A1A] focus:outline-none appearance-none bg-white">
+                    <option value="NORMAL PRIO">NORMAL PRIO</option>
+                    <option value="HIGH PRIO">HIGH PRIO</option>
+                    <option value="URGENT 🔥">URGENT 🔥</option>
+                </select>
+                <button id="add-task-btn"
+                    class="px-10 py-5 bg-teal font-black text-xl hover:bg-[#1A1A1A] hover:text-teal transition-all flex items-center gap-2"
+                    onclick="createTask()">
+                    <span class="material-symbols-outlined font-black">add_circle</span> ADD
+                </button>
+            </div>
+            <!-- Task Rows -->
+            <div id="task-list" class="flex flex-col gap-4">
+            </div>
+        </section>
+        <!-- BOTTOM — WEEKLY SCORE STRIP -->
+        <section>
+            <div class="bg-[#1A1A1A] p-6 border-[3px] border-[#1A1A1A] neo-shadow-lg">
+                <h4 class="text-white text-xs tracking-[0.4em] mb-6 uppercase">WEEKLY DISCIPLINE SCORE</h4>
+                <div class="grid grid-cols-7 gap-4">
+                    <!-- Mon -->
+                    <div class="flex flex-col gap-3">
+                        <div class="h-48 bg-stone-800 border-[2px] border-stone-700 flex flex-col justify-end">
+                            <div class="bg-teal w-full border-t-[3px] border-[#1A1A1A]" style="height: 85%;"></div>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-stone-500 text-[10px] font-black">MON</p>
+                            <p class="text-white text-lg font-black">85</p>
+                        </div>
+                    </div>
+                    <!-- Tue -->
+                    <div class="flex flex-col gap-3">
+                        <div class="h-48 bg-stone-800 border-[2px] border-stone-700 flex flex-col justify-end">
+                            <div class="bg-coral w-full border-t-[3px] border-[#1A1A1A]" style="height: 40%;"></div>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-stone-500 text-[10px] font-black">TUE</p>
+                            <p class="text-white text-lg font-black">40</p>
+                        </div>
+                    </div>
+                    <!-- Wed -->
+                    <div class="flex flex-col gap-3">
+                        <div class="h-48 bg-stone-800 border-[2px] border-stone-700 flex flex-col justify-end">
+                            <div class="bg-teal w-full border-t-[3px] border-[#1A1A1A]" style="height: 92%;"></div>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-stone-500 text-[10px] font-black">WED</p>
+                            <p class="text-white text-lg font-black">92</p>
+                        </div>
+                    </div>
+                    <!-- Thu (CURRENT DAY) -->
+                    <div class="flex flex-col gap-3 p-2 bg-stone-800/50 border-[3px] border-primary">
+                        <div class="h-48 bg-stone-800 border-[2px] border-stone-700 flex flex-col justify-end">
+                            <div class="bg-primary w-full border-t-[3px] border-[#1A1A1A]" style="height: 65%;"></div>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-primary text-[10px] font-black">TODAY</p>
+                            <p class="text-white text-lg font-black">65</p>
+                        </div>
+                    </div>
+                    <!-- Fri -->
+                    <div class="flex flex-col gap-3">
+                        <div class="h-48 bg-stone-800 border-[2px] border-stone-700 flex flex-col justify-end">
+                            <div class="bg-stone-700 w-full" style="height: 0%;"></div>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-stone-500 text-[10px] font-black">FRI</p>
+                            <p class="text-white text-lg font-black">--</p>
+                        </div>
+                    </div>
+                    <!-- Sat -->
+                    <div class="flex flex-col gap-3">
+                        <div class="h-48 bg-stone-800 border-[2px] border-stone-700 flex flex-col justify-end">
+                            <div class="bg-stone-700 w-full" style="height: 0%;"></div>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-stone-500 text-[10px] font-black">SAT</p>
+                            <p class="text-white text-lg font-black">--</p>
+                        </div>
+                    </div>
+                    <!-- Sun -->
+                    <div class="flex flex-col gap-3">
+                        <div class="h-48 bg-stone-800 border-[2px] border-stone-700 flex flex-col justify-end">
+                            <div class="bg-stone-700 w-full" style="height: 0%;"></div>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-stone-500 text-[10px] font-black">SUN</p>
+                            <p class="text-white text-lg font-black">--</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Decorative Signature Shape -->
+    <div class="fixed bottom-10 right-10 pointer-events-none opacity-20">
+        <svg height="200" viewbox="0 0 200 200" width="200">
+            <path d="M100 0 L130 70 L200 100 L130 130 L100 200 L70 130 L0 100 L70 70 Z" fill="#A29BFE" stroke="#1A1A1A"
+                stroke-width="3"></path>
+        </svg>
+    </div>
 
-<script>
-let currentFilter = 'ALL';
-let allTasks = [];
+    <script>
+        let currentFilter = 'ALL';
+        let allTasks = [];
 
-document.addEventListener('DOMContentLoaded', () => {
-    const userId = localStorage.getItem('userId');
-    if (!userId) {
-        window.location.href = '../index.html';
-        return;
-    }
-    
-    const username = localStorage.getItem('username');
-    if (username) {
-        const userSpan = document.querySelector('.p-6 .flex .text-xs.tracking-widest:not(.opacity-60)');
-        if (userSpan) userSpan.innerText = username.toUpperCase();
-    }
-    
-    // Update date
-    const today = new Date();
-    const dateStr = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'][today.getDay()] + ', ' + 
-                   today.toLocaleDateString('en-US', { month: 'long', day: 'numeric' }).toUpperCase();
-    const dateElem = document.querySelector('.opacity-60.mt-2');
-    if (dateElem) dateElem.innerText = dateStr;
-    
-    // Filter buttons
-    document.querySelectorAll('.flex.border-\\[3px\\].border-\\[\\#1A1A1A\\] button').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const filterType = e.target.innerText.trim();
-            currentFilter = filterType;
-            
-            document.querySelectorAll('.flex.border-\\[3px\\].border-\\[\\#1A1A1A\\] button').forEach(b => {
-                b.style.backgroundColor = 'white';
-                b.style.color = '#1A1A1A';
-            });
-            e.target.style.backgroundColor = '#1A1A1A';
-            e.target.style.color = 'white';
-            
-            renderTasks();
-        });
-    });
-    
-    // Logout button
-    document.querySelectorAll('span.material-symbols-outlined[data-icon="account_circle"]').forEach(s => {
-        if (s.parentElement) {
-            s.parentElement.style.cursor = 'pointer';
-            s.parentElement.onclick = () => {
-                localStorage.clear();
+        document.addEventListener('DOMContentLoaded', () => {
+            const userId = localStorage.getItem('userId');
+            if (!userId) {
                 window.location.href = '../index.html';
-            };
+                return;
+            }
+
+            const username = localStorage.getItem('username');
+            if (username) {
+                const userSpan = document.querySelector('.p-6 .flex .text-xs.tracking-widest:not(.opacity-60)');
+                if (userSpan) userSpan.innerText = username.toUpperCase();
+            }
+
+            // Update date
+            const today = new Date();
+            const dateStr = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'][today.getDay()] + ', ' +
+                today.toLocaleDateString('en-US', { month: 'long', day: 'numeric' }).toUpperCase();
+            const dateElem = document.querySelector('.opacity-60.mt-2');
+            if (dateElem) dateElem.innerText = dateStr;
+
+            // Filter buttons
+            document.querySelectorAll('.flex.border-\\[3px\\].border-\\[\\#1A1A1A\\] button').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const filterType = e.target.innerText.trim();
+                    currentFilter = filterType;
+
+                    document.querySelectorAll('.flex.border-\\[3px\\].border-\\[\\#1A1A1A\\] button').forEach(b => {
+                        b.style.backgroundColor = 'white';
+                        b.style.color = '#1A1A1A';
+                    });
+                    e.target.style.backgroundColor = '#1A1A1A';
+                    e.target.style.color = 'white';
+
+                    renderTasks();
+                });
+            });
+
+            // Logout button
+            document.querySelectorAll('span.material-symbols-outlined[data-icon="account_circle"]').forEach(s => {
+                if (s.parentElement) {
+                    s.parentElement.style.cursor = 'pointer';
+                    s.parentElement.onclick = () => {
+                        localStorage.clear();
+                        window.location.href = '../index.html';
+                    };
+                }
+            });
+
+            fetchTasks();
+        });
+
+        async function fetchTasks() {
+            try {
+                const userId = localStorage.getItem('userId');
+                const response = await fetch(`http://localhost:8082/api/tasks?userId=${userId}`);
+                allTasks = await response.json();
+                renderTasks();
+            } catch (e) {
+                console.error('Error fetching tasks', e);
+                document.getElementById('task-list').innerHTML = '<div style="color: red; padding: 20px;">Error loading tasks</div>';
+            }
         }
-    });
-    
-    fetchTasks();
-});
 
-async function fetchTasks() {
-    try {
-        const userId = localStorage.getItem('userId');
-        const response = await fetch(`http://localhost:8082/api/tasks?userId=${userId}`);
-        allTasks = await response.json();
-        renderTasks();
-    } catch (e) {
-        console.error('Error fetching tasks', e);
-        document.getElementById('task-list').innerHTML = '<div style="color: red; padding: 20px;">Error loading tasks</div>';
-    }
-}
+        function renderTasks() {
+            let filteredTasks = allTasks;
 
-function renderTasks() {
-    let filteredTasks = allTasks;
-    
-    if (currentFilter === 'PENDING') {
-        filteredTasks = allTasks.filter(t => t.status === 'PENDING');
-    } else if (currentFilter === 'COMPLETED') {
-        filteredTasks = allTasks.filter(t => t.status === 'COMPLETED');
-    } else if (currentFilter === 'OVERDUE') {
-        filteredTasks = allTasks.filter(t => t.priority === 'URGENT' && t.status === 'PENDING');
-    }
-    
-    const taskList = document.getElementById('task-list');
-    taskList.innerHTML = '';
-    
-    if (filteredTasks.length === 0) {
-        taskList.innerHTML = '<div style="padding: 20px; text-align: center; font-size: 14px; color: #999;">NO TASKS IN THIS FILTER</div>';
-        return;
-    }
-    
-    filteredTasks.forEach(task => {
-        const isCompleted = task.status === 'COMPLETED';
-        const checkBg = isCompleted ? 'bg-teal' : 'bg-white hover:bg-teal';
-        const checkIcon = isCompleted ? '<span class="material-symbols-outlined text-[#1A1A1A] font-black">check</span>' : '';
-        const titleClass = isCompleted ? 'line-through decoration-[4px]' : '';
-        const bgClass = isCompleted ? 'bg-surface-container opacity-60' : 'bg-white';
-        
-        const taskHtml = `
+            if (currentFilter === 'PENDING') {
+                filteredTasks = allTasks.filter(t => t.status === 'PENDING');
+            } else if (currentFilter === 'COMPLETED') {
+                filteredTasks = allTasks.filter(t => t.status === 'COMPLETED');
+            } else if (currentFilter === 'OVERDUE') {
+                filteredTasks = allTasks.filter(t => t.priority === 'URGENT' && t.status === 'PENDING');
+            }
+
+            const taskList = document.getElementById('task-list');
+            taskList.innerHTML = '';
+
+            if (filteredTasks.length === 0) {
+                taskList.innerHTML = '<div style="padding: 20px; text-align: center; font-size: 14px; color: #999;">NO TASKS IN THIS FILTER</div>';
+                return;
+            }
+
+            filteredTasks.forEach(task => {
+                const isCompleted = task.status === 'COMPLETED';
+                const checkBg = isCompleted ? 'bg-teal' : 'bg-white hover:bg-teal';
+                const checkIcon = isCompleted ? '<span class="material-symbols-outlined text-[#1A1A1A] font-black">check</span>' : '';
+                const titleClass = isCompleted ? 'line-through decoration-[4px]' : '';
+                const bgClass = isCompleted ? 'bg-surface-container opacity-60' : 'bg-white';
+
+                const taskHtml = `
         <div class="${bgClass} border-[3px] border-[#1A1A1A] p-6 flex items-center gap-6 hover:translate-x-1 transition-transform">
             <div class="w-10 h-10 border-[3px] border-[#1A1A1A] flex items-center justify-center cursor-pointer ${checkBg} transition-colors" onclick="toggleTask(${task.id})">
                 ${checkIcon}
@@ -447,113 +500,115 @@ function renderTasks() {
             </div>
         </div>
         `;
-        taskList.insertAdjacentHTML('beforeend', taskHtml);
-    });
-}
-
-async function createTask() {
-    const titleInput = document.getElementById('task-title');
-    const prioritySelect = document.getElementById('task-priority');
-    
-    if (!titleInput || !titleInput.value.trim()) {
-        alert('Enter a task title');
-        return;
-    }
-    
-    const userId = localStorage.getItem('userId');
-    
-    try {
-        await fetch('http://localhost:8082/api/tasks', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                userId: parseInt(userId),
-                title: titleInput.value.toUpperCase(),
-                priority: prioritySelect.value,
-                status: 'PENDING',
-            })
-        });
-        
-        titleInput.value = '';
-        fetchTasks();
-    } catch (e) {
-        console.error('Error creating task', e);
-        alert('Failed to create task');
-    }
-}
-
-async function deleteTask(id) {
-    if (!confirm('Delete this task?')) return;
-    
-    try {
-        await fetch(`http://localhost:8082/api/tasks/${id}`, { method: 'DELETE' });
-        fetchTasks();
-    } catch (e) {
-        console.error('Error deleting task', e);
-        alert('Failed to delete task');
-    }
-}
-
-async function toggleTask(id) {
-    const task = allTasks.find(t => t.id === id);
-    if (!task) return;
-    
-    const newStatus = task.status === 'PENDING' ? 'COMPLETED' : 'PENDING';
-    
-    try {
-        await fetch(`http://localhost:8082/api/tasks/${id}`, {
-            method: 'PUT',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                title: task.title,
-                priority: task.priority,
-                status: newStatus
-            })
-        });
-        
-        fetchTasks();
-    } catch (e) {
-        console.error('Error updating task', e);
-    }
-}
-</script>
-
-<script>
-    // Global Auth Guard & Data Plugin
-    document.addEventListener('DOMContentLoaded', () => {
-        const userId = localStorage.getItem('userId');
-        if (!userId) {
-            window.location.href = '../index.html';
-            return;
-        }
-        
-        const username = localStorage.getItem('username');
-        if (username) {
-            // Update username in sidebars replacing STUDENT_01
-            document.querySelectorAll('*').forEach(el => {
-                if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
-                    if (el.innerText.includes('STUDENT_01')) {
-                        el.innerText = el.innerText.replace('STUDENT_01', username);
-                    }
-                }
+                taskList.insertAdjacentHTML('beforeend', taskHtml);
             });
         }
 
-        // Make sidebars clickable for logout where account_circle resides
-        document.querySelectorAll('span').forEach(s => {
-            if(s.innerText.includes('account_circle')) {
-                let p = s.parentElement;
-                if(p) {
-                    p.style.cursor = 'pointer';
-                    p.title = 'Click to Logout';
-                    p.onclick = function() {
-                        localStorage.clear();
-                        window.location.href = '../index.html';
-                    };
-                }
-            }
-        });
-    });
-</script>
+        async function createTask() {
+            const titleInput = document.getElementById('task-title');
+            const prioritySelect = document.getElementById('task-priority');
 
-</body></html>
+            if (!titleInput || !titleInput.value.trim()) {
+                alert('Enter a task title');
+                return;
+            }
+
+            const userId = localStorage.getItem('userId');
+
+            try {
+                await fetch('http://localhost:8082/api/tasks', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        userId: parseInt(userId),
+                        title: titleInput.value.toUpperCase(),
+                        priority: prioritySelect.value,
+                        status: 'PENDING',
+                    })
+                });
+
+                titleInput.value = '';
+                fetchTasks();
+            } catch (e) {
+                console.error('Error creating task', e);
+                alert('Failed to create task');
+            }
+        }
+
+        async function deleteTask(id) {
+            if (!confirm('Delete this task?')) return;
+
+            try {
+                await fetch(`http://localhost:8082/api/tasks/${id}`, { method: 'DELETE' });
+                fetchTasks();
+            } catch (e) {
+                console.error('Error deleting task', e);
+                alert('Failed to delete task');
+            }
+        }
+
+        async function toggleTask(id) {
+            const task = allTasks.find(t => t.id === id);
+            if (!task) return;
+
+            const newStatus = task.status === 'PENDING' ? 'COMPLETED' : 'PENDING';
+
+            try {
+                await fetch(`http://localhost:8082/api/tasks/${id}`, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        title: task.title,
+                        priority: task.priority,
+                        status: newStatus
+                    })
+                });
+
+                fetchTasks();
+            } catch (e) {
+                console.error('Error updating task', e);
+            }
+        }
+    </script>
+
+    <script>
+        // Global Auth Guard & Data Plugin
+        document.addEventListener('DOMContentLoaded', () => {
+            const userId = localStorage.getItem('userId');
+            if (!userId) {
+                window.location.href = '../index.html';
+                return;
+            }
+
+            const username = localStorage.getItem('username');
+            if (username) {
+                // Update username in sidebars replacing STUDENT_01
+                document.querySelectorAll('*').forEach(el => {
+                    if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
+                        if (el.innerText.includes('STUDENT_01')) {
+                            el.innerText = el.innerText.replace('STUDENT_01', username);
+                        }
+                    }
+                });
+            }
+
+            // Make sidebars clickable for logout where account_circle resides
+            document.querySelectorAll('span').forEach(s => {
+                if (s.innerText.includes('account_circle')) {
+                    let p = s.parentElement;
+                    if (p) {
+                        p.style.cursor = 'pointer';
+                        p.title = 'Click to Logout';
+                        p.onclick = function () {
+                            localStorage.clear();
+                            window.location.href = '../index.html';
+                        };
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

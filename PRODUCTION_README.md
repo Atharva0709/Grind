@@ -1,7 +1,7 @@
-# SANKALP - Production Deployment Guide
+# GRIND - Production Deployment Guide
 
 ## System Overview
-Sankalp is a high-output productivity engine built with:
+GRIND is a high-output productivity engine built with:
 - **Frontend**: Vanilla JavaScript, Tailwind CSS, Material Icons
 - **Backend**: Spring Boot 4.0.5, MySQL
 - **Architecture**: Microservices-ready REST API with JWT authentication
@@ -9,7 +9,7 @@ Sankalp is a high-output productivity engine built with:
 ## Deployment Checklist
 
 ### Pre-Deployment
-- [ ] Database: MySQL Sankalp DB initialized and running
+- [ ] Database: MySQL GRIND DB initialized and running
 - [ ] Backend: Spring Boot configured on port 8082
 - [ ] Frontend: Served from `/frontend` directory on port 8000
 - [ ] Environment variables: API_URL set to production backend URL
@@ -18,7 +18,7 @@ Sankalp is a high-output productivity engine built with:
 
 #### Backend
 ```bash
-cd sankalp_backend
+cd GRIND_backend
 ./mvnw clean spring-boot:run
 # Runs on http://localhost:8082
 ```
@@ -172,7 +172,7 @@ docker-compose up -d
 
 ### Manual
 1. Start MySQL: `mysql.exe -u root -p`
-2. Create database: `CREATE DATABASE sankalp_db;`
+2. Create database: `CREATE DATABASE GRIND_db;`
 3. Run backend: `./mvnw spring-boot:run`
 4. Run frontend: `python -m http.serve 8000`
 5. Access: Navigate to http://localhost:8000

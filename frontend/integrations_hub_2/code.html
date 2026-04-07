@@ -1,455 +1,538 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          "colors": {
-                  "primary-dim": "#665800",
-                  "inverse-on-surface": "#9f9d93",
-                  "on-secondary": "#ffffff",
-                  "on-error": "#ffffff",
-                  "surface-dim": "#e6e3d4",
-                  "on-tertiary-fixed-variant": "#790214",
-                  "on-secondary-fixed": "#004844",
-                  "background": "#FFFBF0",
-                  "secondary": "#00716b",
-                  "on-surface": "#393831",
-                  "error-dim": "#b92902",
-                  "error-container": "#f95630",
-                  "on-tertiary": "#ffffff",
-                  "on-background": "#393831",
-                  "primary-fixed-dim": "#ebce1e",
-                  "outline-variant": "#bcb9af",
-                  "on-primary-fixed-variant": "#655800",
-                  "surface-bright": "#fffbff",
-                  "surface-container-highest": "#ece8da",
-                  "surface": "#fffbff",
-                  "primary-container": "#fadd30",
-                  "surface-container-high": "#f2eee1",
-                  "surface-container-low": "#fdf9ed",
-                  "tertiary-container": "#ff928e",
-                  "on-secondary-container": "#005c57",
-                  "on-primary-container": "#5b4e00",
-                  "tertiary": "#b6353a",
-                  "inverse-primary": "#fadd30",
-                  "outline": "#838178",
-                  "secondary-fixed-dim": "#6ce8de",
-                  "secondary-container": "#7cf6ec",
-                  "on-surface-variant": "#66645c",
-                  "secondary-dim": "#00635e",
-                  "tertiary-fixed-dim": "#ff7a79",
-                  "on-error-container": "#520c00",
-                  "tertiary-fixed": "#ff928e",
-                  "on-tertiary-fixed": "#3a0005",
-                  "primary": "#746400",
-                  "on-primary": "#ffffff",
-                  "surface-container-lowest": "#ffffff",
-                  "surface-container": "#f7f4e7",
-                  "inverse-surface": "#0f0e09",
-                  "secondary-fixed": "#7cf6ec",
-                  "surface-tint": "#746400",
-                  "primary-fixed": "#fadd30",
-                  "tertiary-dim": "#a5292f",
-                  "surface-variant": "#ece8da",
-                  "on-tertiary-container": "#69000f",
-                  "on-primary-fixed": "#453c00",
-                  "error": "#be2d06",
-                  "on-secondary-fixed-variant": "#006761"
-          },
-          "borderRadius": {
-                  "DEFAULT": "0.125rem",
-                  "lg": "0.25rem",
-                  "xl": "0.5rem",
-                  "full": "0.75rem"
-          },
-          "fontFamily": {
-                  "headline": ["Space Grotesk"],
-                  "body": ["Space Grotesk"],
-                  "label": ["Space Grotesk"]
-          }
-        },
-      },
-    }
-  </script>
-<style>
-    body { font-family: 'Space Grotesk', sans-serif; background-color: #FFFBF0; }
-    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 700, 'GRAD' 0, 'opsz' 48; }
-    .neo-border { border: 3px solid #1A1A1A; }
-    .neo-shadow { box-shadow: 5px 5px 0px #1A1A1A; }
-    .neo-shadow-lg { box-shadow: 8px 8px 0px #1A1A1A; }
-    .neo-button-hover:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0px #1A1A1A; }
-    .neo-button-active:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0px #1A1A1A; }
-  </style>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-dim": "#665800",
+                        "inverse-on-surface": "#9f9d93",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#e6e3d4",
+                        "on-tertiary-fixed-variant": "#790214",
+                        "on-secondary-fixed": "#004844",
+                        "background": "#FFFBF0",
+                        "secondary": "#00716b",
+                        "on-surface": "#393831",
+                        "error-dim": "#b92902",
+                        "error-container": "#f95630",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#393831",
+                        "primary-fixed-dim": "#ebce1e",
+                        "outline-variant": "#bcb9af",
+                        "on-primary-fixed-variant": "#655800",
+                        "surface-bright": "#fffbff",
+                        "surface-container-highest": "#ece8da",
+                        "surface": "#fffbff",
+                        "primary-container": "#fadd30",
+                        "surface-container-high": "#f2eee1",
+                        "surface-container-low": "#fdf9ed",
+                        "tertiary-container": "#ff928e",
+                        "on-secondary-container": "#005c57",
+                        "on-primary-container": "#5b4e00",
+                        "tertiary": "#b6353a",
+                        "inverse-primary": "#fadd30",
+                        "outline": "#838178",
+                        "secondary-fixed-dim": "#6ce8de",
+                        "secondary-container": "#7cf6ec",
+                        "on-surface-variant": "#66645c",
+                        "secondary-dim": "#00635e",
+                        "tertiary-fixed-dim": "#ff7a79",
+                        "on-error-container": "#520c00",
+                        "tertiary-fixed": "#ff928e",
+                        "on-tertiary-fixed": "#3a0005",
+                        "primary": "#746400",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#f7f4e7",
+                        "inverse-surface": "#0f0e09",
+                        "secondary-fixed": "#7cf6ec",
+                        "surface-tint": "#746400",
+                        "primary-fixed": "#fadd30",
+                        "tertiary-dim": "#a5292f",
+                        "surface-variant": "#ece8da",
+                        "on-tertiary-container": "#69000f",
+                        "on-primary-fixed": "#453c00",
+                        "error": "#be2d06",
+                        "on-secondary-fixed-variant": "#006761"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Space Grotesk"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #FFFBF0;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 700, 'GRAD' 0, 'opsz' 48;
+        }
+
+        .neo-border {
+            border: 3px solid #1A1A1A;
+        }
+
+        .neo-shadow {
+            box-shadow: 5px 5px 0px #1A1A1A;
+        }
+
+        .neo-shadow-lg {
+            box-shadow: 8px 8px 0px #1A1A1A;
+        }
+
+        .neo-button-hover:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 7px 7px 0px #1A1A1A;
+        }
+
+        .neo-button-active:active {
+            transform: translate(2px, 2px);
+            box-shadow: 1px 1px 0px #1A1A1A;
+        }
+    </style>
 </head>
+
 <body class="text-on-background m-0 p-0 flex">
-<!-- SideNavBar Anchor -->
-<aside class="fixed left-0 top-0 h-full flex flex-col justify-between z-40 w-[240px] border-r-[3px] border-stone-900 bg-stone-950 shadow-[5px_0px_0px_0px_rgba(26,26,26,1)]">
-<div class="flex flex-col">
-<div class="p-6 border-b-[3px] border-stone-900 mb-2">
-<div class="text-[28px] font-black text-yellow-400 flex items-center gap-2 uppercase tracking-wider font-['Space_Grotesk']">
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
-                    SANKALP
+    <!-- SideNavBar Anchor -->
+    <aside
+        class="fixed left-0 top-0 h-full flex flex-col justify-between z-40 w-[240px] border-r-[3px] border-stone-900 bg-stone-950 shadow-[5px_0px_0px_0px_rgba(26,26,26,1)]">
+        <div class="flex flex-col">
+            <div class="p-6 border-b-[3px] border-stone-900 mb-2">
+                <div
+                    class="text-[28px] font-black text-yellow-400 flex items-center gap-2 uppercase tracking-wider font-['Space_Grotesk']">
+                    <span class="material-symbols-outlined" data-icon="star"
+                        style="font-variation-settings: 'FILL' 1;">star</span>
+                    GRIND
                 </div>
-<div class="text-[10px] text-yellow-400/60 font-bold uppercase tracking-[0.2em] mt-1">PRODUCTIVITY ENGINE</div>
-</div>
-<nav class="flex flex-col">
-<!-- HOME - ACTIVE -->
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 transition-all    font-['Space_Grotesk'] font-bold uppercase tracking-wider hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200" href="../home_dashboard_1/code.html">
-<span class="material-symbols-outlined" data-icon="home">home</span>
+                <div class="text-[10px] text-yellow-400/60 font-bold uppercase tracking-[0.2em] mt-1">PRODUCTIVITY
+                    ENGINE</div>
+            </div>
+            <nav class="flex flex-col">
+                <!-- HOME - ACTIVE -->
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 transition-all    font-['Space_Grotesk'] font-bold uppercase tracking-wider hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200"
+                    href="../home_dashboard_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="home">home</span>
                     HOME
                 </a>
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../tasks_streak_1/code.html">
-<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider"
+                    href="../tasks_streak_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="bolt">bolt</span>
                     TASKS &amp; STREAK
                 </a>
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../time_awareness_1/code.html">
-<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider"
+                    href="../time_awareness_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="schedule">schedule</span>
                     TIME AWARENESS
                 </a>
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../skills_goals_1/code.html">
-<span class="material-symbols-outlined" data-icon="ads_click">ads_click</span>
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider"
+                    href="../skills_goals_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="ads_click">ads_click</span>
                     SKILLS &amp; GOALS
                 </a>
-<a class="border-l-[6px] border-yellow-400 bg-stone-900 text-yellow-400 py-4 px-6 flex items-center gap-4    transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider translate-x-1" href="../integrations_hub_1/code.html">
-<span class="material-symbols-outlined" data-icon="extension">extension</span>
+                <a class="border-l-[6px] border-yellow-400 bg-stone-900 text-yellow-400 py-4 px-6 flex items-center gap-4    transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider translate-x-1"
+                    href="../integrations_hub_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="extension">extension</span>
                     INTEGRATIONS
                 </a>
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../productivity_tools_1/code.html">
-<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider"
+                    href="../productivity_tools_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
                     PRODUCTIVITY
                 </a>
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../whiteboard_canvas_1/code.html">
-<span class="material-symbols-outlined" data-icon="draw">draw</span>
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider"
+                    href="../whiteboard_canvas_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="draw">draw</span>
                     WHITEBOARD
                 </a>
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../settings_1/code.html">
-<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider"
+                    href="../settings_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="settings">settings</span>
                     SETTINGS
                 </a>
-</nav>
-</div>
-<div class="border-t-[3px] border-stone-900">
-<div class="p-6 flex flex-col gap-4">
-<div class="flex items-center gap-3 text-white">
-<span class="material-symbols-outlined text-yellow-400" data-icon="account_circle">account_circle</span>
-<span class="text-xs tracking-widest font-black uppercase">STUDENT_01</span>
-</div>
-<div class="flex items-center gap-3 text-white">
-<span class="material-symbols-outlined text-yellow-400" data-icon="calendar_today">calendar_today</span>
-<span class="text-xs tracking-widest font-black uppercase">OCT 24, 2024</span>
-</div>
-</div>
-</div>
-</aside>
-<!-- Main Canvas -->
-<main class="ml-[240px] flex-1 p-8 space-y-8 max-w-[1400px]">
-<!-- TOP — CONNECTION STATUS STRIP -->
-<header class="bg-[#1A1A1A] neo-border neo-shadow p-6 flex flex-wrap items-center justify-between gap-6">
-<div class="flex flex-wrap gap-4">
-<div class="bg-[#55EFC4] neo-border px-4 py-2 flex items-center gap-2 font-black text-sm uppercase tracking-tighter">
-<span class="material-symbols-outlined text-base">check_circle</span>
-          GOOGLE CALENDAR — CONNECTED
+            </nav>
         </div>
-<div class="bg-[#55EFC4] neo-border px-4 py-2 flex items-center gap-2 font-black text-sm uppercase tracking-tighter">
-<span class="material-symbols-outlined text-base">check_circle</span>
-          GMAIL — CONNECTED
+        <div class="border-t-[3px] border-stone-900">
+            <div class="p-6 flex flex-col gap-4">
+                <div class="flex items-center gap-3 text-white">
+                    <span class="material-symbols-outlined text-yellow-400"
+                        data-icon="account_circle">account_circle</span>
+                    <span class="text-xs tracking-widest font-black uppercase">STUDENT_01</span>
+                </div>
+                <div class="flex items-center gap-3 text-white">
+                    <span class="material-symbols-outlined text-yellow-400"
+                        data-icon="calendar_today">calendar_today</span>
+                    <span class="text-xs tracking-widest font-black uppercase">OCT 24, 2024</span>
+                </div>
+            </div>
         </div>
-<div class="bg-[#55EFC4] neo-border px-4 py-2 flex items-center gap-2 font-black text-sm uppercase tracking-tighter">
-<span class="material-symbols-outlined text-base">check_circle</span>
-          GOOGLE DRIVE — CONNECTED
+    </aside>
+    <!-- Main Canvas -->
+    <main class="ml-[240px] flex-1 p-8 space-y-8 max-w-[1400px]">
+        <!-- TOP — CONNECTION STATUS STRIP -->
+        <header class="bg-[#1A1A1A] neo-border neo-shadow p-6 flex flex-wrap items-center justify-between gap-6">
+            <div class="flex flex-wrap gap-4">
+                <div
+                    class="bg-[#55EFC4] neo-border px-4 py-2 flex items-center gap-2 font-black text-sm uppercase tracking-tighter">
+                    <span class="material-symbols-outlined text-base">check_circle</span>
+                    GOOGLE CALENDAR — CONNECTED
+                </div>
+                <div
+                    class="bg-[#55EFC4] neo-border px-4 py-2 flex items-center gap-2 font-black text-sm uppercase tracking-tighter">
+                    <span class="material-symbols-outlined text-base">check_circle</span>
+                    GMAIL — CONNECTED
+                </div>
+                <div
+                    class="bg-[#55EFC4] neo-border px-4 py-2 flex items-center gap-2 font-black text-sm uppercase tracking-tighter">
+                    <span class="material-symbols-outlined text-base">check_circle</span>
+                    GOOGLE DRIVE — CONNECTED
+                </div>
+            </div>
+            <button
+                class="bg-[#FFE135] neo-border neo-shadow neo-button-hover neo-button-active px-6 py-2 font-black text-sm uppercase flex items-center gap-2">
+                <span class="material-symbols-outlined">sync</span>
+                ⟳ SYNC ALL
+            </button>
+        </header>
+        <!-- Bento Grid Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- SECTION A — GOOGLE CALENDAR -->
+            <section class="bg-[#4ECDC4] neo-border neo-shadow-lg p-6 flex flex-col min-h-[500px]">
+                <div class="flex justify-between items-start mb-8">
+                    <h2 class="text-3xl font-black uppercase tracking-tighter">YOUR SCHEDULE</h2>
+                    <span class="material-symbols-outlined text-4xl">calendar_month</span>
+                </div>
+                <!-- Mini Week View -->
+                <div class="grid grid-cols-7 gap-2 mb-8">
+                    <div class="bg-[#FFFBF0] neo-border p-2 text-center">
+                        <div class="text-[10px] font-black opacity-50 uppercase">Mon</div>
+                        <div class="text-xl font-black">21</div>
+                    </div>
+                    <div class="bg-[#FFFBF0] neo-border p-2 text-center">
+                        <div class="text-[10px] font-black opacity-50 uppercase">Tue</div>
+                        <div class="text-xl font-black">22</div>
+                    </div>
+                    <div class="bg-[#FFE135] neo-border p-2 text-center neo-shadow">
+                        <div class="text-[10px] font-black uppercase">Wed</div>
+                        <div class="text-xl font-black">23</div>
+                    </div>
+                    <div class="bg-[#FFFBF0] neo-border p-2 text-center">
+                        <div class="text-[10px] font-black opacity-50 uppercase">Thu</div>
+                        <div class="text-xl font-black">24</div>
+                    </div>
+                    <div class="bg-[#FFFBF0] neo-border p-2 text-center">
+                        <div class="text-[10px] font-black opacity-50 uppercase">Fri</div>
+                        <div class="text-xl font-black">25</div>
+                    </div>
+                    <div class="bg-[#FFFBF0] neo-border p-2 text-center">
+                        <div class="text-[10px] font-black opacity-50 uppercase">Sat</div>
+                        <div class="text-xl font-black">26</div>
+                    </div>
+                    <div class="bg-[#FFFBF0] neo-border p-2 text-center">
+                        <div class="text-[10px] font-black opacity-50 uppercase">Sun</div>
+                        <div class="text-xl font-black">27</div>
+                    </div>
+                </div>
+                <div class="flex-1 space-y-4">
+                    <div class="bg-[#FFFBF0] neo-border p-4 flex items-center justify-between">
+                        <div>
+                            <div class="text-sm font-black uppercase">Sprint Review</div>
+                            <div class="text-xs font-bold opacity-60">09:00 AM — 10:30 AM</div>
+                        </div>
+                        <span class="material-symbols-outlined opacity-30">arrow_forward</span>
+                    </div>
+                    <div class="bg-[#FFFBF0] neo-border p-4 flex items-center justify-between">
+                        <div>
+                            <div class="text-sm font-black uppercase">User Interview: Mike</div>
+                            <div class="text-xs font-bold opacity-60">11:00 AM — 12:00 PM</div>
+                        </div>
+                        <span class="material-symbols-outlined opacity-30">arrow_forward</span>
+                    </div>
+                    <div
+                        class="bg-[#FFFBF0] neo-border p-4 flex items-center justify-between border-l-[12px] border-l-[#FF6B6B]">
+                        <div>
+                            <div class="text-sm font-black uppercase">Quick Standup</div>
+                            <div class="text-xs font-bold opacity-60">01:30 PM — 01:45 PM</div>
+                        </div>
+                        <span class="material-symbols-outlined opacity-30">arrow_forward</span>
+                    </div>
+                    <div class="bg-[#FFFBF0] neo-border p-4 flex items-center justify-between">
+                        <div>
+                            <div class="text-sm font-black uppercase">Design Sync</div>
+                            <div class="text-xs font-bold opacity-60">03:00 PM — 04:00 PM</div>
+                        </div>
+                        <span class="material-symbols-outlined opacity-30">arrow_forward</span>
+                    </div>
+                </div>
+            </section>
+            <!-- SECTION B — ACTIONABLE EMAIL FEED -->
+            <section class="bg-[#FF6B6B] neo-border neo-shadow-lg p-6 flex flex-col min-h-[500px]">
+                <div class="flex justify-between items-start mb-8">
+                    <h2 class="text-3xl font-black uppercase tracking-tighter">EMAILS NEEDING ACTION</h2>
+                    <span class="material-symbols-outlined text-4xl">mail</span>
+                </div>
+                <div class="flex gap-2 mb-6">
+                    <button
+                        class="bg-[#1A1A1A] text-white neo-border px-4 py-1 text-xs font-black uppercase">All</button>
+                    <button
+                        class="bg-[#FFFBF0] neo-border px-4 py-1 text-xs font-black uppercase neo-button-hover">Unread</button>
+                    <button
+                        class="bg-[#FFFBF0] neo-border px-4 py-1 text-xs font-black uppercase neo-button-hover">Flagged</button>
+                </div>
+                <div class="flex-1 space-y-4">
+                    <!-- Email Card -->
+                    <div class="bg-[#FFFBF0] neo-border p-4 space-y-2 relative group overflow-hidden">
+                        <div class="flex justify-between items-start">
+                            <span class="text-xs font-black uppercase tracking-widest text-[#1A1A1A]">Sarah
+                                Jenkins</span>
+                            <span class="bg-[#A29BFE] neo-border px-2 py-0.5 text-[10px] font-black uppercase">Pending
+                                Approval</span>
+                        </div>
+                        <div class="text-sm font-black uppercase leading-tight">Regarding the new workflow proposal for
+                            Q4...</div>
+                        <div class="flex gap-2 mt-4">
+                            <button
+                                class="bg-[#FFE135] neo-border px-3 py-1 text-[10px] font-black uppercase neo-button-hover">Reply</button>
+                            <button
+                                class="bg-[#4ECDC4] neo-border px-3 py-1 text-[10px] font-black uppercase neo-button-hover">Archive</button>
+                        </div>
+                    </div>
+                    <div class="bg-[#FFFBF0] neo-border p-4 space-y-2 relative group overflow-hidden">
+                        <div class="flex justify-between items-start">
+                            <span class="text-xs font-black uppercase tracking-widest text-[#1A1A1A]">Growth Bot</span>
+                            <span class="bg-[#FF9A3C] neo-border px-2 py-0.5 text-[10px] font-black uppercase">Urgent
+                                Alert</span>
+                        </div>
+                        <div class="text-sm font-black uppercase leading-tight">Server capacity reached 92% on main
+                            production...</div>
+                        <div class="flex gap-2 mt-4">
+                            <button
+                                class="bg-[#FFE135] neo-border px-3 py-1 text-[10px] font-black uppercase neo-button-hover">View
+                                Logs</button>
+                            <button
+                                class="bg-[#4ECDC4] neo-border px-3 py-1 text-[10px] font-black uppercase neo-button-hover">Mute</button>
+                        </div>
+                    </div>
+                    <div class="bg-[#FFFBF0] neo-border p-4 space-y-2 relative group overflow-hidden opacity-80">
+                        <div class="flex justify-between items-start">
+                            <span class="text-xs font-black uppercase tracking-widest text-[#1A1A1A]">HR Portal</span>
+                            <span class="bg-[#55EFC4] neo-border px-2 py-0.5 text-[10px] font-black uppercase">System
+                                Task</span>
+                        </div>
+                        <div class="text-sm font-black uppercase leading-tight">Monthly timesheet verification
+                            required...</div>
+                        <div class="flex gap-2 mt-4">
+                            <button
+                                class="bg-[#FFE135] neo-border px-3 py-1 text-[10px] font-black uppercase neo-button-hover">Resolve</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-</div>
-<button class="bg-[#FFE135] neo-border neo-shadow neo-button-hover neo-button-active px-6 py-2 font-black text-sm uppercase flex items-center gap-2">
-<span class="material-symbols-outlined">sync</span>
-        ⟳ SYNC ALL
-      </button>
-</header>
-<!-- Bento Grid Section -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<!-- SECTION A — GOOGLE CALENDAR -->
-<section class="bg-[#4ECDC4] neo-border neo-shadow-lg p-6 flex flex-col min-h-[500px]">
-<div class="flex justify-between items-start mb-8">
-<h2 class="text-3xl font-black uppercase tracking-tighter">YOUR SCHEDULE</h2>
-<span class="material-symbols-outlined text-4xl">calendar_month</span>
-</div>
-<!-- Mini Week View -->
-<div class="grid grid-cols-7 gap-2 mb-8">
-<div class="bg-[#FFFBF0] neo-border p-2 text-center">
-<div class="text-[10px] font-black opacity-50 uppercase">Mon</div>
-<div class="text-xl font-black">21</div>
-</div>
-<div class="bg-[#FFFBF0] neo-border p-2 text-center">
-<div class="text-[10px] font-black opacity-50 uppercase">Tue</div>
-<div class="text-xl font-black">22</div>
-</div>
-<div class="bg-[#FFE135] neo-border p-2 text-center neo-shadow">
-<div class="text-[10px] font-black uppercase">Wed</div>
-<div class="text-xl font-black">23</div>
-</div>
-<div class="bg-[#FFFBF0] neo-border p-2 text-center">
-<div class="text-[10px] font-black opacity-50 uppercase">Thu</div>
-<div class="text-xl font-black">24</div>
-</div>
-<div class="bg-[#FFFBF0] neo-border p-2 text-center">
-<div class="text-[10px] font-black opacity-50 uppercase">Fri</div>
-<div class="text-xl font-black">25</div>
-</div>
-<div class="bg-[#FFFBF0] neo-border p-2 text-center">
-<div class="text-[10px] font-black opacity-50 uppercase">Sat</div>
-<div class="text-xl font-black">26</div>
-</div>
-<div class="bg-[#FFFBF0] neo-border p-2 text-center">
-<div class="text-[10px] font-black opacity-50 uppercase">Sun</div>
-<div class="text-xl font-black">27</div>
-</div>
-</div>
-<div class="flex-1 space-y-4">
-<div class="bg-[#FFFBF0] neo-border p-4 flex items-center justify-between">
-<div>
-<div class="text-sm font-black uppercase">Sprint Review</div>
-<div class="text-xs font-bold opacity-60">09:00 AM — 10:30 AM</div>
-</div>
-<span class="material-symbols-outlined opacity-30">arrow_forward</span>
-</div>
-<div class="bg-[#FFFBF0] neo-border p-4 flex items-center justify-between">
-<div>
-<div class="text-sm font-black uppercase">User Interview: Mike</div>
-<div class="text-xs font-bold opacity-60">11:00 AM — 12:00 PM</div>
-</div>
-<span class="material-symbols-outlined opacity-30">arrow_forward</span>
-</div>
-<div class="bg-[#FFFBF0] neo-border p-4 flex items-center justify-between border-l-[12px] border-l-[#FF6B6B]">
-<div>
-<div class="text-sm font-black uppercase">Quick Standup</div>
-<div class="text-xs font-bold opacity-60">01:30 PM — 01:45 PM</div>
-</div>
-<span class="material-symbols-outlined opacity-30">arrow_forward</span>
-</div>
-<div class="bg-[#FFFBF0] neo-border p-4 flex items-center justify-between">
-<div>
-<div class="text-sm font-black uppercase">Design Sync</div>
-<div class="text-xs font-bold opacity-60">03:00 PM — 04:00 PM</div>
-</div>
-<span class="material-symbols-outlined opacity-30">arrow_forward</span>
-</div>
-</div>
-</section>
-<!-- SECTION B — ACTIONABLE EMAIL FEED -->
-<section class="bg-[#FF6B6B] neo-border neo-shadow-lg p-6 flex flex-col min-h-[500px]">
-<div class="flex justify-between items-start mb-8">
-<h2 class="text-3xl font-black uppercase tracking-tighter">EMAILS NEEDING ACTION</h2>
-<span class="material-symbols-outlined text-4xl">mail</span>
-</div>
-<div class="flex gap-2 mb-6">
-<button class="bg-[#1A1A1A] text-white neo-border px-4 py-1 text-xs font-black uppercase">All</button>
-<button class="bg-[#FFFBF0] neo-border px-4 py-1 text-xs font-black uppercase neo-button-hover">Unread</button>
-<button class="bg-[#FFFBF0] neo-border px-4 py-1 text-xs font-black uppercase neo-button-hover">Flagged</button>
-</div>
-<div class="flex-1 space-y-4">
-<!-- Email Card -->
-<div class="bg-[#FFFBF0] neo-border p-4 space-y-2 relative group overflow-hidden">
-<div class="flex justify-between items-start">
-<span class="text-xs font-black uppercase tracking-widest text-[#1A1A1A]">Sarah Jenkins</span>
-<span class="bg-[#A29BFE] neo-border px-2 py-0.5 text-[10px] font-black uppercase">Pending Approval</span>
-</div>
-<div class="text-sm font-black uppercase leading-tight">Regarding the new workflow proposal for Q4...</div>
-<div class="flex gap-2 mt-4">
-<button class="bg-[#FFE135] neo-border px-3 py-1 text-[10px] font-black uppercase neo-button-hover">Reply</button>
-<button class="bg-[#4ECDC4] neo-border px-3 py-1 text-[10px] font-black uppercase neo-button-hover">Archive</button>
-</div>
-</div>
-<div class="bg-[#FFFBF0] neo-border p-4 space-y-2 relative group overflow-hidden">
-<div class="flex justify-between items-start">
-<span class="text-xs font-black uppercase tracking-widest text-[#1A1A1A]">Growth Bot</span>
-<span class="bg-[#FF9A3C] neo-border px-2 py-0.5 text-[10px] font-black uppercase">Urgent Alert</span>
-</div>
-<div class="text-sm font-black uppercase leading-tight">Server capacity reached 92% on main production...</div>
-<div class="flex gap-2 mt-4">
-<button class="bg-[#FFE135] neo-border px-3 py-1 text-[10px] font-black uppercase neo-button-hover">View Logs</button>
-<button class="bg-[#4ECDC4] neo-border px-3 py-1 text-[10px] font-black uppercase neo-button-hover">Mute</button>
-</div>
-</div>
-<div class="bg-[#FFFBF0] neo-border p-4 space-y-2 relative group overflow-hidden opacity-80">
-<div class="flex justify-between items-start">
-<span class="text-xs font-black uppercase tracking-widest text-[#1A1A1A]">HR Portal</span>
-<span class="bg-[#55EFC4] neo-border px-2 py-0.5 text-[10px] font-black uppercase">System Task</span>
-</div>
-<div class="text-sm font-black uppercase leading-tight">Monthly timesheet verification required...</div>
-<div class="flex gap-2 mt-4">
-<button class="bg-[#FFE135] neo-border px-3 py-1 text-[10px] font-black uppercase neo-button-hover">Resolve</button>
-</div>
-</div>
-</div>
-</section>
-</div>
-<!-- SECTION C — RESOURCE VAULT -->
-<section class="bg-[#FFE135] neo-border neo-shadow-lg p-8">
-<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8">
-<div>
-<h2 class="text-4xl font-black uppercase tracking-tighter mb-2">RESOURCE VAULT</h2>
-<p class="text-sm font-bold uppercase opacity-70">Centralized Asset Management &amp; Storage</p>
-</div>
-<div class="flex gap-4 w-full md:w-auto">
-<div class="flex-1 md:w-64 bg-[#FFFBF0] neo-border flex items-center px-4 py-2">
-<span class="material-symbols-outlined mr-2">search</span>
-<input class="bg-transparent border-none focus:ring-0 w-full text-xs font-black uppercase" placeholder="SEARCH VAULT..." type="text"/>
-</div>
-<button class="bg-[#1A1A1A] text-white neo-border px-6 py-2 font-black text-sm uppercase neo-button-hover">Create Folder</button>
-</div>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
-<!-- Sidebar within Vault -->
-<div class="lg:col-span-1 space-y-6">
-<div class="bg-[#FFFBF0] neo-border p-4">
-<h3 class="text-xs font-black uppercase border-b-2 border-[#1A1A1A] pb-2 mb-4">CATEGORIES</h3>
-<ul class="space-y-2">
-<li class="flex items-center justify-between text-xs font-black uppercase p-2 bg-[#1A1A1A] text-white">
-<span>Everything</span>
-<span>(42)</span>
-</li>
-<li class="flex items-center justify-between text-xs font-black uppercase p-2 hover:bg-white/50 cursor-pointer">
-<span>Documents</span>
-<span>(12)</span>
-</li>
-<li class="flex items-center justify-between text-xs font-black uppercase p-2 hover:bg-white/50 cursor-pointer">
-<span>Images</span>
-<span>(24)</span>
-</li>
-<li class="flex items-center justify-between text-xs font-black uppercase p-2 hover:bg-white/50 cursor-pointer">
-<span>Templates</span>
-<span>(6)</span>
-</li>
-</ul>
-</div>
-<!-- Drop Zone -->
-<div class="bg-white/30 border-4 border-dashed border-[#1A1A1A] p-8 text-center flex flex-col items-center justify-center gap-4">
-<span class="material-symbols-outlined text-4xl">upload_file</span>
-<div class="text-xs font-black uppercase">DRAG &amp; DROP ASSETS HERE</div>
-</div>
-</div>
-<!-- File Grid -->
-<div class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
-<!-- File Item -->
-<div class="bg-[#FFFBF0] neo-border neo-shadow p-4 flex flex-col justify-between">
-<div class="flex justify-between mb-4">
-<span class="material-symbols-outlined text-3xl">description</span>
-<span class="material-symbols-outlined text-xl opacity-20">more_vert</span>
-</div>
-<div>
-<div class="text-sm font-black uppercase truncate">Q4_Marketing_Strategy.pdf</div>
-<div class="text-[10px] font-bold opacity-50 uppercase mt-1">1.2 MB • Updated 2h ago</div>
-</div>
-<div class="flex gap-2 mt-6">
-<button class="flex-1 bg-[#4ECDC4] neo-border py-2 text-[10px] font-black uppercase neo-button-hover">Open</button>
-<button class="bg-[#FF6B6B] neo-border px-3 py-2 neo-button-hover">
-<span class="material-symbols-outlined text-sm">delete</span>
-</button>
-</div>
-</div>
-<div class="bg-[#FFFBF0] neo-border neo-shadow p-4 flex flex-col justify-between">
-<div class="flex justify-between mb-4">
-<span class="material-symbols-outlined text-3xl">image</span>
-<span class="material-symbols-outlined text-xl opacity-20">more_vert</span>
-</div>
-<div>
-<div class="text-sm font-black uppercase truncate">App_Mockup_v2.png</div>
-<div class="text-[10px] font-bold opacity-50 uppercase mt-1">4.8 MB • Updated 5h ago</div>
-</div>
-<div class="flex gap-2 mt-6">
-<button class="flex-1 bg-[#4ECDC4] neo-border py-2 text-[10px] font-black uppercase neo-button-hover">Open</button>
-<button class="bg-[#FF6B6B] neo-border px-3 py-2 neo-button-hover">
-<span class="material-symbols-outlined text-sm">delete</span>
-</button>
-</div>
-</div>
-<div class="bg-[#FFFBF0] neo-border neo-shadow p-4 flex flex-col justify-between">
-<div class="flex justify-between mb-4">
-<span class="material-symbols-outlined text-3xl">table_chart</span>
-<span class="material-symbols-outlined text-xl opacity-20">more_vert</span>
-</div>
-<div>
-<div class="text-sm font-black uppercase truncate">Budget_Draft_2024.xlsx</div>
-<div class="text-[10px] font-bold opacity-50 uppercase mt-1">340 KB • Updated Yesterday</div>
-</div>
-<div class="flex gap-2 mt-6">
-<button class="flex-1 bg-[#4ECDC4] neo-border py-2 text-[10px] font-black uppercase neo-button-hover">Open</button>
-<button class="bg-[#FF6B6B] neo-border px-3 py-2 neo-button-hover">
-<span class="material-symbols-outlined text-sm">delete</span>
-</button>
-</div>
-</div>
-<div class="bg-[#FFFBF0] neo-border neo-shadow p-4 flex flex-col justify-between">
-<div class="flex justify-between mb-4">
-<span class="material-symbols-outlined text-3xl">video_library</span>
-<span class="material-symbols-outlined text-xl opacity-20">more_vert</span>
-</div>
-<div>
-<div class="text-sm font-black uppercase truncate">Explainer_Final.mp4</div>
-<div class="text-[10px] font-bold opacity-50 uppercase mt-1">128 MB • Updated 2d ago</div>
-</div>
-<div class="flex gap-2 mt-6">
-<button class="flex-1 bg-[#4ECDC4] neo-border py-2 text-[10px] font-black uppercase neo-button-hover">Open</button>
-<button class="bg-[#FF6B6B] neo-border px-3 py-2 neo-button-hover">
-<span class="material-symbols-outlined text-sm">delete</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Floating Action Ornament -->
-<div class="fixed bottom-8 right-8 z-50">
-<div class="bg-[#A29BFE] neo-border neo-shadow p-4 transform rotate-12 hover:rotate-0 transition-transform cursor-pointer">
-<span class="material-symbols-outlined text-3xl text-black">star</span>
-</div>
-</div>
-</main>
+        <!-- SECTION C — RESOURCE VAULT -->
+        <section class="bg-[#FFE135] neo-border neo-shadow-lg p-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8">
+                <div>
+                    <h2 class="text-4xl font-black uppercase tracking-tighter mb-2">RESOURCE VAULT</h2>
+                    <p class="text-sm font-bold uppercase opacity-70">Centralized Asset Management &amp; Storage</p>
+                </div>
+                <div class="flex gap-4 w-full md:w-auto">
+                    <div class="flex-1 md:w-64 bg-[#FFFBF0] neo-border flex items-center px-4 py-2">
+                        <span class="material-symbols-outlined mr-2">search</span>
+                        <input class="bg-transparent border-none focus:ring-0 w-full text-xs font-black uppercase"
+                            placeholder="SEARCH VAULT..." type="text" />
+                    </div>
+                    <button
+                        class="bg-[#1A1A1A] text-white neo-border px-6 py-2 font-black text-sm uppercase neo-button-hover">Create
+                        Folder</button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <!-- Sidebar within Vault -->
+                <div class="lg:col-span-1 space-y-6">
+                    <div class="bg-[#FFFBF0] neo-border p-4">
+                        <h3 class="text-xs font-black uppercase border-b-2 border-[#1A1A1A] pb-2 mb-4">CATEGORIES</h3>
+                        <ul class="space-y-2">
+                            <li
+                                class="flex items-center justify-between text-xs font-black uppercase p-2 bg-[#1A1A1A] text-white">
+                                <span>Everything</span>
+                                <span>(42)</span>
+                            </li>
+                            <li
+                                class="flex items-center justify-between text-xs font-black uppercase p-2 hover:bg-white/50 cursor-pointer">
+                                <span>Documents</span>
+                                <span>(12)</span>
+                            </li>
+                            <li
+                                class="flex items-center justify-between text-xs font-black uppercase p-2 hover:bg-white/50 cursor-pointer">
+                                <span>Images</span>
+                                <span>(24)</span>
+                            </li>
+                            <li
+                                class="flex items-center justify-between text-xs font-black uppercase p-2 hover:bg-white/50 cursor-pointer">
+                                <span>Templates</span>
+                                <span>(6)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Drop Zone -->
+                    <div
+                        class="bg-white/30 border-4 border-dashed border-[#1A1A1A] p-8 text-center flex flex-col items-center justify-center gap-4">
+                        <span class="material-symbols-outlined text-4xl">upload_file</span>
+                        <div class="text-xs font-black uppercase">DRAG &amp; DROP ASSETS HERE</div>
+                    </div>
+                </div>
+                <!-- File Grid -->
+                <div class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                    <!-- File Item -->
+                    <div class="bg-[#FFFBF0] neo-border neo-shadow p-4 flex flex-col justify-between">
+                        <div class="flex justify-between mb-4">
+                            <span class="material-symbols-outlined text-3xl">description</span>
+                            <span class="material-symbols-outlined text-xl opacity-20">more_vert</span>
+                        </div>
+                        <div>
+                            <div class="text-sm font-black uppercase truncate">Q4_Marketing_Strategy.pdf</div>
+                            <div class="text-[10px] font-bold opacity-50 uppercase mt-1">1.2 MB • Updated 2h ago</div>
+                        </div>
+                        <div class="flex gap-2 mt-6">
+                            <button
+                                class="flex-1 bg-[#4ECDC4] neo-border py-2 text-[10px] font-black uppercase neo-button-hover">Open</button>
+                            <button class="bg-[#FF6B6B] neo-border px-3 py-2 neo-button-hover">
+                                <span class="material-symbols-outlined text-sm">delete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-[#FFFBF0] neo-border neo-shadow p-4 flex flex-col justify-between">
+                        <div class="flex justify-between mb-4">
+                            <span class="material-symbols-outlined text-3xl">image</span>
+                            <span class="material-symbols-outlined text-xl opacity-20">more_vert</span>
+                        </div>
+                        <div>
+                            <div class="text-sm font-black uppercase truncate">App_Mockup_v2.png</div>
+                            <div class="text-[10px] font-bold opacity-50 uppercase mt-1">4.8 MB • Updated 5h ago</div>
+                        </div>
+                        <div class="flex gap-2 mt-6">
+                            <button
+                                class="flex-1 bg-[#4ECDC4] neo-border py-2 text-[10px] font-black uppercase neo-button-hover">Open</button>
+                            <button class="bg-[#FF6B6B] neo-border px-3 py-2 neo-button-hover">
+                                <span class="material-symbols-outlined text-sm">delete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-[#FFFBF0] neo-border neo-shadow p-4 flex flex-col justify-between">
+                        <div class="flex justify-between mb-4">
+                            <span class="material-symbols-outlined text-3xl">table_chart</span>
+                            <span class="material-symbols-outlined text-xl opacity-20">more_vert</span>
+                        </div>
+                        <div>
+                            <div class="text-sm font-black uppercase truncate">Budget_Draft_2024.xlsx</div>
+                            <div class="text-[10px] font-bold opacity-50 uppercase mt-1">340 KB • Updated Yesterday
+                            </div>
+                        </div>
+                        <div class="flex gap-2 mt-6">
+                            <button
+                                class="flex-1 bg-[#4ECDC4] neo-border py-2 text-[10px] font-black uppercase neo-button-hover">Open</button>
+                            <button class="bg-[#FF6B6B] neo-border px-3 py-2 neo-button-hover">
+                                <span class="material-symbols-outlined text-sm">delete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-[#FFFBF0] neo-border neo-shadow p-4 flex flex-col justify-between">
+                        <div class="flex justify-between mb-4">
+                            <span class="material-symbols-outlined text-3xl">video_library</span>
+                            <span class="material-symbols-outlined text-xl opacity-20">more_vert</span>
+                        </div>
+                        <div>
+                            <div class="text-sm font-black uppercase truncate">Explainer_Final.mp4</div>
+                            <div class="text-[10px] font-bold opacity-50 uppercase mt-1">128 MB • Updated 2d ago</div>
+                        </div>
+                        <div class="flex gap-2 mt-6">
+                            <button
+                                class="flex-1 bg-[#4ECDC4] neo-border py-2 text-[10px] font-black uppercase neo-button-hover">Open</button>
+                            <button class="bg-[#FF6B6B] neo-border px-3 py-2 neo-button-hover">
+                                <span class="material-symbols-outlined text-sm">delete</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Floating Action Ornament -->
+        <div class="fixed bottom-8 right-8 z-50">
+            <div
+                class="bg-[#A29BFE] neo-border neo-shadow p-4 transform rotate-12 hover:rotate-0 transition-transform cursor-pointer">
+                <span class="material-symbols-outlined text-3xl text-black">star</span>
+            </div>
+        </div>
+    </main>
 
-<script>
-    // Global Auth Guard & Data Plugin
-    document.addEventListener('DOMContentLoaded', () => {
-        const userId = localStorage.getItem('userId');
-        if (!userId) {
-            window.location.href = '../index.html';
-            return;
-        }
-        
-        const username = localStorage.getItem('username');
-        if (username) {
-            // Update username in sidebars replacing STUDENT_01
-            document.querySelectorAll('*').forEach(el => {
-                if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
-                    if (el.innerText.includes('STUDENT_01')) {
-                        el.innerText = el.innerText.replace('STUDENT_01', username);
+    <script>
+        // Global Auth Guard & Data Plugin
+        document.addEventListener('DOMContentLoaded', () => {
+            const userId = localStorage.getItem('userId');
+            if (!userId) {
+                window.location.href = '../index.html';
+                return;
+            }
+
+            const username = localStorage.getItem('username');
+            if (username) {
+                // Update username in sidebars replacing STUDENT_01
+                document.querySelectorAll('*').forEach(el => {
+                    if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
+                        if (el.innerText.includes('STUDENT_01')) {
+                            el.innerText = el.innerText.replace('STUDENT_01', username);
+                        }
+                    }
+                });
+            }
+
+            // Make sidebars clickable for logout where account_circle resides
+            document.querySelectorAll('span').forEach(s => {
+                if (s.innerText.includes('account_circle')) {
+                    let p = s.parentElement;
+                    if (p) {
+                        p.style.cursor = 'pointer';
+                        p.title = 'Click to Logout';
+                        p.onclick = function () {
+                            localStorage.clear();
+                            window.location.href = '../index.html';
+                        };
                     }
                 }
             });
-        }
-
-        // Make sidebars clickable for logout where account_circle resides
-        document.querySelectorAll('span').forEach(s => {
-            if(s.innerText.includes('account_circle')) {
-                let p = s.parentElement;
-                if(p) {
-                    p.style.cursor = 'pointer';
-                    p.title = 'Click to Logout';
-                    p.onclick = function() {
-                        localStorage.clear();
-                        window.location.href = '../index.html';
-                    };
-                }
-            }
         });
-    });
-</script>
+    </script>
 
-</body></html>
+</body>
+
+</html>

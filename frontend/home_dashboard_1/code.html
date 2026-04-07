@@ -1,429 +1,491 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>SANKALP | Dashboard</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "primary-dim": "#665800",
-                    "inverse-on-surface": "#9f9d93",
-                    "on-secondary": "#ffffff",
-                    "on-error": "#ffffff",
-                    "surface-dim": "#e6e3d4",
-                    "on-tertiary-fixed-variant": "#790214",
-                    "on-secondary-fixed": "#004844",
-                    "background": "#FFFBF0",
-                    "secondary": "#00716b",
-                    "on-surface": "#1A1A1A",
-                    "error-dim": "#b92902",
-                    "error-container": "#f95630",
-                    "on-tertiary": "#ffffff",
-                    "on-background": "#1A1A1A",
-                    "primary-fixed-dim": "#ebce1e",
-                    "outline-variant": "#bcb9af",
-                    "on-primary-fixed-variant": "#655800",
-                    "surface-bright": "#fffbff",
-                    "surface-container-highest": "#ece8da",
-                    "surface": "#fffbff",
-                    "primary-container": "#FFE135",
-                    "surface-container-high": "#f2eee1",
-                    "surface-container-low": "#fdf9ed",
-                    "tertiary-container": "#ff928e",
-                    "on-secondary-container": "#005c57",
-                    "on-primary-container": "#5b4e00",
-                    "tertiary": "#b6353a",
-                    "inverse-primary": "#fadd30",
-                    "outline": "#838178",
-                    "secondary-fixed-dim": "#6ce8de",
-                    "secondary-container": "#7cf6ec",
-                    "on-surface-variant": "#66645c",
-                    "secondary-dim": "#00635e",
-                    "tertiary-fixed-dim": "#ff7a79",
-                    "on-error-container": "#520c00",
-                    "tertiary-fixed": "#ff928e",
-                    "on-tertiary-fixed": "#3a0005",
-                    "primary": "#FFE135",
-                    "on-primary": "#1A1A1A",
-                    "surface-container-lowest": "#ffffff",
-                    "surface-container": "#f7f4e7",
-                    "inverse-surface": "#0f0e09",
-                    "secondary-fixed": "#7cf6ec",
-                    "surface-tint": "#746400",
-                    "primary-fixed": "#fadd30",
-                    "tertiary-dim": "#a5292f",
-                    "surface-variant": "#ece8da",
-                    "on-tertiary-container": "#69000f",
-                    "on-primary-fixed": "#453c00",
-                    "error": "#FF3B3B",
-                    "on-secondary-fixed-variant": "#006761",
-                    "coral": "#FF6B6B",
-                    "teal": "#4ECDC4",
-                    "purple": "#A29BFE",
-                    "mint": "#55EFC4",
-                    "ink": "#1A1A1A"
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>GRIND | Dashboard</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-dim": "#665800",
+                        "inverse-on-surface": "#9f9d93",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#e6e3d4",
+                        "on-tertiary-fixed-variant": "#790214",
+                        "on-secondary-fixed": "#004844",
+                        "background": "#FFFBF0",
+                        "secondary": "#00716b",
+                        "on-surface": "#1A1A1A",
+                        "error-dim": "#b92902",
+                        "error-container": "#f95630",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#1A1A1A",
+                        "primary-fixed-dim": "#ebce1e",
+                        "outline-variant": "#bcb9af",
+                        "on-primary-fixed-variant": "#655800",
+                        "surface-bright": "#fffbff",
+                        "surface-container-highest": "#ece8da",
+                        "surface": "#fffbff",
+                        "primary-container": "#FFE135",
+                        "surface-container-high": "#f2eee1",
+                        "surface-container-low": "#fdf9ed",
+                        "tertiary-container": "#ff928e",
+                        "on-secondary-container": "#005c57",
+                        "on-primary-container": "#5b4e00",
+                        "tertiary": "#b6353a",
+                        "inverse-primary": "#fadd30",
+                        "outline": "#838178",
+                        "secondary-fixed-dim": "#6ce8de",
+                        "secondary-container": "#7cf6ec",
+                        "on-surface-variant": "#66645c",
+                        "secondary-dim": "#00635e",
+                        "tertiary-fixed-dim": "#ff7a79",
+                        "on-error-container": "#520c00",
+                        "tertiary-fixed": "#ff928e",
+                        "on-tertiary-fixed": "#3a0005",
+                        "primary": "#FFE135",
+                        "on-primary": "#1A1A1A",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#f7f4e7",
+                        "inverse-surface": "#0f0e09",
+                        "secondary-fixed": "#7cf6ec",
+                        "surface-tint": "#746400",
+                        "primary-fixed": "#fadd30",
+                        "tertiary-dim": "#a5292f",
+                        "surface-variant": "#ece8da",
+                        "on-tertiary-container": "#69000f",
+                        "on-primary-fixed": "#453c00",
+                        "error": "#FF3B3B",
+                        "on-secondary-fixed-variant": "#006761",
+                        "coral": "#FF6B6B",
+                        "teal": "#4ECDC4",
+                        "purple": "#A29BFE",
+                        "mint": "#55EFC4",
+                        "ink": "#1A1A1A"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "2px",
+                        "xl": "4px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk", "sans-serif"],
+                        "body": ["Space Grotesk", "sans-serif"],
+                        "label": ["Space Grotesk", "sans-serif"]
+                    }
+                },
             },
-            "borderRadius": {
-                    "DEFAULT": "0px",
-                    "lg": "2px",
-                    "xl": "4px",
-                    "full": "9999px"
-            },
-            "fontFamily": {
-                    "headline": ["Space Grotesk", "sans-serif"],
-                    "body": ["Space Grotesk", "sans-serif"],
-                    "label": ["Space Grotesk", "sans-serif"]
-            }
-          },
-        },
-      }
+        }
     </script>
-<style>
+    <style>
         body {
             background-color: #FFFBF0;
             color: #1A1A1A;
             font-family: 'Space Grotesk', sans-serif;
             font-weight: 700;
         }
+
         .neo-shadow {
             box-shadow: 5px 5px 0px #1A1A1A;
         }
+
         .neo-shadow-lg {
             box-shadow: 8px 8px 0px #1A1A1A;
         }
+
         .neo-border {
             border: 3px solid #1A1A1A;
         }
+
         .marquee {
             overflow: hidden;
             white-space: nowrap;
         }
+
         .marquee-content {
             display: inline-block;
             animation: scroll 20s linear infinite;
         }
+
         @keyframes scroll {
-            from { transform: translateX(100%); }
-            to { transform: translateX(-100%); }
+            from {
+                transform: translateX(100%);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
         }
+
         .diagonal-stripes {
-            background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.1) 10px, rgba(0,0,0,0.1) 20px);
+            background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0, 0, 0, 0.1) 10px, rgba(0, 0, 0, 0.1) 20px);
         }
     </style>
 </head>
+
 <body class="flex">
-<!-- SideNavBar Component -->
-<aside class="fixed left-0 top-0 h-full flex flex-col justify-between z-40 w-[240px] border-r-[3px] border-stone-900 bg-stone-950 shadow-[5px_0px_0px_0px_rgba(26,26,26,1)]">
-<div class="flex flex-col">
-<div class="p-6 border-b-[3px] border-stone-900 mb-2">
-<div class="text-[28px] font-black text-yellow-400 flex items-center gap-2 uppercase tracking-wider font-['Space_Grotesk']">
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
-                    SANKALP
+    <!-- SideNavBar Component -->
+    <aside
+        class="fixed left-0 top-0 h-full flex flex-col justify-between z-40 w-[240px] border-r-[3px] border-stone-900 bg-stone-950 shadow-[5px_0px_0px_0px_rgba(26,26,26,1)]">
+        <div class="flex flex-col">
+            <div class="p-6 border-b-[3px] border-stone-900 mb-2">
+                <div
+                    class="text-[28px] font-black text-yellow-400 flex items-center gap-2 uppercase tracking-wider font-['Space_Grotesk']">
+                    <span class="material-symbols-outlined" data-icon="star"
+                        style="font-variation-settings: 'FILL' 1;">star</span>
+                    GRIND
                 </div>
-<div class="text-[10px] text-yellow-400/60 font-bold uppercase tracking-[0.2em] mt-1">PRODUCTIVITY ENGINE</div>
-</div>
-<nav class="flex flex-col">
-<!-- HOME - ACTIVE -->
-<a class="border-l-[6px] border-yellow-400 bg-stone-900 text-yellow-400 py-4 px-6 flex items-center gap-4 transition-all    font-['Space_Grotesk'] font-bold uppercase tracking-wider translate-x-1" href="../home_dashboard_1/code.html">
-<span class="material-symbols-outlined" data-icon="home">home</span>
+                <div class="text-[10px] text-yellow-400/60 font-bold uppercase tracking-[0.2em] mt-1">PRODUCTIVITY
+                    ENGINE</div>
+            </div>
+            <nav class="flex flex-col">
+                <!-- HOME - ACTIVE -->
+                <a class="border-l-[6px] border-yellow-400 bg-stone-900 text-yellow-400 py-4 px-6 flex items-center gap-4 transition-all    font-['Space_Grotesk'] font-bold uppercase tracking-wider translate-x-1"
+                    href="../home_dashboard_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="home">home</span>
                     HOME
                 </a>
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../tasks_streak_1/code.html">
-<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider"
+                    href="../tasks_streak_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="bolt">bolt</span>
                     TASKS &amp; STREAK
                 </a>
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../time_awareness_1/code.html">
-<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider"
+                    href="../time_awareness_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="schedule">schedule</span>
                     TIME AWARENESS
                 </a>
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../skills_goals_1/code.html">
-<span class="material-symbols-outlined" data-icon="ads_click">ads_click</span>
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider"
+                    href="../skills_goals_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="ads_click">ads_click</span>
                     SKILLS &amp; GOALS
                 </a>
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../integrations_hub_1/code.html">
-<span class="material-symbols-outlined" data-icon="extension">extension</span>
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider"
+                    href="../integrations_hub_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="extension">extension</span>
                     INTEGRATIONS
                 </a>
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../productivity_tools_1/code.html">
-<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider"
+                    href="../productivity_tools_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
                     PRODUCTIVITY
                 </a>
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../whiteboard_canvas_1/code.html">
-<span class="material-symbols-outlined" data-icon="draw">draw</span>
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider"
+                    href="../whiteboard_canvas_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="draw">draw</span>
                     WHITEBOARD
                 </a>
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../settings_1/code.html">
-<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider"
+                    href="../settings_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="settings">settings</span>
                     SETTINGS
                 </a>
-</nav>
-</div>
-<div class="border-t-[3px] border-stone-900">
-<div class="p-6 flex flex-col gap-4">
-<div class="flex items-center gap-3 text-white">
-<span class="material-symbols-outlined text-yellow-400" data-icon="account_circle">account_circle</span>
-<span class="text-xs tracking-widest font-black uppercase">STUDENT_01</span>
-</div>
-<div class="flex items-center gap-3 text-white">
-<span class="material-symbols-outlined text-yellow-400" data-icon="calendar_today">calendar_today</span>
-<span class="text-xs tracking-widest font-black uppercase">OCT 24, 2024</span>
-</div>
-</div>
-</div>
-</aside>
-<!-- Main Content Canvas -->
-<main class="ml-[240px] flex-1 p-8 min-h-screen">
-<div class="max-w-7xl mx-auto grid grid-cols-12 gap-8">
-<!-- TOP BANNER -->
-<section class="col-span-12 neo-border bg-primary p-8 neo-shadow-lg flex justify-between items-center relative overflow-hidden">
-<div class="absolute -bottom-8 -right-8 opacity-10">
-<span class="material-symbols-outlined text-[200px]" data-icon="bolt">bolt</span>
-</div>
-<div class="z-10">
-<h1 class="text-[40px] font-black leading-tight tracking-tight uppercase">GOOD MORNING, STUDENT.<br/>LET'S GET TO WORK.</h1>
-</div>
-<div class="z-10 text-right flex flex-col items-end gap-3">
-<div class="text-xl font-black uppercase tracking-widest bg-ink text-primary px-4 py-1">APRIL 15, 2025</div>
-<div class="bg-coral text-ink neo-border px-4 py-2 flex items-center gap-2 font-black tracking-wider uppercase text-sm">
-<span class="material-symbols-outlined" data-icon="local_fire_department" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+            </nav>
+        </div>
+        <div class="border-t-[3px] border-stone-900">
+            <div class="p-6 flex flex-col gap-4">
+                <div class="flex items-center gap-3 text-white">
+                    <span class="material-symbols-outlined text-yellow-400"
+                        data-icon="account_circle">account_circle</span>
+                    <span class="text-xs tracking-widest font-black uppercase">STUDENT_01</span>
+                </div>
+                <div class="flex items-center gap-3 text-white">
+                    <span class="material-symbols-outlined text-yellow-400"
+                        data-icon="calendar_today">calendar_today</span>
+                    <span class="text-xs tracking-widest font-black uppercase">OCT 24, 2024</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!-- Main Content Canvas -->
+    <main class="ml-[240px] flex-1 p-8 min-h-screen">
+        <div class="max-w-7xl mx-auto grid grid-cols-12 gap-8">
+            <!-- TOP BANNER -->
+            <section
+                class="col-span-12 neo-border bg-primary p-8 neo-shadow-lg flex justify-between items-center relative overflow-hidden">
+                <div class="absolute -bottom-8 -right-8 opacity-10">
+                    <span class="material-symbols-outlined text-[200px]" data-icon="bolt">bolt</span>
+                </div>
+                <div class="z-10">
+                    <h1 class="text-[40px] font-black leading-tight tracking-tight uppercase">GOOD MORNING,
+                        STUDENT.<br />LET'S GET TO WORK.</h1>
+                </div>
+                <div class="z-10 text-right flex flex-col items-end gap-3">
+                    <div class="text-xl font-black uppercase tracking-widest bg-ink text-primary px-4 py-1">APRIL 15,
+                        2025</div>
+                    <div
+                        class="bg-coral text-ink neo-border px-4 py-2 flex items-center gap-2 font-black tracking-wider uppercase text-sm">
+                        <span class="material-symbols-outlined" data-icon="local_fire_department"
+                            style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
                         <span id="streak-counter">0 DAY STREAK</span>
                     </div>
-</div>
-</section>
-<!-- ROW 1 -->
-<div class="col-span-12 md:col-span-4 neo-border bg-primary-container p-6 neo-shadow flex flex-col justify-between min-h-[220px]">
-<div>
-<h3 class="text-sm uppercase tracking-[0.2em] mb-4">Task Summary</h3>
-<div id="dashboard-task-summary" class="text-2xl font-black uppercase mb-4">0 TASKS TODAY — 0 DONE</div>
-<div class="w-full h-8 neo-border bg-background relative overflow-hidden">
-<div id="dashboard-task-progress" class="absolute top-0 left-0 h-full bg-teal w-[0%] border-r-[3px] border-ink"></div>
-</div>
-</div>
-<button onclick="window.location.href='../tasks_streak_1/code.html'" class="w-fit mt-6 text-sm font-black uppercase tracking-widest flex items-center gap-2 hover:translate-x-2 transition-transform">
-                    VIEW ALL <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
-</button>
-</div>
-<div class="col-span-12 md:col-span-4 neo-border bg-coral p-6 neo-shadow flex flex-col items-center justify-center relative min-h-[220px]">
-<div class="absolute top-4 left-4 text-[10px] font-black uppercase tracking-widest">Discipline Score</div>
-<div class="relative flex items-center justify-center w-32 h-32">
-<svg class="absolute inset-0 w-full h-full -rotate-90">
-<circle class="text-ink/20" cx="64" cy="64" fill="transparent" r="58" stroke="currentColor" stroke-width="8"></circle>
-<circle id="discipline-progress" class="text-ink" cx="64" cy="64" fill="transparent" r="58" stroke="currentColor" stroke-dasharray="364.4" stroke-dashoffset="364.4" stroke-width="8"></circle>
-</svg>
-<span id="discipline-score" class="text-[80px] font-black leading-none">0</span>
-</div>
-<div class="mt-2 text-sm font-black uppercase tracking-widest">TODAY'S SCORE</div>
-</div>
-<div class="col-span-12 md:col-span-4 neo-border bg-mint p-6 neo-shadow flex flex-col items-center justify-center min-h-[220px]">
-<span class="material-symbols-outlined text-[80px] text-ink" data-icon="shield" style="font-variation-settings: 'FILL' 1;">shield</span>
-<div class="mt-4 text-xl font-black uppercase tracking-widest">1 SHIELD REMAINING</div>
-<div class="mt-2 text-[10px] font-bold opacity-70 uppercase tracking-widest">Next shield in 3 days</div>
-</div>
-<!-- ROW 2 -->
-<div class="col-span-12 md:col-span-7 neo-border bg-ink p-8 neo-shadow relative overflow-hidden min-h-[160px] flex flex-col justify-center">
-<div class="absolute top-4 left-4 text-primary text-[10px] font-black uppercase tracking-widest z-10">System_Alert: Deadlines</div>
-<div class="marquee w-full">
-<div class="marquee-content text-primary text-4xl font-black tracking-tighter uppercase font-mono">
-                        UI DESIGN SUBMISSION [4H]    •    MATH 201 PROBLEM SET [9H]    •    INTERNSHIP APPLICATION [1D]    •    GROUP PROJECT SYNC [1D]    •    RESEARCH PAPER DRAFT [2D]    •   
+                </div>
+            </section>
+            <!-- ROW 1 -->
+            <div
+                class="col-span-12 md:col-span-4 neo-border bg-primary-container p-6 neo-shadow flex flex-col justify-between min-h-[220px]">
+                <div>
+                    <h3 class="text-sm uppercase tracking-[0.2em] mb-4">Task Summary</h3>
+                    <div id="dashboard-task-summary" class="text-2xl font-black uppercase mb-4">0 TASKS TODAY â€” 0 DONE
                     </div>
-</div>
-<div class="absolute bottom-4 right-4 bg-primary text-ink px-2 text-[10px] font-black uppercase">LIVE_TICKER_V1</div>
-</div>
-<div class="col-span-12 md:col-span-5 neo-border bg-purple p-8 neo-shadow flex items-center justify-between min-h-[160px]">
-<div class="flex flex-col">
-<div class="text-[10px] font-black uppercase tracking-widest mb-1">Focus Mode</div>
-<div class="text-[64px] font-black leading-none font-mono">25:00</div>
-</div>
-<button class="bg-primary neo-border p-6 neo-shadow hover:translate-x-[-2px] hover:translate-y-[-2px] active:translate-x-[2px] active:translate-y-[2px] transition-all flex items-center gap-3">
-<span class="material-symbols-outlined text-4xl" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-<span class="text-xl font-black uppercase tracking-tighter">START SESSION</span>
-</button>
-</div>
-<!-- ROW 3 -->
-<div class="col-span-12 md:col-span-4 neo-border bg-background p-6 neo-shadow flex flex-col justify-center">
-<h4 class="text-sm uppercase tracking-[0.2em] mb-4 flex justify-between">
-<span>APRIL</span>
-<span class="text-ink/60">13% GONE</span>
-</h4>
-<div class="flex gap-1 h-12">
-<div class="flex-1 bg-teal neo-border"></div>
-<div class="flex-1 bg-teal neo-border"></div>
-<div class="flex-1 bg-teal neo-border"></div>
-<div class="flex-1 bg-teal neo-border"></div>
-<div class="flex-[6] bg-background neo-border"></div>
-</div>
-</div>
-<div class="col-span-12 md:col-span-4 neo-border bg-background p-6 neo-shadow flex flex-col justify-center">
-<h4 class="text-sm uppercase tracking-[0.2em] mb-4 flex justify-between">
-<span>2025</span>
-<span class="text-ink/60">27% GONE</span>
-</h4>
-<div class="flex gap-1 h-12">
-<div class="flex-[3] bg-purple neo-border"></div>
-<div class="flex-[8] bg-background neo-border"></div>
-</div>
-</div>
-<div class="col-span-12 md:col-span-4 neo-border bg-background p-6 neo-shadow flex flex-col justify-center border-l-[12px] border-l-primary">
-<div class="text-[10px] font-black uppercase tracking-widest opacity-60 mb-1">NEXT CALENDAR EVENT</div>
-<div class="text-xl font-black uppercase tracking-tight">AI ETHICS SEMINAR</div>
-<div class="mt-2 text-2xl font-black font-mono">14:30 - 15:45</div>
-</div>
-<!-- BOTTOM STATUS -->
-<section class="col-span-12 neo-border bg-error p-8 neo-shadow diagonal-stripes flex flex-col md:flex-row items-center gap-8 relative overflow-hidden">
-<div class="z-10 flex items-center gap-4">
-<span class="material-symbols-outlined text-[48px] text-ink" data-icon="report" style="font-variation-settings: 'FILL' 1;">report</span>
-<h2 id="overdue-msg" class="text-2xl font-black uppercase tracking-tight leading-tight">NO OVERDUE TASKS. GOOD JOB.</h2>
-</div>
-<div id="overdue-list" class="z-10 flex flex-wrap gap-3">
-<!-- dynamic overdue tasks will go here -->
-</div>
-<div class="absolute right-[-40px] top-[-20px] opacity-10 pointer-events-none">
-<span class="material-symbols-outlined text-[160px]" data-icon="priority_high">priority_high</span>
-</div>
-</section>
-</div>
-<!-- Visual Ornaments (Signatures) -->
-<div class="fixed bottom-10 right-10 pointer-events-none">
-<div class="w-16 h-16 bg-purple neo-border neo-shadow rotate-12 flex items-center justify-center">
-<span class="material-symbols-outlined text-ink text-3xl" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
-</div>
-</div>
-</main>
-<script>
-let pomodoroTimer = null;
-let timeLeft = 25 * 60;
-let isRunning = false;
+                    <div class="w-full h-8 neo-border bg-background relative overflow-hidden">
+                        <div id="dashboard-task-progress"
+                            class="absolute top-0 left-0 h-full bg-teal w-[0%] border-r-[3px] border-ink"></div>
+                    </div>
+                </div>
+                <button onclick="window.location.href='../tasks_streak_1/code.html'"
+                    class="w-fit mt-6 text-sm font-black uppercase tracking-widest flex items-center gap-2 hover:translate-x-2 transition-transform">
+                    VIEW ALL <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+                </button>
+            </div>
+            <div
+                class="col-span-12 md:col-span-4 neo-border bg-coral p-6 neo-shadow flex flex-col items-center justify-center relative min-h-[220px]">
+                <div class="absolute top-4 left-4 text-[10px] font-black uppercase tracking-widest">Discipline Score
+                </div>
+                <div class="relative flex items-center justify-center w-32 h-32">
+                    <svg class="absolute inset-0 w-full h-full -rotate-90">
+                        <circle class="text-ink/20" cx="64" cy="64" fill="transparent" r="58" stroke="currentColor"
+                            stroke-width="8"></circle>
+                        <circle id="discipline-progress" class="text-ink" cx="64" cy="64" fill="transparent" r="58"
+                            stroke="currentColor" stroke-dasharray="364.4" stroke-dashoffset="364.4" stroke-width="8">
+                        </circle>
+                    </svg>
+                    <span id="discipline-score" class="text-[80px] font-black leading-none">0</span>
+                </div>
+                <div class="mt-2 text-sm font-black uppercase tracking-widest">TODAY'S SCORE</div>
+            </div>
+            <div
+                class="col-span-12 md:col-span-4 neo-border bg-mint p-6 neo-shadow flex flex-col items-center justify-center min-h-[220px]">
+                <span class="material-symbols-outlined text-[80px] text-ink" data-icon="shield"
+                    style="font-variation-settings: 'FILL' 1;">shield</span>
+                <div class="mt-4 text-xl font-black uppercase tracking-widest">1 SHIELD REMAINING</div>
+                <div class="mt-2 text-[10px] font-bold opacity-70 uppercase tracking-widest">Next shield in 3 days</div>
+            </div>
+            <!-- ROW 2 -->
+            <div
+                class="col-span-12 md:col-span-7 neo-border bg-ink p-8 neo-shadow relative overflow-hidden min-h-[160px] flex flex-col justify-center">
+                <div class="absolute top-4 left-4 text-primary text-[10px] font-black uppercase tracking-widest z-10">
+                    System_Alert: Deadlines</div>
+                <div class="marquee w-full">
+                    <div class="marquee-content text-primary text-4xl font-black tracking-tighter uppercase font-mono">
+                        UI DESIGN SUBMISSION [4H] Â Â  â€¢ Â Â  MATH 201 PROBLEM SET [9H] Â Â  â€¢ Â Â  INTERNSHIP APPLICATION [1D]
+                        Â Â  â€¢ Â Â  GROUP PROJECT SYNC [1D] Â Â  â€¢ Â Â  RESEARCH PAPER DRAFT [2D] Â Â  â€¢ Â Â 
+                    </div>
+                </div>
+                <div class="absolute bottom-4 right-4 bg-primary text-ink px-2 text-[10px] font-black uppercase">
+                    LIVE_TICKER_V1</div>
+            </div>
+            <div
+                class="col-span-12 md:col-span-5 neo-border bg-purple p-8 neo-shadow flex items-center justify-between min-h-[160px]">
+                <div class="flex flex-col">
+                    <div class="text-[10px] font-black uppercase tracking-widest mb-1">Focus Mode</div>
+                    <div class="text-[64px] font-black leading-none font-mono">25:00</div>
+                </div>
+                <button
+                    class="bg-primary neo-border p-6 neo-shadow hover:translate-x-[-2px] hover:translate-y-[-2px] active:translate-x-[2px] active:translate-y-[2px] transition-all flex items-center gap-3">
+                    <span class="material-symbols-outlined text-4xl" data-icon="play_arrow"
+                        style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                    <span class="text-xl font-black uppercase tracking-tighter">START SESSION</span>
+                </button>
+            </div>
+            <!-- ROW 3 -->
+            <div class="col-span-12 md:col-span-4 neo-border bg-background p-6 neo-shadow flex flex-col justify-center">
+                <h4 class="text-sm uppercase tracking-[0.2em] mb-4 flex justify-between">
+                    <span>APRIL</span>
+                    <span class="text-ink/60">13% GONE</span>
+                </h4>
+                <div class="flex gap-1 h-12">
+                    <div class="flex-1 bg-teal neo-border"></div>
+                    <div class="flex-1 bg-teal neo-border"></div>
+                    <div class="flex-1 bg-teal neo-border"></div>
+                    <div class="flex-1 bg-teal neo-border"></div>
+                    <div class="flex-[6] bg-background neo-border"></div>
+                </div>
+            </div>
+            <div class="col-span-12 md:col-span-4 neo-border bg-background p-6 neo-shadow flex flex-col justify-center">
+                <h4 class="text-sm uppercase tracking-[0.2em] mb-4 flex justify-between">
+                    <span>2025</span>
+                    <span class="text-ink/60">27% GONE</span>
+                </h4>
+                <div class="flex gap-1 h-12">
+                    <div class="flex-[3] bg-purple neo-border"></div>
+                    <div class="flex-[8] bg-background neo-border"></div>
+                </div>
+            </div>
+            <div
+                class="col-span-12 md:col-span-4 neo-border bg-background p-6 neo-shadow flex flex-col justify-center border-l-[12px] border-l-primary">
+                <div class="text-[10px] font-black uppercase tracking-widest opacity-60 mb-1">NEXT CALENDAR EVENT</div>
+                <div class="text-xl font-black uppercase tracking-tight">AI ETHICS SEMINAR</div>
+                <div class="mt-2 text-2xl font-black font-mono">14:30 - 15:45</div>
+            </div>
+            <!-- BOTTOM STATUS -->
+            <section
+                class="col-span-12 neo-border bg-error p-8 neo-shadow diagonal-stripes flex flex-col md:flex-row items-center gap-8 relative overflow-hidden">
+                <div class="z-10 flex items-center gap-4">
+                    <span class="material-symbols-outlined text-[48px] text-ink" data-icon="report"
+                        style="font-variation-settings: 'FILL' 1;">report</span>
+                    <h2 id="overdue-msg" class="text-2xl font-black uppercase tracking-tight leading-tight">NO OVERDUE
+                        TASKS. GOOD JOB.</h2>
+                </div>
+                <div id="overdue-list" class="z-10 flex flex-wrap gap-3">
+                    <!-- dynamic overdue tasks will go here -->
+                </div>
+                <div class="absolute right-[-40px] top-[-20px] opacity-10 pointer-events-none">
+                    <span class="material-symbols-outlined text-[160px]" data-icon="priority_high">priority_high</span>
+                </div>
+            </section>
+        </div>
+        <!-- Visual Ornaments (Signatures) -->
+        <div class="fixed bottom-10 right-10 pointer-events-none">
+            <div class="w-16 h-16 bg-purple neo-border neo-shadow rotate-12 flex items-center justify-center">
+                <span class="material-symbols-outlined text-ink text-3xl" data-icon="star"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+            </div>
+        </div>
+    </main>
+    <script>
+        let pomodoroTimer = null;
+        let timeLeft = 25 * 60;
+        let isRunning = false;
 
-document.addEventListener('DOMContentLoaded', () => {
-    const userId = localStorage.getItem('userId');
-    const username = localStorage.getItem('username');
-    
-    if (!userId) {
-        window.location.href = '../index.html';
-        return;
-    }
+        document.addEventListener('DOMContentLoaded', () => {
+            const userId = localStorage.getItem('userId');
+            const email = localStorage.getItem('email');
 
-    if (username) {
-        document.querySelectorAll('*').forEach(el => {
-            if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
-                if (el.innerText && el.innerText.includes('STUDENT')) {
-                    el.innerText = el.innerText.replace('STUDENT', username.toUpperCase());
+            if (!userId) {
+                window.location.href = '../index.html';
+                return;
+            }
+
+            if (email) {
+                document.querySelectorAll('*').forEach(el => {
+                    if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
+                        if (el.innerText && el.innerText.includes('STUDENT')) { el.innerText = el.innerText.replace('STUDENT', email ? email.split('@')[0].toUpperCase() : 'STUDENT');
+                        }
+                    }
+                });
+            }
+
+            // Update date in banner
+            const today = new Date();
+            const dateStr = today.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }).toUpperCase();
+            document.querySelectorAll('.text-xl.font-black.uppercase.tracking-widest').forEach(el => {
+                if (el.innerText.includes('APR')) el.innerText = dateStr;
+            });
+
+            // Logout button
+            document.querySelectorAll('span.material-symbols-outlined').forEach(s => {
+                if (s.getAttribute('data-icon') === 'account_circle') {
+                    let p = s.parentElement;
+                    if (p) {
+                        p.style.cursor = 'pointer';
+                        p.title = 'Click to Logout';
+                        p.onclick = () => {
+                            localStorage.clear();
+                            window.location.href = '../index.html';
+                        };
+                    }
                 }
-            }
-        });
-    }
+            });
 
-    // Update date in banner
-    const today = new Date();
-    const dateStr = today.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }).toUpperCase();
-    document.querySelectorAll('.text-xl.font-black.uppercase.tracking-widest').forEach(el => {
-        if (el.innerText.includes('APR')) el.innerText = dateStr;
-    });
-
-    // Logout button
-    document.querySelectorAll('span.material-symbols-outlined').forEach(s => {
-        if (s.getAttribute('data-icon') === 'account_circle') {
-            let p = s.parentElement;
-            if (p) {
-                p.style.cursor = 'pointer';
-                p.title = 'Click to Logout';
-                p.onclick = () => {
-                    localStorage.clear();
-                    window.location.href = '../index.html';
-                };
-            }
-        }
-    });
-
-    // START SESSION button
-    const startBtn = document.querySelector('.bg-primary.neo-border.p-6');
-    if (startBtn) {
-        startBtn.style.cursor = 'pointer';
-        startBtn.onclick = () => {
-            if (isRunning) {
-                clearInterval(pomodoroTimer);
-                startBtn.querySelector('span:last-child').innerText = 'START SESSION';
-                isRunning = false;
-            } else {
-                isRunning = true;
-                startBtn.querySelector('span:last-child').innerText = 'PAUSE SESSION';
-                pomodoroTimer = setInterval(() => {
-                    if (timeLeft > 0) {
-                        timeLeft--;
-                        const m = Math.floor(timeLeft / 60).toString().padStart(2, '0');
-                        const s = (timeLeft % 60).toString().padStart(2, '0');
-                        const timerDisplay = document.querySelector('.text-\\[64px\\].font-black.leading-none.font-mono');
-                        if (timerDisplay) timerDisplay.innerText = `${m}:${s}`;
-                    } else {
+            // START SESSION button
+            const startBtn = document.querySelector('.bg-primary.neo-border.p-6');
+            if (startBtn) {
+                startBtn.style.cursor = 'pointer';
+                startBtn.onclick = () => {
+                    if (isRunning) {
                         clearInterval(pomodoroTimer);
-                        alert('Session Complete! Take a break.');
-                        timeLeft = 25 * 60;
                         startBtn.querySelector('span:last-child').innerText = 'START SESSION';
                         isRunning = false;
+                    } else {
+                        isRunning = true;
+                        startBtn.querySelector('span:last-child').innerText = 'PAUSE SESSION';
+                        pomodoroTimer = setInterval(() => {
+                            if (timeLeft > 0) {
+                                timeLeft--;
+                                const m = Math.floor(timeLeft / 60).toString().padStart(2, '0');
+                                const s = (timeLeft % 60).toString().padStart(2, '0');
+                                const timerDisplay = document.querySelector('.text-\\[64px\\].font-black.leading-none.font-mono');
+                                if (timerDisplay) timerDisplay.innerText = `${m}:${s}`;
+                            } else {
+                                clearInterval(pomodoroTimer);
+                                alert('Session Complete! Take a break.');
+                                timeLeft = 25 * 60;
+                                startBtn.querySelector('span:last-child').innerText = 'START SESSION';
+                                isRunning = false;
+                            }
+                        }, 1000);
                     }
-                }, 1000);
+                };
             }
-        };
-    }
 
-    // Load live tasks and stats
-    fetch(`http://localhost:8082/api/tasks?userId=${userId}`)
-        .then(res => res.json())
-        .then(tasks => {
-            const totalTasks = tasks.length;
-            const doneTasks = tasks.filter(t => t.status === 'COMPLETED').length;
-            const progress = totalTasks === 0 ? 0 : Math.round((doneTasks / totalTasks) * 100);
-            
-            const summary = document.getElementById('dashboard-task-summary');
-            if (summary) summary.innerText = `${totalTasks} TASKS TODAY — ${doneTasks} DONE`;
-            
-            const progressBar = document.getElementById('dashboard-task-progress');
-            if (progressBar) progressBar.style.width = `${progress}%`;
+            // Load live tasks and stats
+            fetch(`http://localhost:8082/api/tasks?userId=${userId}`)
+                .then(res => res.json())
+                .then(tasks => {
+                    const totalTasks = tasks.length;
+                    const doneTasks = tasks.filter(t => t.status === 'COMPLETED').length;
+                    const progress = totalTasks === 0 ? 0 : Math.round((doneTasks / totalTasks) * 100);
 
-            const overdueTasks = tasks.filter(t => t.priority === 'URGENT' && t.status !== 'COMPLETED');
-            const overdueList = document.getElementById('overdue-list');
-            const overdueMsg = document.getElementById('overdue-msg');
-            
-            if (overdueList && overdueMsg) {
-                overdueList.innerHTML = '';
-                if (overdueTasks.length > 0) {
-                    overdueMsg.innerText = `ATTENTION: ${overdueTasks.length} URGENT TASK(S) PENDING. HANDLE NOW.`;
-                    overdueTasks.forEach(t => {
-                        overdueList.innerHTML += `<span class="bg-ink text-error neo-border px-4 py-2 font-black uppercase tracking-widest text-xs">${t.title}</span>`;
-                    });
-                } else {
-                    overdueMsg.innerText = `NO OVERDUE TASKS. GOOD JOB.`;
-                }
-            }
-        })
-        .catch(err => console.error('Error fetching tasks:', err));
+                    const summary = document.getElementById('dashboard-task-summary');
+                    if (summary) summary.innerText = `${totalTasks} TASKS TODAY â€” ${doneTasks} DONE`;
 
-    // Load user stats
-    fetch(`http://localhost:8082/api/users/${userId}`)
-        .then(res => res.json())
-        .then(user => {
-            const sCounter = document.getElementById('streak-counter');
-            if (sCounter) sCounter.innerText = `${user.streak || 0} DAY STREAK`;
-            
-            const dScore = document.getElementById('discipline-score');
-            if (dScore) {
-                dScore.innerText = user.disciplineScore || 0;
-                const scoreVal = Math.max(0, Math.min(100, user.disciplineScore || 0));
-                const maxDash = 364.4;
-                const progressCircle = document.getElementById('discipline-progress');
-                if (progressCircle) progressCircle.style.strokeDashoffset = maxDash - (scoreVal / 100) * maxDash;
-            }
-        })
-        .catch(err => console.error('Error fetching user stats:', err));
-});
-</script>
+                    const progressBar = document.getElementById('dashboard-task-progress');
+                    if (progressBar) progressBar.style.width = `${progress}%`;
+
+                    const overdueTasks = tasks.filter(t => t.priority === 'URGENT' && t.status !== 'COMPLETED');
+                    const overdueList = document.getElementById('overdue-list');
+                    const overdueMsg = document.getElementById('overdue-msg');
+
+                    if (overdueList && overdueMsg) {
+                        overdueList.innerHTML = '';
+                        if (overdueTasks.length > 0) {
+                            overdueMsg.innerText = `ATTENTION: ${overdueTasks.length} URGENT TASK(S) PENDING. HANDLE NOW.`;
+                            overdueTasks.forEach(t => {
+                                overdueList.innerHTML += `<span class="bg-ink text-error neo-border px-4 py-2 font-black uppercase tracking-widest text-xs">${t.title}</span>`;
+                            });
+                        } else {
+                            overdueMsg.innerText = `NO OVERDUE TASKS. GOOD JOB.`;
+                        }
+                    }
+                })
+                .catch(err => console.error('Error fetching tasks:', err));
+
+            // Load user stats
+            fetch(`http://localhost:8082/api/users/${userId}`)
+                .then(res => res.json())
+                .then(user => {
+                    const sCounter = document.getElementById('streak-counter');
+                    if (sCounter) sCounter.innerText = `${user.streak || 0} DAY STREAK`;
+
+                    const dScore = document.getElementById('discipline-score');
+                    if (dScore) {
+                        dScore.innerText = user.disciplineScore || 0;
+                        const scoreVal = Math.max(0, Math.min(100, user.disciplineScore || 0));
+                        const maxDash = 364.4;
+                        const progressCircle = document.getElementById('discipline-progress');
+                        if (progressCircle) progressCircle.style.strokeDashoffset = maxDash - (scoreVal / 100) * maxDash;
+                    }
+                })
+                .catch(err => console.error('Error fetching user stats:', err));
+        });
+    </script>
 </body>
+
 </html>

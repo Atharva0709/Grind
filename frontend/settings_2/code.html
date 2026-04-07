@@ -1,408 +1,501 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          "colors": {
-                  "primary-dim": "#665800",
-                  "inverse-on-surface": "#9f9d93",
-                  "on-secondary": "#ffffff",
-                  "on-error": "#ffffff",
-                  "surface-dim": "#e6e3d4",
-                  "on-tertiary-fixed-variant": "#790214",
-                  "on-secondary-fixed": "#004844",
-                  "background": "#fffbff",
-                  "secondary": "#00716b",
-                  "on-surface": "#393831",
-                  "error-dim": "#b92902",
-                  "error-container": "#f95630",
-                  "on-tertiary": "#ffffff",
-                  "on-background": "#393831",
-                  "primary-fixed-dim": "#ebce1e",
-                  "outline-variant": "#bcb9af",
-                  "on-primary-fixed-variant": "#655800",
-                  "surface-bright": "#fffbff",
-                  "surface-container-highest": "#ece8da",
-                  "surface": "#fffbff",
-                  "primary-container": "#fadd30",
-                  "surface-container-high": "#f2eee1",
-                  "surface-container-low": "#fdf9ed",
-                  "tertiary-container": "#ff928e",
-                  "on-secondary-container": "#005c57",
-                  "on-primary-container": "#5b4e00",
-                  "tertiary": "#b6353a",
-                  "inverse-primary": "#fadd30",
-                  "outline": "#838178",
-                  "secondary-fixed-dim": "#6ce8de",
-                  "secondary-container": "#7cf6ec",
-                  "on-surface-variant": "#66645c",
-                  "secondary-dim": "#00635e",
-                  "tertiary-fixed-dim": "#ff7a79",
-                  "on-error-container": "#520c00",
-                  "tertiary-fixed": "#ff928e",
-                  "on-tertiary-fixed": "#3a0005",
-                  "primary": "#746400",
-                  "on-primary": "#ffffff",
-                  "surface-container-lowest": "#ffffff",
-                  "surface-container": "#f7f4e7",
-                  "inverse-surface": "#0f0e09",
-                  "secondary-fixed": "#7cf6ec",
-                  "surface-tint": "#746400",
-                  "primary-fixed": "#fadd30",
-                  "tertiary-dim": "#a5292f",
-                  "surface-variant": "#ece8da",
-                  "on-tertiary-container": "#69000f",
-                  "on-primary-fixed": "#453c00",
-                  "error": "#be2d06",
-                  "on-secondary-fixed-variant": "#006761",
-                  "accent-orange": "#FF9A3C"
-          },
-          "borderRadius": {
-                  "DEFAULT": "0.125rem",
-                  "lg": "0.25rem",
-                  "xl": "0.5rem",
-                  "full": "0.75rem"
-          },
-          "fontFamily": {
-                  "headline": ["Space Grotesk"],
-                  "body": ["Space Grotesk"],
-                  "label": ["Space Grotesk"]
-          }
-        },
-      },
-    }
-  </script>
-<style>
-    body {
-      background-color: #FFFBF0;
-      font-family: 'Space Grotesk', sans-serif;
-      color: #1A1A1A;
-    }
-    .neo-brutal-border { border: 3px solid #1A1A1A; }
-    .neo-brutal-shadow { shadow: 5px 5px 0px #1A1A1A; }
-    .neo-brutal-shadow-hover:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0px #1A1A1A; }
-    .neo-brutal-shadow-active:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0px #1A1A1A; }
-    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 24; }
-  </style>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-dim": "#665800",
+                        "inverse-on-surface": "#9f9d93",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#e6e3d4",
+                        "on-tertiary-fixed-variant": "#790214",
+                        "on-secondary-fixed": "#004844",
+                        "background": "#fffbff",
+                        "secondary": "#00716b",
+                        "on-surface": "#393831",
+                        "error-dim": "#b92902",
+                        "error-container": "#f95630",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#393831",
+                        "primary-fixed-dim": "#ebce1e",
+                        "outline-variant": "#bcb9af",
+                        "on-primary-fixed-variant": "#655800",
+                        "surface-bright": "#fffbff",
+                        "surface-container-highest": "#ece8da",
+                        "surface": "#fffbff",
+                        "primary-container": "#fadd30",
+                        "surface-container-high": "#f2eee1",
+                        "surface-container-low": "#fdf9ed",
+                        "tertiary-container": "#ff928e",
+                        "on-secondary-container": "#005c57",
+                        "on-primary-container": "#5b4e00",
+                        "tertiary": "#b6353a",
+                        "inverse-primary": "#fadd30",
+                        "outline": "#838178",
+                        "secondary-fixed-dim": "#6ce8de",
+                        "secondary-container": "#7cf6ec",
+                        "on-surface-variant": "#66645c",
+                        "secondary-dim": "#00635e",
+                        "tertiary-fixed-dim": "#ff7a79",
+                        "on-error-container": "#520c00",
+                        "tertiary-fixed": "#ff928e",
+                        "on-tertiary-fixed": "#3a0005",
+                        "primary": "#746400",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#f7f4e7",
+                        "inverse-surface": "#0f0e09",
+                        "secondary-fixed": "#7cf6ec",
+                        "surface-tint": "#746400",
+                        "primary-fixed": "#fadd30",
+                        "tertiary-dim": "#a5292f",
+                        "surface-variant": "#ece8da",
+                        "on-tertiary-container": "#69000f",
+                        "on-primary-fixed": "#453c00",
+                        "error": "#be2d06",
+                        "on-secondary-fixed-variant": "#006761",
+                        "accent-orange": "#FF9A3C"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Space Grotesk"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FFFBF0;
+            font-family: 'Space Grotesk', sans-serif;
+            color: #1A1A1A;
+        }
+
+        .neo-brutal-border {
+            border: 3px solid #1A1A1A;
+        }
+
+        .neo-brutal-shadow {
+            shadow: 5px 5px 0px #1A1A1A;
+        }
+
+        .neo-brutal-shadow-hover:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 7px 7px 0px #1A1A1A;
+        }
+
+        .neo-brutal-shadow-active:active {
+            transform: translate(2px, 2px);
+            box-shadow: 1px 1px 0px #1A1A1A;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
 </head>
+
 <body class="bg-[#FFFBF0]">
-<!-- SideNavBar Component -->
-<aside class="fixed left-0 top-0 h-full flex flex-col justify-between z-40 w-[240px] border-r-[3px] border-stone-900 bg-stone-950 shadow-[5px_0px_0px_0px_rgba(26,26,26,1)]">
-<div class="flex flex-col">
-<div class="p-6 border-b-[3px] border-stone-900 mb-2">
-<div class="text-[28px] font-black text-yellow-400 flex items-center gap-2 uppercase tracking-wider font-['Space_Grotesk']">
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
-                    SANKALP
+    <!-- SideNavBar Component -->
+    <aside
+        class="fixed left-0 top-0 h-full flex flex-col justify-between z-40 w-[240px] border-r-[3px] border-stone-900 bg-stone-950 shadow-[5px_0px_0px_0px_rgba(26,26,26,1)]">
+        <div class="flex flex-col">
+            <div class="p-6 border-b-[3px] border-stone-900 mb-2">
+                <div
+                    class="text-[28px] font-black text-yellow-400 flex items-center gap-2 uppercase tracking-wider font-['Space_Grotesk']">
+                    <span class="material-symbols-outlined" data-icon="star"
+                        style="font-variation-settings: 'FILL' 1;">star</span>
+                    GRIND
                 </div>
-<div class="text-[10px] text-yellow-400/60 font-bold uppercase tracking-[0.2em] mt-1">PRODUCTIVITY ENGINE</div>
-</div>
-<nav class="flex flex-col">
-<!-- HOME - ACTIVE -->
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 transition-all    font-['Space_Grotesk'] font-bold uppercase tracking-wider hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200" href="../home_dashboard_1/code.html">
-<span class="material-symbols-outlined" data-icon="home">home</span>
+                <div class="text-[10px] text-yellow-400/60 font-bold uppercase tracking-[0.2em] mt-1">PRODUCTIVITY
+                    ENGINE</div>
+            </div>
+            <nav class="flex flex-col">
+                <!-- HOME - ACTIVE -->
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 transition-all    font-['Space_Grotesk'] font-bold uppercase tracking-wider hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200"
+                    href="../home_dashboard_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="home">home</span>
                     HOME
                 </a>
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../tasks_streak_1/code.html">
-<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider"
+                    href="../tasks_streak_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="bolt">bolt</span>
                     TASKS &amp; STREAK
                 </a>
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../time_awareness_1/code.html">
-<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider"
+                    href="../time_awareness_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="schedule">schedule</span>
                     TIME AWARENESS
                 </a>
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../skills_goals_1/code.html">
-<span class="material-symbols-outlined" data-icon="ads_click">ads_click</span>
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider"
+                    href="../skills_goals_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="ads_click">ads_click</span>
                     SKILLS &amp; GOALS
                 </a>
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../integrations_hub_1/code.html">
-<span class="material-symbols-outlined" data-icon="extension">extension</span>
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider"
+                    href="../integrations_hub_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="extension">extension</span>
                     INTEGRATIONS
                 </a>
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../productivity_tools_1/code.html">
-<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider"
+                    href="../productivity_tools_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
                     PRODUCTIVITY
                 </a>
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../whiteboard_canvas_1/code.html">
-<span class="material-symbols-outlined" data-icon="draw">draw</span>
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider"
+                    href="../whiteboard_canvas_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="draw">draw</span>
                     WHITEBOARD
                 </a>
-<a class="border-l-[6px] border-yellow-400 bg-stone-900 text-yellow-400 py-4 px-6 flex items-center gap-4    transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider translate-x-1" href="../settings_1/code.html">
-<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                <a class="border-l-[6px] border-yellow-400 bg-stone-900 text-yellow-400 py-4 px-6 flex items-center gap-4    transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider translate-x-1"
+                    href="../settings_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="settings">settings</span>
                     SETTINGS
                 </a>
-</nav>
-</div>
-<div class="border-t-[3px] border-stone-900">
-<div class="p-6 flex flex-col gap-4">
-<div class="flex items-center gap-3 text-white">
-<span class="material-symbols-outlined text-yellow-400" data-icon="account_circle">account_circle</span>
-<span class="text-xs tracking-widest font-black uppercase">STUDENT_01</span>
-</div>
-<div class="flex items-center gap-3 text-white">
-<span class="material-symbols-outlined text-yellow-400" data-icon="calendar_today">calendar_today</span>
-<span class="text-xs tracking-widest font-black uppercase">OCT 24, 2024</span>
-</div>
-</div>
-</div>
-</aside>
-<!-- Main Content Layout -->
-<main class="ml-[240px] min-h-screen p-8 flex gap-8">
-<!-- Left: Settings Categories -->
-<section class="w-[30%] flex flex-col gap-4">
-<h1 class="text-4xl font-black uppercase mb-4 tracking-tighter">SETTINGS</h1>
-<div class="flex flex-col gap-2">
-<button class="neo-brutal-border bg-primary-container p-4 flex items-center gap-4 neo-brutal-shadow font-bold text-left transition-all">
-<span class="material-symbols-outlined">person</span> PROFILE
-        </button>
-<button class="neo-brutal-border bg-white p-4 flex items-center gap-4 neo-brutal-shadow-hover font-bold text-left transition-all">
-<span class="material-symbols-outlined">palette</span> APPEARANCE
-        </button>
-<button class="neo-brutal-border bg-white p-4 flex items-center gap-4 neo-brutal-shadow-hover font-bold text-left transition-all">
-<span class="material-symbols-outlined">notifications</span> NOTIFICATIONS
-        </button>
-<button class="neo-brutal-border bg-white p-4 flex items-center gap-4 neo-brutal-shadow-hover font-bold text-left transition-all">
-<span class="material-symbols-outlined">database</span> DATA &amp; STORAGE
-        </button>
-<button class="neo-brutal-border bg-white p-4 flex items-center gap-4 neo-brutal-shadow-hover font-bold text-left transition-all">
-<span class="material-symbols-outlined">link</span> INTEGRATIONS
-        </button>
-<button class="neo-brutal-border bg-white p-4 flex items-center gap-4 neo-brutal-shadow-hover font-bold text-left transition-all">
-<span class="material-symbols-outlined">keyboard</span> KEYBOARD SHORTCUTS
-        </button>
-<button class="neo-brutal-border bg-white p-4 flex items-center gap-4 neo-brutal-shadow-hover font-bold text-left transition-all">
-<span class="material-symbols-outlined">info</span> ABOUT
-        </button>
-</div>
-<!-- Decorative Visual Anchor -->
-<div class="mt-auto neo-brutal-border bg-[#A29BFE] p-6 neo-brutal-shadow relative overflow-hidden">
-<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-[100px] text-white/20">terminal</span>
-<h3 class="text-xl font-black">SYSTEM HEALTH</h3>
-<p class="text-sm font-bold mt-2">v1.0.0-STABLE</p>
-</div>
-</section>
-<!-- Right: Content Panel -->
-<section class="w-[70%] bg-white neo-brutal-border p-8 neo-brutal-shadow overflow-y-auto max-h-[calc(100vh-64px)]">
-<!-- PROFILE SECTION -->
-<div class="mb-12 border-b-[3px] border-[#1A1A1A] pb-8">
-<h2 class="text-2xl font-black uppercase mb-6 flex items-center gap-3">
-<span class="w-4 h-4 bg-accent-orange block"></span> PROFILE
-        </h2>
-<div class="flex items-start gap-8">
-<div class="flex flex-col gap-4">
-<div class="w-32 h-32 neo-brutal-border bg-surface-container shadow-[5px_5px_0px_#1A1A1A] relative group">
-<img alt="Profile" class="w-full h-full object-cover" data-alt="minimalist 2d vector avatar of a focused person wearing glasses and a hoodie in neutral tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJudrrjTwgkhsxUrjaj8n7vwAqLLUtaK_MlWqZHn6r8TGZQnwzZNfScfEIqHDJ8DbA9eAxWICZkUo6nsOxtKEcCJctiqvhCc2lu5SedxUZ7OrDAaKHPdAsZbf6YGreZgOZcEjcaaeCtIZzCfDbjmZa_nPa1dphDCf2LGTOggPn5nY1ihbG2UBG9hE0kb_IPMueVxdW76hHxVuQ1uTbqRVcuKeSaGvMvNzT8VlHrXbQjECquKqX63FAEWVV_ziwJbdtFVjXoAYTNCY"/>
-<button class="absolute -bottom-2 -right-2 bg-accent-orange neo-brutal-border p-2 neo-brutal-shadow-hover">
-<span class="material-symbols-outlined text-sm">edit</span>
-</button>
-</div>
-<button class="neo-brutal-border bg-white px-4 py-2 text-xs font-black hover:bg-stone-100 transition-all">CHANGE PHOTO</button>
-</div>
-<div class="flex-1 flex flex-col gap-6">
-<div class="flex flex-col gap-2">
-<label class="text-xs font-black uppercase tracking-widest text-stone-500">USER_NAME</label>
-<input class="neo-brutal-border p-4 font-bold focus:bg-primary-container outline-none transition-all" type="text" value="STUDENT_01"/>
-</div>
-<div class="flex flex-col gap-2">
-<label class="text-xs font-black uppercase tracking-widest text-stone-500">SYSTEM_ID</label>
-<input class="neo-brutal-border p-4 font-bold bg-stone-50 opacity-60 cursor-not-allowed" readonly="" type="text" value="GRIND-4492-X"/>
-</div>
-</div>
-</div>
-</div>
-<!-- APPEARANCE SECTION -->
-<div class="mb-12 border-b-[3px] border-[#1A1A1A] pb-8">
-<h2 class="text-2xl font-black uppercase mb-6 flex items-center gap-3">
-<span class="w-4 h-4 bg-secondary block"></span> APPEARANCE
-        </h2>
-<div class="flex flex-col gap-8">
-<div class="flex flex-col gap-4">
-<label class="text-xs font-black uppercase tracking-widest text-stone-500">ACCENT COLOR</label>
-<div class="grid grid-cols-8 gap-4">
-<div class="w-10 h-10 neo-brutal-border bg-accent-orange shadow-[3px_3px_0px_#1A1A1A] cursor-pointer ring-2 ring-black ring-offset-2"></div>
-<div class="w-10 h-10 neo-brutal-border bg-primary shadow-[3px_3px_0px_#1A1A1A] cursor-pointer hover:scale-105 transition-all"></div>
-<div class="w-10 h-10 neo-brutal-border bg-secondary shadow-[3px_3px_0px_#1A1A1A] cursor-pointer hover:scale-105 transition-all"></div>
-<div class="w-10 h-10 neo-brutal-border bg-tertiary shadow-[3px_3px_0px_#1A1A1A] cursor-pointer hover:scale-105 transition-all"></div>
-<div class="w-10 h-10 neo-brutal-border bg-[#FF6B6B] shadow-[3px_3px_0px_#1A1A1A] cursor-pointer hover:scale-105 transition-all"></div>
-<div class="w-10 h-10 neo-brutal-border bg-[#4ECDC4] shadow-[3px_3px_0px_#1A1A1A] cursor-pointer hover:scale-105 transition-all"></div>
-<div class="w-10 h-10 neo-brutal-border bg-[#A29BFE] shadow-[3px_3px_0px_#1A1A1A] cursor-pointer hover:scale-105 transition-all"></div>
-<div class="w-10 h-10 neo-brutal-border bg-stone-900 shadow-[3px_3px_0px_#1A1A1A] cursor-pointer hover:scale-105 transition-all"></div>
-</div>
-</div>
-<div class="flex flex-col gap-4">
-<label class="text-xs font-black uppercase tracking-widest text-stone-500">FONT SIZE</label>
-<div class="flex neo-brutal-border w-fit overflow-hidden bg-stone-100">
-<button class="px-6 py-3 font-bold border-r-[3px] border-[#1A1A1A] bg-white hover:bg-primary-container">COMPACT</button>
-<button class="px-6 py-3 font-bold border-r-[3px] border-[#1A1A1A] bg-primary-container">STANDARD</button>
-<button class="px-6 py-3 font-bold bg-white hover:bg-primary-container">EXPANDED</button>
-</div>
-</div>
-</div>
-</div>
-<!-- NOTIFICATIONS SECTION -->
-<div class="mb-12 border-b-[3px] border-[#1A1A1A] pb-8">
-<h2 class="text-2xl font-black uppercase mb-6 flex items-center gap-3">
-<span class="w-4 h-4 bg-tertiary block"></span> NOTIFICATIONS
-        </h2>
-<div class="flex flex-col gap-2">
-<div class="flex items-center justify-between p-4 bg-stone-50 neo-brutal-border">
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined">bolt</span>
-<span class="font-bold">STREAK REMINDERS</span>
-</div>
-<div class="w-12 h-6 bg-accent-orange neo-brutal-border relative cursor-pointer">
-<div class="absolute right-1 top-1 w-3 h-3 bg-black"></div>
-</div>
-</div>
-<div class="flex items-center justify-between p-4 bg-stone-50 neo-brutal-border">
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined">task_alt</span>
-<span class="font-bold">TASK DEADLINES</span>
-</div>
-<div class="w-12 h-6 bg-accent-orange neo-brutal-border relative cursor-pointer">
-<div class="absolute right-1 top-1 w-3 h-3 bg-black"></div>
-</div>
-</div>
-<div class="flex items-center justify-between p-4 bg-stone-50 neo-brutal-border opacity-50">
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined">mail</span>
-<span class="font-bold">WEEKLY DIGEST</span>
-</div>
-<div class="w-12 h-6 bg-white neo-brutal-border relative cursor-pointer">
-<div class="absolute left-1 top-1 w-3 h-3 bg-stone-300"></div>
-</div>
-</div>
-</div>
-</div>
-<!-- DATA & STORAGE SECTION -->
-<div class="mb-12 border-b-[3px] border-[#1A1A1A] pb-8">
-<h2 class="text-2xl font-black uppercase mb-6 flex items-center gap-3">
-<span class="w-4 h-4 bg-[#A29BFE] block"></span> DATA &amp; STORAGE
-        </h2>
-<div class="grid grid-cols-3 gap-6">
-<div class="neo-brutal-border p-6 bg-white neo-brutal-shadow-hover cursor-pointer group">
-<span class="material-symbols-outlined mb-4 text-3xl">download</span>
-<h4 class="font-black">EXPORT DATA</h4>
-<p class="text-xs font-bold text-stone-500 mt-2">Download all logs as .JSON</p>
-</div>
-<div class="neo-brutal-border p-6 bg-white neo-brutal-shadow-hover cursor-pointer group">
-<span class="material-symbols-outlined mb-4 text-3xl">delete_sweep</span>
-<h4 class="font-black">CLEAR CACHE</h4>
-<p class="text-xs font-bold text-stone-500 mt-2">Frees up 124MB of space</p>
-</div>
-<div class="neo-brutal-border p-6 bg-[#FF6B6B] neo-brutal-shadow-hover cursor-pointer group">
-<span class="material-symbols-outlined mb-4 text-3xl text-white">dangerous</span>
-<h4 class="font-black text-white">RESET SYSTEM</h4>
-<p class="text-xs font-bold text-white/80 mt-2">Irreversible action</p>
-</div>
-</div>
-</div>
-<!-- KEYBOARD SHORTCUTS SECTION -->
-<div class="mb-12 border-b-[3px] border-[#1A1A1A] pb-8">
-<h2 class="text-2xl font-black uppercase mb-6 flex items-center gap-3">
-<span class="w-4 h-4 bg-[#4ECDC4] block"></span> KEYBOARD SHORTCUTS
-        </h2>
-<div class="grid grid-cols-2 gap-x-12 gap-y-4">
-<div class="flex items-center justify-between border-b-2 border-stone-100 pb-2">
-<span class="font-bold text-sm">QUICK ADD TASK</span>
-<div class="flex gap-1">
-<kbd class="neo-brutal-border bg-stone-100 px-2 py-1 text-xs font-black shadow-[2px_2px_0px_#1A1A1A]">CTRL</kbd>
-<kbd class="neo-brutal-border bg-stone-100 px-2 py-1 text-xs font-black shadow-[2px_2px_0px_#1A1A1A]">N</kbd>
-</div>
-</div>
-<div class="flex items-center justify-between border-b-2 border-stone-100 pb-2">
-<span class="font-bold text-sm">OPEN SEARCH</span>
-<div class="flex gap-1">
-<kbd class="neo-brutal-border bg-stone-100 px-2 py-1 text-xs font-black shadow-[2px_2px_0px_#1A1A1A]">CTRL</kbd>
-<kbd class="neo-brutal-border bg-stone-100 px-2 py-1 text-xs font-black shadow-[2px_2px_0px_#1A1A1A]">K</kbd>
-</div>
-</div>
-<div class="flex items-center justify-between border-b-2 border-stone-100 pb-2">
-<span class="font-bold text-sm">TOGGLE TIMER</span>
-<div class="flex gap-1">
-<kbd class="neo-brutal-border bg-stone-100 px-2 py-1 text-xs font-black shadow-[2px_2px_0px_#1A1A1A]">ALT</kbd>
-<kbd class="neo-brutal-border bg-stone-100 px-2 py-1 text-xs font-black shadow-[2px_2px_0px_#1A1A1A]">SPACE</kbd>
-</div>
-</div>
-<div class="flex items-center justify-between border-b-2 border-stone-100 pb-2">
-<span class="font-bold text-sm">GO TO SETTINGS</span>
-<div class="flex gap-1">
-<kbd class="neo-brutal-border bg-stone-100 px-2 py-1 text-xs font-black shadow-[2px_2px_0px_#1A1A1A]">CTRL</kbd>
-<kbd class="neo-brutal-border bg-stone-100 px-2 py-1 text-xs font-black shadow-[2px_2px_0px_#1A1A1A]">S</kbd>
-</div>
-</div>
-</div>
-</div>
-<!-- ABOUT SECTION -->
-<div class="pb-8">
-<h2 class="text-2xl font-black uppercase mb-6 flex items-center gap-3">
-<span class="w-4 h-4 bg-stone-900 block"></span> ABOUT
-        </h2>
-<div class="bg-stone-50 neo-brutal-border p-8 flex flex-col items-center text-center relative overflow-hidden">
-<!-- Geometric Ornaments -->
-<div class="absolute top-0 right-0 w-24 h-24 bg-accent-orange transform rotate-45 translate-x-12 -translate-y-12"></div>
-<div class="absolute bottom-4 left-4 w-8 h-8 bg-[#A29BFE] rounded-full"></div>
-<h1 class="text-6xl font-black tracking-tighter mb-2">SANKALP</h1>
-<p class="text-xl font-bold uppercase text-accent-orange">THE EDITORIAL ENGINE</p>
-<div class="my-6 neo-brutal-border bg-white px-4 py-1 font-black text-sm">VERSION 1.0.0-BETA</div>
-<p class="max-w-md font-medium text-stone-600">Built for high-output individuals. Designed with architectural integrity. No fluff. Just grinding.</p>
-<div class="mt-8 flex gap-4">
-<button class="neo-brutal-border bg-white px-6 py-2 font-black text-sm neo-brutal-shadow-hover">CHANGELOG</button>
-<button class="neo-brutal-border bg-white px-6 py-2 font-black text-sm neo-brutal-shadow-hover">LEGAL</button>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- Floating Help FAB (Contextual for Settings) -->
-<button class="fixed bottom-8 right-8 w-16 h-16 bg-accent-orange neo-brutal-border rounded-full flex items-center justify-center neo-brutal-shadow-hover transition-transform hover:rotate-12 z-50">
-<span class="material-symbols-outlined text-black text-3xl">question_mark</span>
-</button>
+            </nav>
+        </div>
+        <div class="border-t-[3px] border-stone-900">
+            <div class="p-6 flex flex-col gap-4">
+                <div class="flex items-center gap-3 text-white">
+                    <span class="material-symbols-outlined text-yellow-400"
+                        data-icon="account_circle">account_circle</span>
+                    <span class="text-xs tracking-widest font-black uppercase">STUDENT_01</span>
+                </div>
+                <div class="flex items-center gap-3 text-white">
+                    <span class="material-symbols-outlined text-yellow-400"
+                        data-icon="calendar_today">calendar_today</span>
+                    <span class="text-xs tracking-widest font-black uppercase">OCT 24, 2024</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!-- Main Content Layout -->
+    <main class="ml-[240px] min-h-screen p-8 flex gap-8">
+        <!-- Left: Settings Categories -->
+        <section class="w-[30%] flex flex-col gap-4">
+            <h1 class="text-4xl font-black uppercase mb-4 tracking-tighter">SETTINGS</h1>
+            <div class="flex flex-col gap-2">
+                <button
+                    class="neo-brutal-border bg-primary-container p-4 flex items-center gap-4 neo-brutal-shadow font-bold text-left transition-all">
+                    <span class="material-symbols-outlined">person</span> PROFILE
+                </button>
+                <button
+                    class="neo-brutal-border bg-white p-4 flex items-center gap-4 neo-brutal-shadow-hover font-bold text-left transition-all">
+                    <span class="material-symbols-outlined">palette</span> APPEARANCE
+                </button>
+                <button
+                    class="neo-brutal-border bg-white p-4 flex items-center gap-4 neo-brutal-shadow-hover font-bold text-left transition-all">
+                    <span class="material-symbols-outlined">notifications</span> NOTIFICATIONS
+                </button>
+                <button
+                    class="neo-brutal-border bg-white p-4 flex items-center gap-4 neo-brutal-shadow-hover font-bold text-left transition-all">
+                    <span class="material-symbols-outlined">database</span> DATA &amp; STORAGE
+                </button>
+                <button
+                    class="neo-brutal-border bg-white p-4 flex items-center gap-4 neo-brutal-shadow-hover font-bold text-left transition-all">
+                    <span class="material-symbols-outlined">link</span> INTEGRATIONS
+                </button>
+                <button
+                    class="neo-brutal-border bg-white p-4 flex items-center gap-4 neo-brutal-shadow-hover font-bold text-left transition-all">
+                    <span class="material-symbols-outlined">keyboard</span> KEYBOARD SHORTCUTS
+                </button>
+                <button
+                    class="neo-brutal-border bg-white p-4 flex items-center gap-4 neo-brutal-shadow-hover font-bold text-left transition-all">
+                    <span class="material-symbols-outlined">info</span> ABOUT
+                </button>
+            </div>
+            <!-- Decorative Visual Anchor -->
+            <div class="mt-auto neo-brutal-border bg-[#A29BFE] p-6 neo-brutal-shadow relative overflow-hidden">
+                <span
+                    class="material-symbols-outlined absolute -right-4 -bottom-4 text-[100px] text-white/20">terminal</span>
+                <h3 class="text-xl font-black">SYSTEM HEALTH</h3>
+                <p class="text-sm font-bold mt-2">v1.0.0-STABLE</p>
+            </div>
+        </section>
+        <!-- Right: Content Panel -->
+        <section
+            class="w-[70%] bg-white neo-brutal-border p-8 neo-brutal-shadow overflow-y-auto max-h-[calc(100vh-64px)]">
+            <!-- PROFILE SECTION -->
+            <div class="mb-12 border-b-[3px] border-[#1A1A1A] pb-8">
+                <h2 class="text-2xl font-black uppercase mb-6 flex items-center gap-3">
+                    <span class="w-4 h-4 bg-accent-orange block"></span> PROFILE
+                </h2>
+                <div class="flex items-start gap-8">
+                    <div class="flex flex-col gap-4">
+                        <div
+                            class="w-32 h-32 neo-brutal-border bg-surface-container shadow-[5px_5px_0px_#1A1A1A] relative group">
+                            <img alt="Profile" class="w-full h-full object-cover"
+                                data-alt="minimalist 2d vector avatar of a focused person wearing glasses and a hoodie in neutral tones"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJudrrjTwgkhsxUrjaj8n7vwAqLLUtaK_MlWqZHn6r8TGZQnwzZNfScfEIqHDJ8DbA9eAxWICZkUo6nsOxtKEcCJctiqvhCc2lu5SedxUZ7OrDAaKHPdAsZbf6YGreZgOZcEjcaaeCtIZzCfDbjmZa_nPa1dphDCf2LGTOggPn5nY1ihbG2UBG9hE0kb_IPMueVxdW76hHxVuQ1uTbqRVcuKeSaGvMvNzT8VlHrXbQjECquKqX63FAEWVV_ziwJbdtFVjXoAYTNCY" />
+                            <button
+                                class="absolute -bottom-2 -right-2 bg-accent-orange neo-brutal-border p-2 neo-brutal-shadow-hover">
+                                <span class="material-symbols-outlined text-sm">edit</span>
+                            </button>
+                        </div>
+                        <button
+                            class="neo-brutal-border bg-white px-4 py-2 text-xs font-black hover:bg-stone-100 transition-all">CHANGE
+                            PHOTO</button>
+                    </div>
+                    <div class="flex-1 flex flex-col gap-6">
+                        <div class="flex flex-col gap-2">
+                            <label class="text-xs font-black uppercase tracking-widest text-stone-500">USER_NAME</label>
+                            <input
+                                class="neo-brutal-border p-4 font-bold focus:bg-primary-container outline-none transition-all"
+                                type="text" value="STUDENT_01" />
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="text-xs font-black uppercase tracking-widest text-stone-500">SYSTEM_ID</label>
+                            <input class="neo-brutal-border p-4 font-bold bg-stone-50 opacity-60 cursor-not-allowed"
+                                readonly="" type="text" value="GRIND-4492-X" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- APPEARANCE SECTION -->
+            <div class="mb-12 border-b-[3px] border-[#1A1A1A] pb-8">
+                <h2 class="text-2xl font-black uppercase mb-6 flex items-center gap-3">
+                    <span class="w-4 h-4 bg-secondary block"></span> APPEARANCE
+                </h2>
+                <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-4">
+                        <label class="text-xs font-black uppercase tracking-widest text-stone-500">ACCENT COLOR</label>
+                        <div class="grid grid-cols-8 gap-4">
+                            <div
+                                class="w-10 h-10 neo-brutal-border bg-accent-orange shadow-[3px_3px_0px_#1A1A1A] cursor-pointer ring-2 ring-black ring-offset-2">
+                            </div>
+                            <div
+                                class="w-10 h-10 neo-brutal-border bg-primary shadow-[3px_3px_0px_#1A1A1A] cursor-pointer hover:scale-105 transition-all">
+                            </div>
+                            <div
+                                class="w-10 h-10 neo-brutal-border bg-secondary shadow-[3px_3px_0px_#1A1A1A] cursor-pointer hover:scale-105 transition-all">
+                            </div>
+                            <div
+                                class="w-10 h-10 neo-brutal-border bg-tertiary shadow-[3px_3px_0px_#1A1A1A] cursor-pointer hover:scale-105 transition-all">
+                            </div>
+                            <div
+                                class="w-10 h-10 neo-brutal-border bg-[#FF6B6B] shadow-[3px_3px_0px_#1A1A1A] cursor-pointer hover:scale-105 transition-all">
+                            </div>
+                            <div
+                                class="w-10 h-10 neo-brutal-border bg-[#4ECDC4] shadow-[3px_3px_0px_#1A1A1A] cursor-pointer hover:scale-105 transition-all">
+                            </div>
+                            <div
+                                class="w-10 h-10 neo-brutal-border bg-[#A29BFE] shadow-[3px_3px_0px_#1A1A1A] cursor-pointer hover:scale-105 transition-all">
+                            </div>
+                            <div
+                                class="w-10 h-10 neo-brutal-border bg-stone-900 shadow-[3px_3px_0px_#1A1A1A] cursor-pointer hover:scale-105 transition-all">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <label class="text-xs font-black uppercase tracking-widest text-stone-500">FONT SIZE</label>
+                        <div class="flex neo-brutal-border w-fit overflow-hidden bg-stone-100">
+                            <button
+                                class="px-6 py-3 font-bold border-r-[3px] border-[#1A1A1A] bg-white hover:bg-primary-container">COMPACT</button>
+                            <button
+                                class="px-6 py-3 font-bold border-r-[3px] border-[#1A1A1A] bg-primary-container">STANDARD</button>
+                            <button class="px-6 py-3 font-bold bg-white hover:bg-primary-container">EXPANDED</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- NOTIFICATIONS SECTION -->
+            <div class="mb-12 border-b-[3px] border-[#1A1A1A] pb-8">
+                <h2 class="text-2xl font-black uppercase mb-6 flex items-center gap-3">
+                    <span class="w-4 h-4 bg-tertiary block"></span> NOTIFICATIONS
+                </h2>
+                <div class="flex flex-col gap-2">
+                    <div class="flex items-center justify-between p-4 bg-stone-50 neo-brutal-border">
+                        <div class="flex items-center gap-4">
+                            <span class="material-symbols-outlined">bolt</span>
+                            <span class="font-bold">STREAK REMINDERS</span>
+                        </div>
+                        <div class="w-12 h-6 bg-accent-orange neo-brutal-border relative cursor-pointer">
+                            <div class="absolute right-1 top-1 w-3 h-3 bg-black"></div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between p-4 bg-stone-50 neo-brutal-border">
+                        <div class="flex items-center gap-4">
+                            <span class="material-symbols-outlined">task_alt</span>
+                            <span class="font-bold">TASK DEADLINES</span>
+                        </div>
+                        <div class="w-12 h-6 bg-accent-orange neo-brutal-border relative cursor-pointer">
+                            <div class="absolute right-1 top-1 w-3 h-3 bg-black"></div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between p-4 bg-stone-50 neo-brutal-border opacity-50">
+                        <div class="flex items-center gap-4">
+                            <span class="material-symbols-outlined">mail</span>
+                            <span class="font-bold">WEEKLY DIGEST</span>
+                        </div>
+                        <div class="w-12 h-6 bg-white neo-brutal-border relative cursor-pointer">
+                            <div class="absolute left-1 top-1 w-3 h-3 bg-stone-300"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- DATA & STORAGE SECTION -->
+            <div class="mb-12 border-b-[3px] border-[#1A1A1A] pb-8">
+                <h2 class="text-2xl font-black uppercase mb-6 flex items-center gap-3">
+                    <span class="w-4 h-4 bg-[#A29BFE] block"></span> DATA &amp; STORAGE
+                </h2>
+                <div class="grid grid-cols-3 gap-6">
+                    <div class="neo-brutal-border p-6 bg-white neo-brutal-shadow-hover cursor-pointer group">
+                        <span class="material-symbols-outlined mb-4 text-3xl">download</span>
+                        <h4 class="font-black">EXPORT DATA</h4>
+                        <p class="text-xs font-bold text-stone-500 mt-2">Download all logs as .JSON</p>
+                    </div>
+                    <div class="neo-brutal-border p-6 bg-white neo-brutal-shadow-hover cursor-pointer group">
+                        <span class="material-symbols-outlined mb-4 text-3xl">delete_sweep</span>
+                        <h4 class="font-black">CLEAR CACHE</h4>
+                        <p class="text-xs font-bold text-stone-500 mt-2">Frees up 124MB of space</p>
+                    </div>
+                    <div class="neo-brutal-border p-6 bg-[#FF6B6B] neo-brutal-shadow-hover cursor-pointer group">
+                        <span class="material-symbols-outlined mb-4 text-3xl text-white">dangerous</span>
+                        <h4 class="font-black text-white">RESET SYSTEM</h4>
+                        <p class="text-xs font-bold text-white/80 mt-2">Irreversible action</p>
+                    </div>
+                </div>
+            </div>
+            <!-- KEYBOARD SHORTCUTS SECTION -->
+            <div class="mb-12 border-b-[3px] border-[#1A1A1A] pb-8">
+                <h2 class="text-2xl font-black uppercase mb-6 flex items-center gap-3">
+                    <span class="w-4 h-4 bg-[#4ECDC4] block"></span> KEYBOARD SHORTCUTS
+                </h2>
+                <div class="grid grid-cols-2 gap-x-12 gap-y-4">
+                    <div class="flex items-center justify-between border-b-2 border-stone-100 pb-2">
+                        <span class="font-bold text-sm">QUICK ADD TASK</span>
+                        <div class="flex gap-1">
+                            <kbd
+                                class="neo-brutal-border bg-stone-100 px-2 py-1 text-xs font-black shadow-[2px_2px_0px_#1A1A1A]">CTRL</kbd>
+                            <kbd
+                                class="neo-brutal-border bg-stone-100 px-2 py-1 text-xs font-black shadow-[2px_2px_0px_#1A1A1A]">N</kbd>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between border-b-2 border-stone-100 pb-2">
+                        <span class="font-bold text-sm">OPEN SEARCH</span>
+                        <div class="flex gap-1">
+                            <kbd
+                                class="neo-brutal-border bg-stone-100 px-2 py-1 text-xs font-black shadow-[2px_2px_0px_#1A1A1A]">CTRL</kbd>
+                            <kbd
+                                class="neo-brutal-border bg-stone-100 px-2 py-1 text-xs font-black shadow-[2px_2px_0px_#1A1A1A]">K</kbd>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between border-b-2 border-stone-100 pb-2">
+                        <span class="font-bold text-sm">TOGGLE TIMER</span>
+                        <div class="flex gap-1">
+                            <kbd
+                                class="neo-brutal-border bg-stone-100 px-2 py-1 text-xs font-black shadow-[2px_2px_0px_#1A1A1A]">ALT</kbd>
+                            <kbd
+                                class="neo-brutal-border bg-stone-100 px-2 py-1 text-xs font-black shadow-[2px_2px_0px_#1A1A1A]">SPACE</kbd>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between border-b-2 border-stone-100 pb-2">
+                        <span class="font-bold text-sm">GO TO SETTINGS</span>
+                        <div class="flex gap-1">
+                            <kbd
+                                class="neo-brutal-border bg-stone-100 px-2 py-1 text-xs font-black shadow-[2px_2px_0px_#1A1A1A]">CTRL</kbd>
+                            <kbd
+                                class="neo-brutal-border bg-stone-100 px-2 py-1 text-xs font-black shadow-[2px_2px_0px_#1A1A1A]">S</kbd>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ABOUT SECTION -->
+            <div class="pb-8">
+                <h2 class="text-2xl font-black uppercase mb-6 flex items-center gap-3">
+                    <span class="w-4 h-4 bg-stone-900 block"></span> ABOUT
+                </h2>
+                <div
+                    class="bg-stone-50 neo-brutal-border p-8 flex flex-col items-center text-center relative overflow-hidden">
+                    <!-- Geometric Ornaments -->
+                    <div
+                        class="absolute top-0 right-0 w-24 h-24 bg-accent-orange transform rotate-45 translate-x-12 -translate-y-12">
+                    </div>
+                    <div class="absolute bottom-4 left-4 w-8 h-8 bg-[#A29BFE] rounded-full"></div>
+                    <h1 class="text-6xl font-black tracking-tighter mb-2">GRIND</h1>
+                    <p class="text-xl font-bold uppercase text-accent-orange">THE EDITORIAL ENGINE</p>
+                    <div class="my-6 neo-brutal-border bg-white px-4 py-1 font-black text-sm">VERSION 1.0.0-BETA</div>
+                    <p class="max-w-md font-medium text-stone-600">Built for high-output individuals. Designed with
+                        architectural integrity. No fluff. Just grinding.</p>
+                    <div class="mt-8 flex gap-4">
+                        <button
+                            class="neo-brutal-border bg-white px-6 py-2 font-black text-sm neo-brutal-shadow-hover">CHANGELOG</button>
+                        <button
+                            class="neo-brutal-border bg-white px-6 py-2 font-black text-sm neo-brutal-shadow-hover">LEGAL</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Floating Help FAB (Contextual for Settings) -->
+    <button
+        class="fixed bottom-8 right-8 w-16 h-16 bg-accent-orange neo-brutal-border rounded-full flex items-center justify-center neo-brutal-shadow-hover transition-transform hover:rotate-12 z-50">
+        <span class="material-symbols-outlined text-black text-3xl">question_mark</span>
+    </button>
 
-<script>
-    // Global Auth Guard & Data Plugin
-    document.addEventListener('DOMContentLoaded', () => {
-        const userId = localStorage.getItem('userId');
-        if (!userId) {
-            window.location.href = '../index.html';
-            return;
-        }
-        
-        const username = localStorage.getItem('username');
-        if (username) {
-            // Update username in sidebars replacing STUDENT_01
-            document.querySelectorAll('*').forEach(el => {
-                if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
-                    if (el.innerText.includes('STUDENT_01')) {
-                        el.innerText = el.innerText.replace('STUDENT_01', username);
+    <script>
+        // Global Auth Guard & Data Plugin
+        document.addEventListener('DOMContentLoaded', () => {
+            const userId = localStorage.getItem('userId');
+            if (!userId) {
+                window.location.href = '../index.html';
+                return;
+            }
+
+            const username = localStorage.getItem('username');
+            if (username) {
+                // Update username in sidebars replacing STUDENT_01
+                document.querySelectorAll('*').forEach(el => {
+                    if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
+                        if (el.innerText.includes('STUDENT_01')) {
+                            el.innerText = el.innerText.replace('STUDENT_01', username);
+                        }
+                    }
+                });
+            }
+
+            // Make sidebars clickable for logout where account_circle resides
+            document.querySelectorAll('span').forEach(s => {
+                if (s.innerText.includes('account_circle')) {
+                    let p = s.parentElement;
+                    if (p) {
+                        p.style.cursor = 'pointer';
+                        p.title = 'Click to Logout';
+                        p.onclick = function () {
+                            localStorage.clear();
+                            window.location.href = '../index.html';
+                        };
                     }
                 }
             });
-        }
-
-        // Make sidebars clickable for logout where account_circle resides
-        document.querySelectorAll('span').forEach(s => {
-            if(s.innerText.includes('account_circle')) {
-                let p = s.parentElement;
-                if(p) {
-                    p.style.cursor = 'pointer';
-                    p.title = 'Click to Logout';
-                    p.onclick = function() {
-                        localStorage.clear();
-                        window.location.href = '../index.html';
-                    };
-                }
-            }
         });
-    });
-</script>
+    </script>
 
-</body></html>
+</body>
+
+</html>

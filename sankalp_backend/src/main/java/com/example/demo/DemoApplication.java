@@ -13,16 +13,17 @@ public class DemoApplication {
     }
 
     @Bean
-    public CommandLineRunner initData(UserRepository userRepository, TaskRepository taskRepository, SkillRepository skillRepository) {
+    public CommandLineRunner initData(UserRepository userRepository, TaskRepository taskRepository,
+            SkillRepository skillRepository) {
         return args -> {
             if (userRepository.count() == 0) {
                 User u = new User();
-                u.setUsername("CHINMAY SONI");
+                u.setEmail("chinmay@example.com");
                 u.setPassword("pass");
                 u.setStreak(0);
                 u.setDisciplineScore(0);
                 User savedUser = userRepository.save(u);
-                
+
                 Task t1 = new Task();
                 t1.setTitle("MISSION");
                 t1.setPriority("URGENT");
@@ -43,7 +44,7 @@ public class DemoApplication {
                 t3.setStatus("COMPLETED");
                 t3.setUserId(savedUser.getId());
                 taskRepository.save(t3);
-                
+
                 Skill s1 = new Skill();
                 s1.setUserId(savedUser.getId());
                 s1.setName("JAVA");
@@ -51,7 +52,7 @@ public class DemoApplication {
                 s1.setCategory("PROGRAMMING");
                 s1.setHoursSpent(0);
                 skillRepository.save(s1);
-                
+
                 Skill s2 = new Skill();
                 s2.setUserId(savedUser.getId());
                 s2.setName("PROBLEM SOLVING");

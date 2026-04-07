@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>GRIND | Productivity</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>GRIND | Productivity</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -83,336 +90,404 @@
             },
         }
     </script>
-<style>
-        body { font-family: 'Space Grotesk', sans-serif; background-color: #FFFBF0; }
-        .brutalist-shadow { box-shadow: 5px 5px 0px #1A1A1A; }
-        .brutalist-shadow-lg { box-shadow: 8px 8px 0px #1A1A1A; }
-        .brutalist-shadow-active { box-shadow: 1px 1px 0px #1A1A1A; transform: translate(4px, 4px); }
+    <style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #FFFBF0;
+        }
+
+        .brutalist-shadow {
+            box-shadow: 5px 5px 0px #1A1A1A;
+        }
+
+        .brutalist-shadow-lg {
+            box-shadow: 8px 8px 0px #1A1A1A;
+        }
+
+        .brutalist-shadow-active {
+            box-shadow: 1px 1px 0px #1A1A1A;
+            transform: translate(4px, 4px);
+        }
+
         .red-stripes {
             background-image: repeating-linear-gradient(45deg, #FF3B3B, #FF3B3B 10px, #D62B2B 10px, #D62B2B 20px);
         }
     </style>
 </head>
+
 <body class="text-ink font-bold">
-<!-- SideNavBar (Shared Component) -->
-<aside class="fixed left-0 top-0 h-full flex flex-col justify-between z-40 w-[240px] border-r-[3px] border-stone-900 bg-stone-950 shadow-[5px_0px_0px_0px_rgba(26,26,26,1)]">
-<div class="flex flex-col">
-<div class="p-6 border-b-[3px] border-stone-900 mb-2">
-<div class="text-[28px] font-black text-yellow-400 flex items-center gap-2 uppercase tracking-wider font-['Space_Grotesk']">
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
-                    SANKALP
+    <!-- SideNavBar (Shared Component) -->
+    <aside
+        class="fixed left-0 top-0 h-full flex flex-col justify-between z-40 w-[240px] border-r-[3px] border-stone-900 bg-stone-950 shadow-[5px_0px_0px_0px_rgba(26,26,26,1)]">
+        <div class="flex flex-col">
+            <div class="p-6 border-b-[3px] border-stone-900 mb-2">
+                <div
+                    class="text-[28px] font-black text-yellow-400 flex items-center gap-2 uppercase tracking-wider font-['Space_Grotesk']">
+                    <span class="material-symbols-outlined" data-icon="star"
+                        style="font-variation-settings: 'FILL' 1;">star</span>
+                    GRIND
                 </div>
-<div class="text-[10px] text-yellow-400/60 font-bold uppercase tracking-[0.2em] mt-1">PRODUCTIVITY ENGINE</div>
-</div>
-<nav class="flex flex-col">
-<!-- HOME - ACTIVE -->
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 transition-all    font-['Space_Grotesk'] font-bold uppercase tracking-wider hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200" href="../home_dashboard_1/code.html">
-<span class="material-symbols-outlined" data-icon="home">home</span>
+                <div class="text-[10px] text-yellow-400/60 font-bold uppercase tracking-[0.2em] mt-1">PRODUCTIVITY
+                    ENGINE</div>
+            </div>
+            <nav class="flex flex-col">
+                <!-- HOME - ACTIVE -->
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 transition-all    font-['Space_Grotesk'] font-bold uppercase tracking-wider hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200"
+                    href="../home_dashboard_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="home">home</span>
                     HOME
                 </a>
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../tasks_streak_1/code.html">
-<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider"
+                    href="../tasks_streak_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="bolt">bolt</span>
                     TASKS &amp; STREAK
                 </a>
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../time_awareness_1/code.html">
-<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider"
+                    href="../time_awareness_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="schedule">schedule</span>
                     TIME AWARENESS
                 </a>
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../skills_goals_1/code.html">
-<span class="material-symbols-outlined" data-icon="ads_click">ads_click</span>
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider"
+                    href="../skills_goals_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="ads_click">ads_click</span>
                     SKILLS &amp; GOALS
                 </a>
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../integrations_hub_1/code.html">
-<span class="material-symbols-outlined" data-icon="extension">extension</span>
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider"
+                    href="../integrations_hub_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="extension">extension</span>
                     INTEGRATIONS
                 </a>
-<a class="border-l-[6px] border-yellow-400 bg-stone-900 text-yellow-400 py-4 px-6 flex items-center gap-4    transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider translate-x-1" href="../productivity_tools_1/code.html">
-<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+                <a class="border-l-[6px] border-yellow-400 bg-stone-900 text-yellow-400 py-4 px-6 flex items-center gap-4    transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider translate-x-1"
+                    href="../productivity_tools_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
                     PRODUCTIVITY
                 </a>
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../whiteboard_canvas_1/code.html">
-<span class="material-symbols-outlined" data-icon="draw">draw</span>
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider"
+                    href="../whiteboard_canvas_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="draw">draw</span>
                     WHITEBOARD
                 </a>
-<a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider" href="../settings_1/code.html">
-<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                <a class="border-l-[6px] border-transparent text-white py-4 px-6 flex items-center gap-4 hover:bg-stone-900 hover:border-yellow-400/50 hover:text-yellow-200 transition-all font-['Space_Grotesk'] font-bold uppercase tracking-wider"
+                    href="../settings_1/code.html">
+                    <span class="material-symbols-outlined" data-icon="settings">settings</span>
                     SETTINGS
                 </a>
-</nav>
-</div>
-<div class="border-t-[3px] border-stone-900">
-<div class="p-6 flex flex-col gap-4">
-<div class="flex items-center gap-3 text-white">
-<span class="material-symbols-outlined text-yellow-400" data-icon="account_circle">account_circle</span>
-<span class="text-xs tracking-widest font-black uppercase">STUDENT_01</span>
-</div>
-<div class="flex items-center gap-3 text-white">
-<span class="material-symbols-outlined text-yellow-400" data-icon="calendar_today">calendar_today</span>
-<span class="text-xs tracking-widest font-black uppercase">OCT 24, 2024</span>
-</div>
-</div>
-</div>
-</aside>
-<!-- Main Canvas -->
-<main class="ml-[240px] min-h-screen p-8 lg:p-12 space-y-12 max-w-[1400px]">
-<!-- TOP: POMODORO TIMER -->
-<section class="bg-stone-950 text-white border-[3px] border-stone-950 brutalist-shadow-lg p-10 relative overflow-hidden">
-<div class="absolute top-0 right-0 p-4">
-<span class="material-symbols-outlined text-yellow-400 text-6xl opacity-20 rotate-12">timer</span>
-</div>
-<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-12">
-<h1 class="text-5xl md:text-6xl font-black uppercase tracking-tighter leading-none">
+            </nav>
+        </div>
+        <div class="border-t-[3px] border-stone-900">
+            <div class="p-6 flex flex-col gap-4">
+                <div class="flex items-center gap-3 text-white">
+                    <span class="material-symbols-outlined text-yellow-400"
+                        data-icon="account_circle">account_circle</span>
+                    <span class="text-xs tracking-widest font-black uppercase">STUDENT_01</span>
+                </div>
+                <div class="flex items-center gap-3 text-white">
+                    <span class="material-symbols-outlined text-yellow-400"
+                        data-icon="calendar_today">calendar_today</span>
+                    <span class="text-xs tracking-widest font-black uppercase">OCT 24, 2024</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!-- Main Canvas -->
+    <main class="ml-[240px] min-h-screen p-8 lg:p-12 space-y-12 max-w-[1400px]">
+        <!-- TOP: POMODORO TIMER -->
+        <section
+            class="bg-stone-950 text-white border-[3px] border-stone-950 brutalist-shadow-lg p-10 relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-4">
+                <span class="material-symbols-outlined text-yellow-400 text-6xl opacity-20 rotate-12">timer</span>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-12">
+                <h1 class="text-5xl md:text-6xl font-black uppercase tracking-tighter leading-none">
                     DEEP WORK <span class="text-yellow-400">MODE</span>
-</h1>
-<div class="flex gap-2 bg-stone-900 border-[3px] border-stone-800 p-2">
-<button class="bg-yellow-400 text-stone-950 px-6 py-2 uppercase tracking-widest text-xs font-black border-[3px] border-stone-950 brutalist-shadow">FOCUS</button>
-<button class="text-white px-6 py-2 uppercase tracking-widest text-xs font-black border-[3px] border-transparent hover:bg-stone-800 transition-colors">SHORT BREAK</button>
-<button class="text-white px-6 py-2 uppercase tracking-widest text-xs font-black border-[3px] border-transparent hover:bg-stone-800 transition-colors">LONG BREAK</button>
-</div>
-</div>
-<div class="flex flex-col items-center justify-center my-16">
-<div class="text-[120px] md:text-[180px] font-black text-yellow-400 leading-none tracking-tighter border-y-[6px] border-yellow-400 py-4">
+                </h1>
+                <div class="flex gap-2 bg-stone-900 border-[3px] border-stone-800 p-2">
+                    <button
+                        class="bg-yellow-400 text-stone-950 px-6 py-2 uppercase tracking-widest text-xs font-black border-[3px] border-stone-950 brutalist-shadow">FOCUS</button>
+                    <button
+                        class="text-white px-6 py-2 uppercase tracking-widest text-xs font-black border-[3px] border-transparent hover:bg-stone-800 transition-colors">SHORT
+                        BREAK</button>
+                    <button
+                        class="text-white px-6 py-2 uppercase tracking-widest text-xs font-black border-[3px] border-transparent hover:bg-stone-800 transition-colors">LONG
+                        BREAK</button>
+                </div>
+            </div>
+            <div class="flex flex-col items-center justify-center my-16">
+                <div
+                    class="text-[120px] md:text-[180px] font-black text-yellow-400 leading-none tracking-tighter border-y-[6px] border-yellow-400 py-4">
                     25:00
                 </div>
-</div>
-<div class="flex flex-col md:flex-row items-center justify-between gap-8 border-t-[3px] border-stone-800 pt-8">
-<div class="flex gap-6">
-<button class="bg-yellow-400 text-stone-950 px-12 py-5 text-2xl font-black uppercase border-[3px] border-stone-950 brutalist-shadow hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[7px_7px_0px_#facc15] transition-all">START SESSION</button>
-<button class="bg-stone-800 text-white px-10 py-5 text-xl font-black uppercase border-[3px] border-stone-950 brutalist-shadow hover:bg-stone-700 transition-all">RESET</button>
-</div>
-<div class="flex items-center gap-4 overflow-x-auto w-full md:w-auto pb-4 md:pb-0">
-<div class="flex-shrink-0 flex items-center gap-2 text-stone-400 text-xs tracking-widest uppercase">
-<span class="material-symbols-outlined text-sm">history</span> RECENT:
+            </div>
+            <div
+                class="flex flex-col md:flex-row items-center justify-between gap-8 border-t-[3px] border-stone-800 pt-8">
+                <div class="flex gap-6">
+                    <button
+                        class="bg-yellow-400 text-stone-950 px-12 py-5 text-2xl font-black uppercase border-[3px] border-stone-950 brutalist-shadow hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[7px_7px_0px_#facc15] transition-all">START
+                        SESSION</button>
+                    <button
+                        class="bg-stone-800 text-white px-10 py-5 text-xl font-black uppercase border-[3px] border-stone-950 brutalist-shadow hover:bg-stone-700 transition-all">RESET</button>
+                </div>
+                <div class="flex items-center gap-4 overflow-x-auto w-full md:w-auto pb-4 md:pb-0">
+                    <div class="flex-shrink-0 flex items-center gap-2 text-stone-400 text-xs tracking-widest uppercase">
+                        <span class="material-symbols-outlined text-sm">history</span> RECENT:
                     </div>
-<div class="flex-shrink-0 bg-stone-900 border-[3px] border-stone-800 px-4 py-2 text-yellow-400 text-xs font-black">25M DEEP_CODE</div>
-<div class="flex-shrink-0 bg-stone-900 border-[3px] border-stone-800 px-4 py-2 text-white text-xs font-black opacity-50">25M UI_DESIGN</div>
-<div class="flex-shrink-0 bg-stone-900 border-[3px] border-stone-800 px-4 py-2 text-white text-xs font-black opacity-30">5M BREAK</div>
-</div>
-</div>
-</section>
-<!-- MIDDLE GRID -->
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-<!-- MIDDLE LEFT: WEEKLY AUDIT -->
-<section class="bg-purple text-ink border-[3px] border-ink brutalist-shadow p-8 flex flex-col">
-<div class="flex justify-between items-start mb-8 border-b-[3px] border-ink pb-4">
-<h2 class="text-3xl font-black uppercase tracking-tighter">WEEKLY AUDIT — WEEK 16</h2>
-<span class="material-symbols-outlined text-4xl">bar_chart</span>
-</div>
-<!-- CSS Bar Chart -->
-<div class="flex items-end justify-between h-48 gap-3 mb-10 px-4">
-<div class="flex flex-col items-center flex-1 gap-2">
-<div class="w-full bg-ink/20 border-x-[3px] border-t-[3px] border-ink h-[40%] relative">
-<div class="absolute bottom-0 w-full bg-white border-t-[3px] border-ink h-[80%]"></div>
-</div>
-<span class="text-[10px] font-black uppercase">MON</span>
-</div>
-<div class="flex flex-col items-center flex-1 gap-2">
-<div class="w-full bg-ink/20 border-x-[3px] border-t-[3px] border-ink h-[70%] relative">
-<div class="absolute bottom-0 w-full bg-white border-t-[3px] border-ink h-[95%]"></div>
-</div>
-<span class="text-[10px] font-black uppercase">TUE</span>
-</div>
-<div class="flex flex-col items-center flex-1 gap-2">
-<div class="w-full bg-ink/20 border-x-[3px] border-t-[3px] border-ink h-[55%] relative">
-<div class="absolute bottom-0 w-full bg-white border-t-[3px] border-ink h-[40%]"></div>
-</div>
-<span class="text-[10px] font-black uppercase">WED</span>
-</div>
-<div class="flex flex-col items-center flex-1 gap-2">
-<div class="w-full bg-ink/20 border-x-[3px] border-t-[3px] border-ink h-[90%] relative">
-<div class="absolute bottom-0 w-full bg-mint border-t-[3px] border-ink h-[100%]"></div>
-</div>
-<span class="text-[10px] font-black uppercase text-mint-700">THU</span>
-</div>
-<div class="flex flex-col items-center flex-1 gap-2">
-<div class="w-full bg-ink/20 border-x-[3px] border-t-[3px] border-ink h-[65%] relative">
-<div class="absolute bottom-0 w-full bg-white border-t-[3px] border-ink h-[75%]"></div>
-</div>
-<span class="text-[10px] font-black uppercase">FRI</span>
-</div>
-<div class="flex flex-col items-center flex-1 gap-2">
-<div class="w-full bg-ink/20 border-x-[3px] border-t-[3px] border-ink h-[30%] relative">
-<div class="absolute bottom-0 w-full bg-white border-t-[3px] border-ink h-[20%]"></div>
-</div>
-<span class="text-[10px] font-black uppercase">SAT</span>
-</div>
-<div class="flex flex-col items-center flex-1 gap-2">
-<div class="w-full bg-ink/20 border-x-[3px] border-t-[3px] border-ink h-[45%] relative">
-<div class="absolute bottom-0 w-full bg-white border-t-[3px] border-ink h-[60%]"></div>
-</div>
-<span class="text-[10px] font-black uppercase">SUN</span>
-</div>
-</div>
-<div class="grid grid-cols-3 gap-4">
-<div class="bg-white border-[3px] border-ink p-4 brutalist-shadow">
-<div class="text-[10px] font-black uppercase opacity-60">AVG SCORE</div>
-<div class="text-3xl font-black">84%</div>
-</div>
-<div class="bg-mint border-[3px] border-ink p-4 brutalist-shadow">
-<div class="text-[10px] font-black uppercase opacity-60">BEST DAY</div>
-<div class="text-3xl font-black">THU</div>
-</div>
-<div class="bg-white border-[3px] border-ink p-4 brutalist-shadow">
-<div class="text-[10px] font-black uppercase opacity-60">WORST DAY</div>
-<div class="text-3xl font-black">SAT</div>
-</div>
-</div>
-</section>
-<!-- MIDDLE RIGHT: SKILL GROWTH LOG -->
-<section class="bg-mint text-ink border-[3px] border-ink brutalist-shadow p-8 flex flex-col">
-<div class="flex justify-between items-start mb-8 border-b-[3px] border-ink pb-4">
-<h2 class="text-3xl font-black uppercase tracking-tighter">SKILL GROWTH LOG</h2>
-<span class="material-symbols-outlined text-4xl">ads_click</span>
-</div>
-<div class="space-y-6 flex-grow">
-<!-- Skill Item -->
-<div class="bg-white/40 border-[3px] border-ink p-4 flex flex-col gap-3">
-<div class="flex justify-between items-center">
-<span class="font-black text-lg uppercase">SYSTEMS ARCHITECTURE</span>
-<span class="text-xs bg-ink text-white px-2 py-0.5">LVL 42</span>
-</div>
-<div class="flex items-center gap-4">
-<div class="flex-grow h-6 bg-ink/10 border-[3px] border-ink relative overflow-hidden">
-<div class="absolute left-0 top-0 h-full bg-purple border-r-[3px] border-ink" style="width: 78%;"></div>
-</div>
-<div class="font-black text-sm text-right min-w-[60px]">78% -&gt; 82%</div>
-</div>
-</div>
-<!-- Skill Item -->
-<div class="bg-white/40 border-[3px] border-ink p-4 flex flex-col gap-3">
-<div class="flex justify-between items-center">
-<span class="font-black text-lg uppercase">ALGORITHMIC TRADING</span>
-<span class="text-xs bg-ink text-white px-2 py-0.5">LVL 18</span>
-</div>
-<div class="flex items-center gap-4">
-<div class="flex-grow h-6 bg-ink/10 border-[3px] border-ink relative overflow-hidden">
-<div class="absolute left-0 top-0 h-full bg-coral border-r-[3px] border-ink" style="width: 45%;"></div>
-</div>
-<div class="font-black text-sm text-right min-w-[60px]">40% -&gt; 45%</div>
-</div>
-</div>
-<!-- Skill Item -->
-<div class="bg-white/40 border-[3px] border-ink p-4 flex flex-col gap-3">
-<div class="flex justify-between items-center">
-<span class="font-black text-lg uppercase">NEO-BRUTALIST DESIGN</span>
-<span class="text-xs bg-ink text-white px-2 py-0.5">LVL 99</span>
-</div>
-<div class="flex items-center gap-4">
-<div class="flex-grow h-6 bg-ink/10 border-[3px] border-ink relative overflow-hidden">
-<div class="absolute left-0 top-0 h-full bg-yellow-400 border-r-[3px] border-ink" style="width: 95%;"></div>
-</div>
-<div class="font-black text-sm text-right min-w-[60px]">92% -&gt; 95%</div>
-</div>
-</div>
-</div>
-<button class="mt-8 bg-ink text-white py-4 uppercase font-black tracking-widest brutalist-shadow hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+                    <div
+                        class="flex-shrink-0 bg-stone-900 border-[3px] border-stone-800 px-4 py-2 text-yellow-400 text-xs font-black">
+                        25M DEEP_CODE</div>
+                    <div
+                        class="flex-shrink-0 bg-stone-900 border-[3px] border-stone-800 px-4 py-2 text-white text-xs font-black opacity-50">
+                        25M UI_DESIGN</div>
+                    <div
+                        class="flex-shrink-0 bg-stone-900 border-[3px] border-stone-800 px-4 py-2 text-white text-xs font-black opacity-30">
+                        5M BREAK</div>
+                </div>
+            </div>
+        </section>
+        <!-- MIDDLE GRID -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- MIDDLE LEFT: WEEKLY AUDIT -->
+            <section class="bg-purple text-ink border-[3px] border-ink brutalist-shadow p-8 flex flex-col">
+                <div class="flex justify-between items-start mb-8 border-b-[3px] border-ink pb-4">
+                    <h2 class="text-3xl font-black uppercase tracking-tighter">WEEKLY AUDIT — WEEK 16</h2>
+                    <span class="material-symbols-outlined text-4xl">bar_chart</span>
+                </div>
+                <!-- CSS Bar Chart -->
+                <div class="flex items-end justify-between h-48 gap-3 mb-10 px-4">
+                    <div class="flex flex-col items-center flex-1 gap-2">
+                        <div class="w-full bg-ink/20 border-x-[3px] border-t-[3px] border-ink h-[40%] relative">
+                            <div class="absolute bottom-0 w-full bg-white border-t-[3px] border-ink h-[80%]"></div>
+                        </div>
+                        <span class="text-[10px] font-black uppercase">MON</span>
+                    </div>
+                    <div class="flex flex-col items-center flex-1 gap-2">
+                        <div class="w-full bg-ink/20 border-x-[3px] border-t-[3px] border-ink h-[70%] relative">
+                            <div class="absolute bottom-0 w-full bg-white border-t-[3px] border-ink h-[95%]"></div>
+                        </div>
+                        <span class="text-[10px] font-black uppercase">TUE</span>
+                    </div>
+                    <div class="flex flex-col items-center flex-1 gap-2">
+                        <div class="w-full bg-ink/20 border-x-[3px] border-t-[3px] border-ink h-[55%] relative">
+                            <div class="absolute bottom-0 w-full bg-white border-t-[3px] border-ink h-[40%]"></div>
+                        </div>
+                        <span class="text-[10px] font-black uppercase">WED</span>
+                    </div>
+                    <div class="flex flex-col items-center flex-1 gap-2">
+                        <div class="w-full bg-ink/20 border-x-[3px] border-t-[3px] border-ink h-[90%] relative">
+                            <div class="absolute bottom-0 w-full bg-mint border-t-[3px] border-ink h-[100%]"></div>
+                        </div>
+                        <span class="text-[10px] font-black uppercase text-mint-700">THU</span>
+                    </div>
+                    <div class="flex flex-col items-center flex-1 gap-2">
+                        <div class="w-full bg-ink/20 border-x-[3px] border-t-[3px] border-ink h-[65%] relative">
+                            <div class="absolute bottom-0 w-full bg-white border-t-[3px] border-ink h-[75%]"></div>
+                        </div>
+                        <span class="text-[10px] font-black uppercase">FRI</span>
+                    </div>
+                    <div class="flex flex-col items-center flex-1 gap-2">
+                        <div class="w-full bg-ink/20 border-x-[3px] border-t-[3px] border-ink h-[30%] relative">
+                            <div class="absolute bottom-0 w-full bg-white border-t-[3px] border-ink h-[20%]"></div>
+                        </div>
+                        <span class="text-[10px] font-black uppercase">SAT</span>
+                    </div>
+                    <div class="flex flex-col items-center flex-1 gap-2">
+                        <div class="w-full bg-ink/20 border-x-[3px] border-t-[3px] border-ink h-[45%] relative">
+                            <div class="absolute bottom-0 w-full bg-white border-t-[3px] border-ink h-[60%]"></div>
+                        </div>
+                        <span class="text-[10px] font-black uppercase">SUN</span>
+                    </div>
+                </div>
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="bg-white border-[3px] border-ink p-4 brutalist-shadow">
+                        <div class="text-[10px] font-black uppercase opacity-60">AVG SCORE</div>
+                        <div class="text-3xl font-black">84%</div>
+                    </div>
+                    <div class="bg-mint border-[3px] border-ink p-4 brutalist-shadow">
+                        <div class="text-[10px] font-black uppercase opacity-60">BEST DAY</div>
+                        <div class="text-3xl font-black">THU</div>
+                    </div>
+                    <div class="bg-white border-[3px] border-ink p-4 brutalist-shadow">
+                        <div class="text-[10px] font-black uppercase opacity-60">WORST DAY</div>
+                        <div class="text-3xl font-black">SAT</div>
+                    </div>
+                </div>
+            </section>
+            <!-- MIDDLE RIGHT: SKILL GROWTH LOG -->
+            <section class="bg-mint text-ink border-[3px] border-ink brutalist-shadow p-8 flex flex-col">
+                <div class="flex justify-between items-start mb-8 border-b-[3px] border-ink pb-4">
+                    <h2 class="text-3xl font-black uppercase tracking-tighter">SKILL GROWTH LOG</h2>
+                    <span class="material-symbols-outlined text-4xl">ads_click</span>
+                </div>
+                <div class="space-y-6 flex-grow">
+                    <!-- Skill Item -->
+                    <div class="bg-white/40 border-[3px] border-ink p-4 flex flex-col gap-3">
+                        <div class="flex justify-between items-center">
+                            <span class="font-black text-lg uppercase">SYSTEMS ARCHITECTURE</span>
+                            <span class="text-xs bg-ink text-white px-2 py-0.5">LVL 42</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="flex-grow h-6 bg-ink/10 border-[3px] border-ink relative overflow-hidden">
+                                <div class="absolute left-0 top-0 h-full bg-purple border-r-[3px] border-ink"
+                                    style="width: 78%;"></div>
+                            </div>
+                            <div class="font-black text-sm text-right min-w-[60px]">78% -&gt; 82%</div>
+                        </div>
+                    </div>
+                    <!-- Skill Item -->
+                    <div class="bg-white/40 border-[3px] border-ink p-4 flex flex-col gap-3">
+                        <div class="flex justify-between items-center">
+                            <span class="font-black text-lg uppercase">ALGORITHMIC TRADING</span>
+                            <span class="text-xs bg-ink text-white px-2 py-0.5">LVL 18</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="flex-grow h-6 bg-ink/10 border-[3px] border-ink relative overflow-hidden">
+                                <div class="absolute left-0 top-0 h-full bg-coral border-r-[3px] border-ink"
+                                    style="width: 45%;"></div>
+                            </div>
+                            <div class="font-black text-sm text-right min-w-[60px]">40% -&gt; 45%</div>
+                        </div>
+                    </div>
+                    <!-- Skill Item -->
+                    <div class="bg-white/40 border-[3px] border-ink p-4 flex flex-col gap-3">
+                        <div class="flex justify-between items-center">
+                            <span class="font-black text-lg uppercase">NEO-BRUTALIST DESIGN</span>
+                            <span class="text-xs bg-ink text-white px-2 py-0.5">LVL 99</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="flex-grow h-6 bg-ink/10 border-[3px] border-ink relative overflow-hidden">
+                                <div class="absolute left-0 top-0 h-full bg-yellow-400 border-r-[3px] border-ink"
+                                    style="width: 95%;"></div>
+                            </div>
+                            <div class="font-black text-sm text-right min-w-[60px]">92% -&gt; 95%</div>
+                        </div>
+                    </div>
+                </div>
+                <button
+                    class="mt-8 bg-ink text-white py-4 uppercase font-black tracking-widest brutalist-shadow hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
                     LOG NEW GROWTH POINT
                 </button>
-</section>
-</div>
-<!-- BOTTOM: PROCRASTINATION ALERT -->
-<section class="red-stripes border-[6px] border-ink brutalist-shadow-lg p-1 w-full">
-<div class="bg-white border-[3px] border-ink p-10">
-<div class="flex flex-col md:flex-row items-center gap-8 mb-10">
-<div class="bg-error text-white p-4 flex items-center justify-center brutalist-shadow">
-<span class="material-symbols-outlined text-6xl">warning</span>
-</div>
-<h2 class="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none text-error">
+            </section>
+        </div>
+        <!-- BOTTOM: PROCRASTINATION ALERT -->
+        <section class="red-stripes border-[6px] border-ink brutalist-shadow-lg p-1 w-full">
+            <div class="bg-white border-[3px] border-ink p-10">
+                <div class="flex flex-col md:flex-row items-center gap-8 mb-10">
+                    <div class="bg-error text-white p-4 flex items-center justify-center brutalist-shadow">
+                        <span class="material-symbols-outlined text-6xl">warning</span>
+                    </div>
+                    <h2 class="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none text-error">
                         PROCRASTINATION DETECTED
                     </h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<!-- Task Card -->
-<div class="border-[3px] border-ink p-6 bg-cream flex flex-col gap-6 brutalist-shadow">
-<div class="space-y-1">
-<div class="text-[10px] font-black uppercase tracking-widest text-error">DELAYED 4.5 HOURS</div>
-<h3 class="text-xl font-black uppercase leading-tight">FINALIZE OS CORE COMPONENT DOCUMENTATION</h3>
-</div>
-<div class="flex gap-3">
-<button class="flex-1 bg-ink text-white py-3 font-black uppercase text-xs border-[3px] border-ink hover:bg-zinc-800 transition-all">DO IT NOW</button>
-<button class="flex-1 border-[3px] border-ink py-3 font-black uppercase text-xs hover:bg-ink hover:text-white transition-all">RESCHEDULE</button>
-</div>
-</div>
-<!-- Task Card -->
-<div class="border-[3px] border-ink p-6 bg-cream flex flex-col gap-6 brutalist-shadow">
-<div class="space-y-1">
-<div class="text-[10px] font-black uppercase tracking-widest text-error">DELAYED 2 DAYS</div>
-<h3 class="text-xl font-black uppercase leading-tight">QUARTERLY PRODUCTIVITY AUDIT SUBMISSION</h3>
-</div>
-<div class="flex gap-3">
-<button class="flex-1 bg-ink text-white py-3 font-black uppercase text-xs border-[3px] border-ink hover:bg-zinc-800 transition-all">DO IT NOW</button>
-<button class="flex-1 border-[3px] border-ink py-3 font-black uppercase text-xs hover:bg-ink hover:text-white transition-all">RESCHEDULE</button>
-</div>
-</div>
-<!-- Task Card -->
-<div class="border-[3px] border-ink p-6 bg-cream flex flex-col gap-6 brutalist-shadow">
-<div class="space-y-1">
-<div class="text-[10px] font-black uppercase tracking-widest text-error">OVERDUE BY 1 WEEK</div>
-<h3 class="text-xl font-black uppercase leading-tight">REVIEW Q3 INFRASTRUCTURE UPGRADE PLANS</h3>
-</div>
-<div class="flex gap-3">
-<button class="flex-1 bg-ink text-white py-3 font-black uppercase text-xs border-[3px] border-ink hover:bg-zinc-800 transition-all">DO IT NOW</button>
-<button class="flex-1 border-[3px] border-ink py-3 font-black uppercase text-xs hover:bg-ink hover:text-white transition-all">RESCHEDULE</button>
-</div>
-</div>
-</div>
-<div class="mt-10 flex justify-end">
-<div class="bg-zinc-100 border-[3px] border-ink px-6 py-2 flex items-center gap-4">
-<span class="text-xs uppercase font-black">CURRENT ENGINE PENALTY:</span>
-<span class="text-2xl font-black text-error">-250 XP/HR</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Decoration / Signature Shapes -->
-<div class="flex justify-between items-center py-12">
-<div class="h-24 w-24 bg-coral border-[3px] border-ink rounded-full brutalist-shadow flex items-center justify-center">
-<span class="material-symbols-outlined text-4xl text-white" data-weight="fill">bolt</span>
-</div>
-<div class="flex gap-4">
-<div class="h-12 w-12 bg-mint border-[3px] border-ink rotate-45 brutalist-shadow"></div>
-<div class="h-12 w-12 bg-purple border-[3px] border-ink -rotate-12 brutalist-shadow"></div>
-<div class="h-12 w-12 bg-yellow-400 border-[3px] border-ink rotate-12 brutalist-shadow"></div>
-</div>
-</div>
-</main>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Task Card -->
+                    <div class="border-[3px] border-ink p-6 bg-cream flex flex-col gap-6 brutalist-shadow">
+                        <div class="space-y-1">
+                            <div class="text-[10px] font-black uppercase tracking-widest text-error">DELAYED 4.5 HOURS
+                            </div>
+                            <h3 class="text-xl font-black uppercase leading-tight">FINALIZE OS CORE COMPONENT
+                                DOCUMENTATION</h3>
+                        </div>
+                        <div class="flex gap-3">
+                            <button
+                                class="flex-1 bg-ink text-white py-3 font-black uppercase text-xs border-[3px] border-ink hover:bg-zinc-800 transition-all">DO
+                                IT NOW</button>
+                            <button
+                                class="flex-1 border-[3px] border-ink py-3 font-black uppercase text-xs hover:bg-ink hover:text-white transition-all">RESCHEDULE</button>
+                        </div>
+                    </div>
+                    <!-- Task Card -->
+                    <div class="border-[3px] border-ink p-6 bg-cream flex flex-col gap-6 brutalist-shadow">
+                        <div class="space-y-1">
+                            <div class="text-[10px] font-black uppercase tracking-widest text-error">DELAYED 2 DAYS
+                            </div>
+                            <h3 class="text-xl font-black uppercase leading-tight">QUARTERLY PRODUCTIVITY AUDIT
+                                SUBMISSION</h3>
+                        </div>
+                        <div class="flex gap-3">
+                            <button
+                                class="flex-1 bg-ink text-white py-3 font-black uppercase text-xs border-[3px] border-ink hover:bg-zinc-800 transition-all">DO
+                                IT NOW</button>
+                            <button
+                                class="flex-1 border-[3px] border-ink py-3 font-black uppercase text-xs hover:bg-ink hover:text-white transition-all">RESCHEDULE</button>
+                        </div>
+                    </div>
+                    <!-- Task Card -->
+                    <div class="border-[3px] border-ink p-6 bg-cream flex flex-col gap-6 brutalist-shadow">
+                        <div class="space-y-1">
+                            <div class="text-[10px] font-black uppercase tracking-widest text-error">OVERDUE BY 1 WEEK
+                            </div>
+                            <h3 class="text-xl font-black uppercase leading-tight">REVIEW Q3 INFRASTRUCTURE UPGRADE
+                                PLANS</h3>
+                        </div>
+                        <div class="flex gap-3">
+                            <button
+                                class="flex-1 bg-ink text-white py-3 font-black uppercase text-xs border-[3px] border-ink hover:bg-zinc-800 transition-all">DO
+                                IT NOW</button>
+                            <button
+                                class="flex-1 border-[3px] border-ink py-3 font-black uppercase text-xs hover:bg-ink hover:text-white transition-all">RESCHEDULE</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-10 flex justify-end">
+                    <div class="bg-zinc-100 border-[3px] border-ink px-6 py-2 flex items-center gap-4">
+                        <span class="text-xs uppercase font-black">CURRENT ENGINE PENALTY:</span>
+                        <span class="text-2xl font-black text-error">-250 XP/HR</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Decoration / Signature Shapes -->
+        <div class="flex justify-between items-center py-12">
+            <div
+                class="h-24 w-24 bg-coral border-[3px] border-ink rounded-full brutalist-shadow flex items-center justify-center">
+                <span class="material-symbols-outlined text-4xl text-white" data-weight="fill">bolt</span>
+            </div>
+            <div class="flex gap-4">
+                <div class="h-12 w-12 bg-mint border-[3px] border-ink rotate-45 brutalist-shadow"></div>
+                <div class="h-12 w-12 bg-purple border-[3px] border-ink -rotate-12 brutalist-shadow"></div>
+                <div class="h-12 w-12 bg-yellow-400 border-[3px] border-ink rotate-12 brutalist-shadow"></div>
+            </div>
+        </div>
+    </main>
 
-<script>
-    // Global Auth Guard & Data Plugin
-    document.addEventListener('DOMContentLoaded', () => {
-        const userId = localStorage.getItem('userId');
-        if (!userId) {
-            window.location.href = '../index.html';
-            return;
-        }
-        
-        const username = localStorage.getItem('username');
-        if (username) {
-            // Update username in sidebars replacing STUDENT_01
-            document.querySelectorAll('*').forEach(el => {
-                if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
-                    if (el.innerText.includes('STUDENT_01')) {
-                        el.innerText = el.innerText.replace('STUDENT_01', username);
+    <script>
+        // Global Auth Guard & Data Plugin
+        document.addEventListener('DOMContentLoaded', () => {
+            const userId = localStorage.getItem('userId');
+            if (!userId) {
+                window.location.href = '../index.html';
+                return;
+            }
+
+            const username = localStorage.getItem('username');
+            if (username) {
+                // Update username in sidebars replacing STUDENT_01
+                document.querySelectorAll('*').forEach(el => {
+                    if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
+                        if (el.innerText.includes('STUDENT_01')) {
+                            el.innerText = el.innerText.replace('STUDENT_01', username);
+                        }
+                    }
+                });
+            }
+
+            // Make sidebars clickable for logout where account_circle resides
+            document.querySelectorAll('span').forEach(s => {
+                if (s.innerText.includes('account_circle')) {
+                    let p = s.parentElement;
+                    if (p) {
+                        p.style.cursor = 'pointer';
+                        p.title = 'Click to Logout';
+                        p.onclick = function () {
+                            localStorage.clear();
+                            window.location.href = '../index.html';
+                        };
                     }
                 }
             });
-        }
-
-        // Make sidebars clickable for logout where account_circle resides
-        document.querySelectorAll('span').forEach(s => {
-            if(s.innerText.includes('account_circle')) {
-                let p = s.parentElement;
-                if(p) {
-                    p.style.cursor = 'pointer';
-                    p.title = 'Click to Logout';
-                    p.onclick = function() {
-                        localStorage.clear();
-                        window.location.href = '../index.html';
-                    };
-                }
-            }
         });
-    });
-</script>
+    </script>
 
-</body></html>
+</body>
+
+</html>

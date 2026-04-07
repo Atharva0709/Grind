@@ -1,4 +1,4 @@
-# SANKALP PRODUCTION DEPLOYMENT - Final Summary
+# GRIND PRODUCTION DEPLOYMENT - Final Summary
 
 ## Work Completed
 
@@ -198,7 +198,7 @@ window.location.href = './home_dashboard_1/code.html';
 ### Quick Start (Local)
 ```bash
 # Terminal 1: Backend
-cd sankalp_backend
+cd GRIND_backend
 ./mvnw clean spring-boot:run
 
 # Terminal 2: Frontend  
@@ -269,7 +269,7 @@ http://localhost:8000
 ---
 
 ## Version Information
-- **Frontend**: Sankalp v1.0.0-PRODUCTION
+- **Frontend**: GRIND v1.0.0-PRODUCTION
 - **Backend**: Spring Boot 4.0.5
 - **Database**: MySQL 8.0+
 - **Deployment Date**: April 5, 2026
